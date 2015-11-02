@@ -1,0 +1,714 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C607DE031BD9851800E1441A /* FTConnectivity.h in Headers */ = {isa = PBXBuildFile; fileRef = C607DE011BD9851800E1441A /* FTConnectivity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C607DE041BD9851800E1441A /* FTConnectivity.h in Headers */ = {isa = PBXBuildFile; fileRef = C607DE011BD9851800E1441A /* FTConnectivity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C607DE051BD9851800E1441A /* FTConnectivity.m in Sources */ = {isa = PBXBuildFile; fileRef = C607DE021BD9851800E1441A /* FTConnectivity.m */; };
+		C607DE061BD9851800E1441A /* FTConnectivity.m in Sources */ = {isa = PBXBuildFile; fileRef = C607DE021BD9851800E1441A /* FTConnectivity.m */; };
+		C610B07B1BCE42C200DF3854 /* Flytech.h in Headers */ = {isa = PBXBuildFile; fileRef = C610B0781BCE42C200DF3854 /* Flytech.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C64CDD8C1BDFBBD900F72549 /* FTSerialPortCommunicator.h in Headers */ = {isa = PBXBuildFile; fileRef = C64CDD8A1BDFBBD900F72549 /* FTSerialPortCommunicator.h */; };
+		C64CDD8D1BDFBBD900F72549 /* FTSerialPortCommunicator.h in Headers */ = {isa = PBXBuildFile; fileRef = C64CDD8A1BDFBBD900F72549 /* FTSerialPortCommunicator.h */; };
+		C64CDD8E1BDFBBD900F72549 /* FTSerialPortCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CDD8B1BDFBBD900F72549 /* FTSerialPortCommunicator.m */; };
+		C64CDD8F1BDFBBD900F72549 /* FTSerialPortCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CDD8B1BDFBBD900F72549 /* FTSerialPortCommunicator.m */; };
+		C64CDD921BDFC13B00F72549 /* FTSerialPortConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = C64CDD901BDFC13B00F72549 /* FTSerialPortConfiguration.h */; };
+		C64CDD931BDFC13B00F72549 /* FTSerialPortConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = C64CDD901BDFC13B00F72549 /* FTSerialPortConfiguration.h */; };
+		C64CDD941BDFC13B00F72549 /* FTSerialPortConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CDD911BDFC13B00F72549 /* FTSerialPortConfiguration.m */; };
+		C64CDD951BDFC13B00F72549 /* FTSerialPortConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CDD911BDFC13B00F72549 /* FTSerialPortConfiguration.m */; };
+		C64CDD981BE0B42600F72549 /* FTSerialPortConfiguration+Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = C64CDD961BE0B42600F72549 /* FTSerialPortConfiguration+Factory.h */; };
+		C64CDD991BE0B42600F72549 /* FTSerialPortConfiguration+Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = C64CDD961BE0B42600F72549 /* FTSerialPortConfiguration+Factory.h */; };
+		C64CDD9A1BE0B42600F72549 /* FTSerialPortConfiguration+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CDD971BE0B42600F72549 /* FTSerialPortConfiguration+Factory.m */; };
+		C64CDD9B1BE0B42600F72549 /* FTSerialPortConfiguration+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CDD971BE0B42600F72549 /* FTSerialPortConfiguration+Factory.m */; };
+		C64CDDA71BE0BFF800F72549 /* FTPeripheralController.h in Headers */ = {isa = PBXBuildFile; fileRef = C64CDDA51BE0BFF800F72549 /* FTPeripheralController.h */; };
+		C64CDDA81BE0BFF800F72549 /* FTPeripheralController.h in Headers */ = {isa = PBXBuildFile; fileRef = C64CDDA51BE0BFF800F72549 /* FTPeripheralController.h */; };
+		C64CDDA91BE0BFF800F72549 /* FTPeripheralController.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CDDA61BE0BFF800F72549 /* FTPeripheralController.m */; };
+		C64CDDAA1BE0BFF800F72549 /* FTPeripheralController.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CDDA61BE0BFF800F72549 /* FTPeripheralController.m */; };
+		C64CDDAD1BE0C17900F72549 /* FTStand+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C64CDDAB1BE0C17900F72549 /* FTStand+Private.h */; };
+		C64CDDAE1BE0C17900F72549 /* FTStand+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C64CDDAB1BE0C17900F72549 /* FTStand+Private.h */; };
+		C64CDDAF1BE0C17900F72549 /* FTStand+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CDDAC1BE0C17900F72549 /* FTStand+Private.m */; };
+		C64CDDB01BE0C17900F72549 /* FTStand+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CDDAC1BE0C17900F72549 /* FTStand+Private.m */; };
+		C64CDDBF1BE0FC1200F72549 /* CBPeripheral+Services.h in Headers */ = {isa = PBXBuildFile; fileRef = C64CDDBD1BE0FC1200F72549 /* CBPeripheral+Services.h */; };
+		C64CDDC01BE0FC1200F72549 /* CBPeripheral+Services.h in Headers */ = {isa = PBXBuildFile; fileRef = C64CDDBD1BE0FC1200F72549 /* CBPeripheral+Services.h */; };
+		C64CDDC11BE0FC1200F72549 /* CBPeripheral+Services.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CDDBE1BE0FC1200F72549 /* CBPeripheral+Services.m */; };
+		C64CDDC21BE0FC1200F72549 /* CBPeripheral+Services.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CDDBE1BE0FC1200F72549 /* CBPeripheral+Services.m */; };
+		C64CDDC51BE0FDDB00F72549 /* CBService+Characteristics.h in Headers */ = {isa = PBXBuildFile; fileRef = C64CDDC31BE0FDDB00F72549 /* CBService+Characteristics.h */; };
+		C64CDDC61BE0FDDB00F72549 /* CBService+Characteristics.h in Headers */ = {isa = PBXBuildFile; fileRef = C64CDDC31BE0FDDB00F72549 /* CBService+Characteristics.h */; };
+		C64CDDC71BE0FDDB00F72549 /* CBService+Characteristics.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CDDC41BE0FDDB00F72549 /* CBService+Characteristics.m */; };
+		C64CDDC81BE0FDDB00F72549 /* CBService+Characteristics.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CDDC41BE0FDDB00F72549 /* CBService+Characteristics.m */; };
+		C64CDDCB1BE1124C00F72549 /* FTSerialPortCommunicator+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C64CDDC91BE1124C00F72549 /* FTSerialPortCommunicator+Private.h */; };
+		C64CDDCC1BE1124C00F72549 /* FTSerialPortCommunicator+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C64CDDC91BE1124C00F72549 /* FTSerialPortCommunicator+Private.h */; };
+		C64CDDCD1BE1124C00F72549 /* FTSerialPortCommunicator+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CDDCA1BE1124C00F72549 /* FTSerialPortCommunicator+Private.m */; };
+		C64CDDCE1BE1124C00F72549 /* FTSerialPortCommunicator+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CDDCA1BE1124C00F72549 /* FTSerialPortCommunicator+Private.m */; };
+		C64CDDD21BE27BCD00F72549 /* FTStandModelNumberParser.h in Headers */ = {isa = PBXBuildFile; fileRef = C64CDDD01BE27BCD00F72549 /* FTStandModelNumberParser.h */; };
+		C64CDDD31BE27BCD00F72549 /* FTStandModelNumberParser.h in Headers */ = {isa = PBXBuildFile; fileRef = C64CDDD01BE27BCD00F72549 /* FTStandModelNumberParser.h */; };
+		C64CDDD41BE27BCD00F72549 /* FTStandModelNumberParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CDDD11BE27BCD00F72549 /* FTStandModelNumberParser.m */; };
+		C64CDDD51BE27BCD00F72549 /* FTStandModelNumberParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CDDD11BE27BCD00F72549 /* FTStandModelNumberParser.m */; };
+		C64CDDD81BE35BA100F72549 /* FTPrinter.h in Headers */ = {isa = PBXBuildFile; fileRef = C64CDDD61BE35BA100F72549 /* FTPrinter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C64CDDD91BE35BA100F72549 /* FTPrinter.h in Headers */ = {isa = PBXBuildFile; fileRef = C64CDDD61BE35BA100F72549 /* FTPrinter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C64CDDDA1BE35BA100F72549 /* FTPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CDDD71BE35BA100F72549 /* FTPrinter.m */; };
+		C64CDDDB1BE35BA100F72549 /* FTPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CDDD71BE35BA100F72549 /* FTPrinter.m */; };
+		C64CDDDE1BE361CF00F72549 /* FTPrinter+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C64CDDDC1BE361CF00F72549 /* FTPrinter+Private.h */; };
+		C64CDDDF1BE361CF00F72549 /* FTPrinter+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C64CDDDC1BE361CF00F72549 /* FTPrinter+Private.h */; };
+		C64CDDE01BE361CF00F72549 /* FTPrinter+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CDDDD1BE361CF00F72549 /* FTPrinter+Private.m */; };
+		C64CDDE11BE361CF00F72549 /* FTPrinter+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CDDDD1BE361CF00F72549 /* FTPrinter+Private.m */; };
+		C64CDDEA1BE3A32400F72549 /* FTSerialPortCommunicatorTask.h in Headers */ = {isa = PBXBuildFile; fileRef = C64CDDE81BE3A32400F72549 /* FTSerialPortCommunicatorTask.h */; };
+		C64CDDEB1BE3A32400F72549 /* FTSerialPortCommunicatorTask.h in Headers */ = {isa = PBXBuildFile; fileRef = C64CDDE81BE3A32400F72549 /* FTSerialPortCommunicatorTask.h */; };
+		C64CDDEC1BE3A32400F72549 /* FTSerialPortCommunicatorTask.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CDDE91BE3A32400F72549 /* FTSerialPortCommunicatorTask.m */; };
+		C64CDDED1BE3A32400F72549 /* FTSerialPortCommunicatorTask.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CDDE91BE3A32400F72549 /* FTSerialPortCommunicatorTask.m */; };
+		C65783031BD95A77000C2E48 /* FTBLEAvailabilityAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = C65782EE1BD95A77000C2E48 /* FTBLEAvailabilityAdapter.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C65783041BD95A77000C2E48 /* FTBLEAvailabilityAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C65782EF1BD95A77000C2E48 /* FTBLEAvailabilityAdapter.m */; };
+		C65783051BD95A77000C2E48 /* FTCentralManagerDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = C65782F01BD95A77000C2E48 /* FTCentralManagerDelegateProxy.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C65783061BD95A77000C2E48 /* FTCentralManagerDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = C65782F11BD95A77000C2E48 /* FTCentralManagerDelegateProxy.m */; };
+		C65783071BD95A77000C2E48 /* FTConnectionPool.h in Headers */ = {isa = PBXBuildFile; fileRef = C65782F21BD95A77000C2E48 /* FTConnectionPool.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C65783081BD95A77000C2E48 /* FTConnectionPool.m in Sources */ = {isa = PBXBuildFile; fileRef = C65782F31BD95A77000C2E48 /* FTConnectionPool.m */; };
+		C65783091BD95A77000C2E48 /* FTScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = C65782F41BD95A77000C2E48 /* FTScanner.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C657830A1BD95A77000C2E48 /* FTScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = C65782F51BD95A77000C2E48 /* FTScanner.m */; };
+		C657830D1BD95A77000C2E48 /* FTBLEAvailability.h in Headers */ = {isa = PBXBuildFile; fileRef = C65782F91BD95A77000C2E48 /* FTBLEAvailability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C657830E1BD95A77000C2E48 /* FTBLEAvailability.m in Sources */ = {isa = PBXBuildFile; fileRef = C65782FA1BD95A77000C2E48 /* FTBLEAvailability.m */; };
+		C657830F1BD95A77000C2E48 /* FTErrorDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = C65782FB1BD95A77000C2E48 /* FTErrorDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C65783101BD95A77000C2E48 /* FTErrorDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = C65782FC1BD95A77000C2E48 /* FTErrorDomain.m */; };
+		C65783111BD95A77000C2E48 /* FTFlytech+SharedInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = C65782FD1BD95A77000C2E48 /* FTFlytech+SharedInstance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C65783121BD95A77000C2E48 /* FTFlytech+SharedInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = C65782FE1BD95A77000C2E48 /* FTFlytech+SharedInstance.m */; };
+		C65783131BD95A77000C2E48 /* FTFlytech.h in Headers */ = {isa = PBXBuildFile; fileRef = C65782FF1BD95A77000C2E48 /* FTFlytech.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C65783141BD95A77000C2E48 /* FTFlytech.m in Sources */ = {isa = PBXBuildFile; fileRef = C65783001BD95A77000C2E48 /* FTFlytech.m */; };
+		C65783151BD95A77000C2E48 /* FTStand.h in Headers */ = {isa = PBXBuildFile; fileRef = C65783011BD95A77000C2E48 /* FTStand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C65783161BD95A77000C2E48 /* FTStand.m in Sources */ = {isa = PBXBuildFile; fileRef = C65783021BD95A77000C2E48 /* FTStand.m */; };
+		C65783171BD95B02000C2E48 /* FTFlytech.h in Headers */ = {isa = PBXBuildFile; fileRef = C65782FF1BD95A77000C2E48 /* FTFlytech.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C65783181BD95B09000C2E48 /* FTFlytech.m in Sources */ = {isa = PBXBuildFile; fileRef = C65783001BD95A77000C2E48 /* FTFlytech.m */; };
+		C65783191BD95B0C000C2E48 /* FTFlytech+SharedInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = C65782FD1BD95A77000C2E48 /* FTFlytech+SharedInstance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C657831A1BD95B11000C2E48 /* FTFlytech+SharedInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = C65782FE1BD95A77000C2E48 /* FTFlytech+SharedInstance.m */; };
+		C657831B1BD95B1B000C2E48 /* FTBLEAvailability.h in Headers */ = {isa = PBXBuildFile; fileRef = C65782F91BD95A77000C2E48 /* FTBLEAvailability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C657831C1BD95B1F000C2E48 /* FTBLEAvailability.m in Sources */ = {isa = PBXBuildFile; fileRef = C65782FA1BD95A77000C2E48 /* FTBLEAvailability.m */; };
+		C657831D1BD95B22000C2E48 /* FTStand.h in Headers */ = {isa = PBXBuildFile; fileRef = C65783011BD95A77000C2E48 /* FTStand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C657831E1BD95B28000C2E48 /* FTStand.m in Sources */ = {isa = PBXBuildFile; fileRef = C65783021BD95A77000C2E48 /* FTStand.m */; };
+		C657831F1BD95B2D000C2E48 /* FTErrorDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = C65782FB1BD95A77000C2E48 /* FTErrorDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C65783201BD95B34000C2E48 /* FTErrorDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = C65782FC1BD95A77000C2E48 /* FTErrorDomain.m */; };
+		C65783211BD95B3B000C2E48 /* FTBLEAvailabilityAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = C65782EE1BD95A77000C2E48 /* FTBLEAvailabilityAdapter.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C65783221BD95B47000C2E48 /* FTBLEAvailabilityAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C65782EF1BD95A77000C2E48 /* FTBLEAvailabilityAdapter.m */; };
+		C65783231BD95B4B000C2E48 /* FTCentralManagerDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = C65782F01BD95A77000C2E48 /* FTCentralManagerDelegateProxy.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C65783241BD95B53000C2E48 /* FTCentralManagerDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = C65782F11BD95A77000C2E48 /* FTCentralManagerDelegateProxy.m */; };
+		C65783251BD95B57000C2E48 /* FTConnectionPool.h in Headers */ = {isa = PBXBuildFile; fileRef = C65782F21BD95A77000C2E48 /* FTConnectionPool.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C65783261BD95B5E000C2E48 /* FTConnectionPool.m in Sources */ = {isa = PBXBuildFile; fileRef = C65782F31BD95A77000C2E48 /* FTConnectionPool.m */; };
+		C65783271BD95B62000C2E48 /* FTScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = C65782F41BD95A77000C2E48 /* FTScanner.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C65783281BD95B67000C2E48 /* FTScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = C65782F51BD95A77000C2E48 /* FTScanner.m */; };
+		C657832D1BD95C05000C2E48 /* FTErrorDomain+Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = C657832B1BD95C05000C2E48 /* FTErrorDomain+Factory.h */; };
+		C657832E1BD95C05000C2E48 /* FTErrorDomain+Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = C657832B1BD95C05000C2E48 /* FTErrorDomain+Factory.h */; };
+		C657832F1BD95C05000C2E48 /* FTErrorDomain+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = C657832C1BD95C05000C2E48 /* FTErrorDomain+Factory.m */; };
+		C65783301BD95C05000C2E48 /* FTErrorDomain+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = C657832C1BD95C05000C2E48 /* FTErrorDomain+Factory.m */; };
+		C6B81CB11BDA6A1500A0C4E0 /* CBCentralManager+Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = C6B81CAF1BDA6A1500A0C4E0 /* CBCentralManager+Factory.h */; };
+		C6B81CB21BDA6A1500A0C4E0 /* CBCentralManager+Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = C6B81CAF1BDA6A1500A0C4E0 /* CBCentralManager+Factory.h */; };
+		C6B81CB31BDA6A1500A0C4E0 /* CBCentralManager+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B81CB01BDA6A1500A0C4E0 /* CBCentralManager+Factory.m */; };
+		C6B81CB41BDA6A1500A0C4E0 /* CBCentralManager+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B81CB01BDA6A1500A0C4E0 /* CBCentralManager+Factory.m */; };
+		C6CFD67A1BDE34E200234EF6 /* FTConnectionAttempt.h in Headers */ = {isa = PBXBuildFile; fileRef = C6CFD6781BDE34E200234EF6 /* FTConnectionAttempt.h */; };
+		C6CFD67B1BDE34E200234EF6 /* FTConnectionAttempt.h in Headers */ = {isa = PBXBuildFile; fileRef = C6CFD6781BDE34E200234EF6 /* FTConnectionAttempt.h */; };
+		C6CFD67C1BDE34E200234EF6 /* FTConnectionAttempt.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CFD6791BDE34E200234EF6 /* FTConnectionAttempt.m */; };
+		C6CFD67D1BDE34E200234EF6 /* FTConnectionAttempt.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CFD6791BDE34E200234EF6 /* FTConnectionAttempt.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C607DE011BD9851800E1441A /* FTConnectivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTConnectivity.h; sourceTree = "<group>"; };
+		C607DE021BD9851800E1441A /* FTConnectivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTConnectivity.m; sourceTree = "<group>"; };
+		C610B06B1BCE41C100DF3854 /* Flytech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Flytech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C610B0781BCE42C200DF3854 /* Flytech.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flytech.h; sourceTree = "<group>"; };
+		C610B07A1BCE42C200DF3854 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C610B0861BCE504C00DF3854 /* Flytech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Flytech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C64CDD8A1BDFBBD900F72549 /* FTSerialPortCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTSerialPortCommunicator.h; sourceTree = "<group>"; };
+		C64CDD8B1BDFBBD900F72549 /* FTSerialPortCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTSerialPortCommunicator.m; sourceTree = "<group>"; };
+		C64CDD901BDFC13B00F72549 /* FTSerialPortConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTSerialPortConfiguration.h; sourceTree = "<group>"; };
+		C64CDD911BDFC13B00F72549 /* FTSerialPortConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTSerialPortConfiguration.m; sourceTree = "<group>"; };
+		C64CDD961BE0B42600F72549 /* FTSerialPortConfiguration+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FTSerialPortConfiguration+Factory.h"; sourceTree = "<group>"; };
+		C64CDD971BE0B42600F72549 /* FTSerialPortConfiguration+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FTSerialPortConfiguration+Factory.m"; sourceTree = "<group>"; };
+		C64CDDA51BE0BFF800F72549 /* FTPeripheralController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPeripheralController.h; sourceTree = "<group>"; };
+		C64CDDA61BE0BFF800F72549 /* FTPeripheralController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPeripheralController.m; sourceTree = "<group>"; };
+		C64CDDAB1BE0C17900F72549 /* FTStand+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FTStand+Private.h"; sourceTree = "<group>"; };
+		C64CDDAC1BE0C17900F72549 /* FTStand+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FTStand+Private.m"; sourceTree = "<group>"; };
+		C64CDDBD1BE0FC1200F72549 /* CBPeripheral+Services.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBPeripheral+Services.h"; sourceTree = "<group>"; };
+		C64CDDBE1BE0FC1200F72549 /* CBPeripheral+Services.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBPeripheral+Services.m"; sourceTree = "<group>"; };
+		C64CDDC31BE0FDDB00F72549 /* CBService+Characteristics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBService+Characteristics.h"; sourceTree = "<group>"; };
+		C64CDDC41BE0FDDB00F72549 /* CBService+Characteristics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBService+Characteristics.m"; sourceTree = "<group>"; };
+		C64CDDC91BE1124C00F72549 /* FTSerialPortCommunicator+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FTSerialPortCommunicator+Private.h"; sourceTree = "<group>"; };
+		C64CDDCA1BE1124C00F72549 /* FTSerialPortCommunicator+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FTSerialPortCommunicator+Private.m"; sourceTree = "<group>"; };
+		C64CDDD01BE27BCD00F72549 /* FTStandModelNumberParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTStandModelNumberParser.h; sourceTree = "<group>"; };
+		C64CDDD11BE27BCD00F72549 /* FTStandModelNumberParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTStandModelNumberParser.m; sourceTree = "<group>"; };
+		C64CDDD61BE35BA100F72549 /* FTPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPrinter.h; sourceTree = "<group>"; };
+		C64CDDD71BE35BA100F72549 /* FTPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPrinter.m; sourceTree = "<group>"; };
+		C64CDDDC1BE361CF00F72549 /* FTPrinter+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FTPrinter+Private.h"; sourceTree = "<group>"; };
+		C64CDDDD1BE361CF00F72549 /* FTPrinter+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FTPrinter+Private.m"; sourceTree = "<group>"; };
+		C64CDDE81BE3A32400F72549 /* FTSerialPortCommunicatorTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTSerialPortCommunicatorTask.h; sourceTree = "<group>"; };
+		C64CDDE91BE3A32400F72549 /* FTSerialPortCommunicatorTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTSerialPortCommunicatorTask.m; sourceTree = "<group>"; };
+		C65782EE1BD95A77000C2E48 /* FTBLEAvailabilityAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBLEAvailabilityAdapter.h; sourceTree = "<group>"; };
+		C65782EF1BD95A77000C2E48 /* FTBLEAvailabilityAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTBLEAvailabilityAdapter.m; sourceTree = "<group>"; };
+		C65782F01BD95A77000C2E48 /* FTCentralManagerDelegateProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCentralManagerDelegateProxy.h; sourceTree = "<group>"; };
+		C65782F11BD95A77000C2E48 /* FTCentralManagerDelegateProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCentralManagerDelegateProxy.m; sourceTree = "<group>"; };
+		C65782F21BD95A77000C2E48 /* FTConnectionPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTConnectionPool.h; sourceTree = "<group>"; };
+		C65782F31BD95A77000C2E48 /* FTConnectionPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTConnectionPool.m; sourceTree = "<group>"; };
+		C65782F41BD95A77000C2E48 /* FTScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTScanner.h; sourceTree = "<group>"; };
+		C65782F51BD95A77000C2E48 /* FTScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTScanner.m; sourceTree = "<group>"; };
+		C65782F91BD95A77000C2E48 /* FTBLEAvailability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBLEAvailability.h; sourceTree = "<group>"; };
+		C65782FA1BD95A77000C2E48 /* FTBLEAvailability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTBLEAvailability.m; sourceTree = "<group>"; };
+		C65782FB1BD95A77000C2E48 /* FTErrorDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTErrorDomain.h; sourceTree = "<group>"; };
+		C65782FC1BD95A77000C2E48 /* FTErrorDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTErrorDomain.m; sourceTree = "<group>"; };
+		C65782FD1BD95A77000C2E48 /* FTFlytech+SharedInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FTFlytech+SharedInstance.h"; sourceTree = "<group>"; };
+		C65782FE1BD95A77000C2E48 /* FTFlytech+SharedInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FTFlytech+SharedInstance.m"; sourceTree = "<group>"; };
+		C65782FF1BD95A77000C2E48 /* FTFlytech.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTFlytech.h; sourceTree = "<group>"; };
+		C65783001BD95A77000C2E48 /* FTFlytech.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTFlytech.m; sourceTree = "<group>"; };
+		C65783011BD95A77000C2E48 /* FTStand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTStand.h; sourceTree = "<group>"; };
+		C65783021BD95A77000C2E48 /* FTStand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTStand.m; sourceTree = "<group>"; };
+		C657832B1BD95C05000C2E48 /* FTErrorDomain+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FTErrorDomain+Factory.h"; sourceTree = "<group>"; };
+		C657832C1BD95C05000C2E48 /* FTErrorDomain+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FTErrorDomain+Factory.m"; sourceTree = "<group>"; };
+		C6B81CAF1BDA6A1500A0C4E0 /* CBCentralManager+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBCentralManager+Factory.h"; sourceTree = "<group>"; };
+		C6B81CB01BDA6A1500A0C4E0 /* CBCentralManager+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBCentralManager+Factory.m"; sourceTree = "<group>"; };
+		C6CFD6781BDE34E200234EF6 /* FTConnectionAttempt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTConnectionAttempt.h; sourceTree = "<group>"; };
+		C6CFD6791BDE34E200234EF6 /* FTConnectionAttempt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTConnectionAttempt.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C610B0671BCE41C100DF3854 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C610B0821BCE504C00DF3854 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C610B0611BCE41C100DF3854 = {
+			isa = PBXGroup;
+			children = (
+				C610B0771BCE42C200DF3854 /* Umbrella */,
+				C610B0761BCE42C200DF3854 /* Source */,
+				C610B0791BCE42C200DF3854 /* Resources */,
+				C610B06C1BCE41C100DF3854 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C610B06C1BCE41C100DF3854 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C610B06B1BCE41C100DF3854 /* Flytech.framework */,
+				C610B0861BCE504C00DF3854 /* Flytech.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C610B0761BCE42C200DF3854 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C65782F81BD95A77000C2E48 /* Public */,
+				C65782ED1BD95A77000C2E48 /* Private */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		C610B0771BCE42C200DF3854 /* Umbrella */ = {
+			isa = PBXGroup;
+			children = (
+				C610B0781BCE42C200DF3854 /* Flytech.h */,
+			);
+			path = Umbrella;
+			sourceTree = "<group>";
+		};
+		C610B0791BCE42C200DF3854 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C610B07A1BCE42C200DF3854 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C65782ED1BD95A77000C2E48 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				C65782EE1BD95A77000C2E48 /* FTBLEAvailabilityAdapter.h */,
+				C65782EF1BD95A77000C2E48 /* FTBLEAvailabilityAdapter.m */,
+				C65782F01BD95A77000C2E48 /* FTCentralManagerDelegateProxy.h */,
+				C65782F11BD95A77000C2E48 /* FTCentralManagerDelegateProxy.m */,
+				C6B81CAF1BDA6A1500A0C4E0 /* CBCentralManager+Factory.h */,
+				C6B81CB01BDA6A1500A0C4E0 /* CBCentralManager+Factory.m */,
+				C65782F21BD95A77000C2E48 /* FTConnectionPool.h */,
+				C65782F31BD95A77000C2E48 /* FTConnectionPool.m */,
+				C6CFD6781BDE34E200234EF6 /* FTConnectionAttempt.h */,
+				C6CFD6791BDE34E200234EF6 /* FTConnectionAttempt.m */,
+				C65782F41BD95A77000C2E48 /* FTScanner.h */,
+				C65782F51BD95A77000C2E48 /* FTScanner.m */,
+				C64CDDAB1BE0C17900F72549 /* FTStand+Private.h */,
+				C64CDDAC1BE0C17900F72549 /* FTStand+Private.m */,
+				C64CDDD01BE27BCD00F72549 /* FTStandModelNumberParser.h */,
+				C64CDDD11BE27BCD00F72549 /* FTStandModelNumberParser.m */,
+				C64CDDA51BE0BFF800F72549 /* FTPeripheralController.h */,
+				C64CDDA61BE0BFF800F72549 /* FTPeripheralController.m */,
+				C64CDDC31BE0FDDB00F72549 /* CBService+Characteristics.h */,
+				C64CDDC41BE0FDDB00F72549 /* CBService+Characteristics.m */,
+				C64CDDBD1BE0FC1200F72549 /* CBPeripheral+Services.h */,
+				C64CDDBE1BE0FC1200F72549 /* CBPeripheral+Services.m */,
+				C657832B1BD95C05000C2E48 /* FTErrorDomain+Factory.h */,
+				C657832C1BD95C05000C2E48 /* FTErrorDomain+Factory.m */,
+				C64CDD8A1BDFBBD900F72549 /* FTSerialPortCommunicator.h */,
+				C64CDD8B1BDFBBD900F72549 /* FTSerialPortCommunicator.m */,
+				C64CDDE81BE3A32400F72549 /* FTSerialPortCommunicatorTask.h */,
+				C64CDDE91BE3A32400F72549 /* FTSerialPortCommunicatorTask.m */,
+				C64CDDC91BE1124C00F72549 /* FTSerialPortCommunicator+Private.h */,
+				C64CDDCA1BE1124C00F72549 /* FTSerialPortCommunicator+Private.m */,
+				C64CDD901BDFC13B00F72549 /* FTSerialPortConfiguration.h */,
+				C64CDD911BDFC13B00F72549 /* FTSerialPortConfiguration.m */,
+				C64CDD961BE0B42600F72549 /* FTSerialPortConfiguration+Factory.h */,
+				C64CDD971BE0B42600F72549 /* FTSerialPortConfiguration+Factory.m */,
+				C64CDDDC1BE361CF00F72549 /* FTPrinter+Private.h */,
+				C64CDDDD1BE361CF00F72549 /* FTPrinter+Private.m */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		C65782F81BD95A77000C2E48 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				C65782FF1BD95A77000C2E48 /* FTFlytech.h */,
+				C65783001BD95A77000C2E48 /* FTFlytech.m */,
+				C65782FD1BD95A77000C2E48 /* FTFlytech+SharedInstance.h */,
+				C65782FE1BD95A77000C2E48 /* FTFlytech+SharedInstance.m */,
+				C65782F91BD95A77000C2E48 /* FTBLEAvailability.h */,
+				C65782FA1BD95A77000C2E48 /* FTBLEAvailability.m */,
+				C607DE011BD9851800E1441A /* FTConnectivity.h */,
+				C607DE021BD9851800E1441A /* FTConnectivity.m */,
+				C65783011BD95A77000C2E48 /* FTStand.h */,
+				C65783021BD95A77000C2E48 /* FTStand.m */,
+				C64CDDD61BE35BA100F72549 /* FTPrinter.h */,
+				C64CDDD71BE35BA100F72549 /* FTPrinter.m */,
+				C65782FB1BD95A77000C2E48 /* FTErrorDomain.h */,
+				C65782FC1BD95A77000C2E48 /* FTErrorDomain.m */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C610B0681BCE41C100DF3854 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C657832D1BD95C05000C2E48 /* FTErrorDomain+Factory.h in Headers */,
+				C64CDDD21BE27BCD00F72549 /* FTStandModelNumberParser.h in Headers */,
+				C65783111BD95A77000C2E48 /* FTFlytech+SharedInstance.h in Headers */,
+				C64CDDEA1BE3A32400F72549 /* FTSerialPortCommunicatorTask.h in Headers */,
+				C65783131BD95A77000C2E48 /* FTFlytech.h in Headers */,
+				C657830F1BD95A77000C2E48 /* FTErrorDomain.h in Headers */,
+				C65783151BD95A77000C2E48 /* FTStand.h in Headers */,
+				C657830D1BD95A77000C2E48 /* FTBLEAvailability.h in Headers */,
+				C64CDDD81BE35BA100F72549 /* FTPrinter.h in Headers */,
+				C65783071BD95A77000C2E48 /* FTConnectionPool.h in Headers */,
+				C64CDD981BE0B42600F72549 /* FTSerialPortConfiguration+Factory.h in Headers */,
+				C64CDD8C1BDFBBD900F72549 /* FTSerialPortCommunicator.h in Headers */,
+				C6B81CB11BDA6A1500A0C4E0 /* CBCentralManager+Factory.h in Headers */,
+				C65783091BD95A77000C2E48 /* FTScanner.h in Headers */,
+				C65783051BD95A77000C2E48 /* FTCentralManagerDelegateProxy.h in Headers */,
+				C65783031BD95A77000C2E48 /* FTBLEAvailabilityAdapter.h in Headers */,
+				C610B07B1BCE42C200DF3854 /* Flytech.h in Headers */,
+				C6CFD67A1BDE34E200234EF6 /* FTConnectionAttempt.h in Headers */,
+				C607DE031BD9851800E1441A /* FTConnectivity.h in Headers */,
+				C64CDDAD1BE0C17900F72549 /* FTStand+Private.h in Headers */,
+				C64CDDA71BE0BFF800F72549 /* FTPeripheralController.h in Headers */,
+				C64CDDDE1BE361CF00F72549 /* FTPrinter+Private.h in Headers */,
+				C64CDDBF1BE0FC1200F72549 /* CBPeripheral+Services.h in Headers */,
+				C64CDD921BDFC13B00F72549 /* FTSerialPortConfiguration.h in Headers */,
+				C64CDDCB1BE1124C00F72549 /* FTSerialPortCommunicator+Private.h in Headers */,
+				C64CDDC51BE0FDDB00F72549 /* CBService+Characteristics.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C610B0831BCE504C00DF3854 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C65783251BD95B57000C2E48 /* FTConnectionPool.h in Headers */,
+				C64CDDC01BE0FC1200F72549 /* CBPeripheral+Services.h in Headers */,
+				C657831F1BD95B2D000C2E48 /* FTErrorDomain.h in Headers */,
+				C6CFD67B1BDE34E200234EF6 /* FTConnectionAttempt.h in Headers */,
+				C657831B1BD95B1B000C2E48 /* FTBLEAvailability.h in Headers */,
+				C64CDDDF1BE361CF00F72549 /* FTPrinter+Private.h in Headers */,
+				C65783191BD95B0C000C2E48 /* FTFlytech+SharedInstance.h in Headers */,
+				C64CDDD91BE35BA100F72549 /* FTPrinter.h in Headers */,
+				C64CDDEB1BE3A32400F72549 /* FTSerialPortCommunicatorTask.h in Headers */,
+				C65783211BD95B3B000C2E48 /* FTBLEAvailabilityAdapter.h in Headers */,
+				C65783171BD95B02000C2E48 /* FTFlytech.h in Headers */,
+				C65783231BD95B4B000C2E48 /* FTCentralManagerDelegateProxy.h in Headers */,
+				C64CDDC61BE0FDDB00F72549 /* CBService+Characteristics.h in Headers */,
+				C64CDD991BE0B42600F72549 /* FTSerialPortConfiguration+Factory.h in Headers */,
+				C64CDDAE1BE0C17900F72549 /* FTStand+Private.h in Headers */,
+				C64CDD931BDFC13B00F72549 /* FTSerialPortConfiguration.h in Headers */,
+				C64CDD8D1BDFBBD900F72549 /* FTSerialPortCommunicator.h in Headers */,
+				C65783271BD95B62000C2E48 /* FTScanner.h in Headers */,
+				C64CDDCC1BE1124C00F72549 /* FTSerialPortCommunicator+Private.h in Headers */,
+				C657831D1BD95B22000C2E48 /* FTStand.h in Headers */,
+				C64CDDA81BE0BFF800F72549 /* FTPeripheralController.h in Headers */,
+				C657832E1BD95C05000C2E48 /* FTErrorDomain+Factory.h in Headers */,
+				C6B81CB21BDA6A1500A0C4E0 /* CBCentralManager+Factory.h in Headers */,
+				C64CDDD31BE27BCD00F72549 /* FTStandModelNumberParser.h in Headers */,
+				C607DE041BD9851800E1441A /* FTConnectivity.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C610B06A1BCE41C100DF3854 /* Flytech iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C610B0731BCE41C100DF3854 /* Build configuration list for PBXNativeTarget "Flytech iOS" */;
+			buildPhases = (
+				C610B0661BCE41C100DF3854 /* Sources */,
+				C610B0671BCE41C100DF3854 /* Frameworks */,
+				C610B0681BCE41C100DF3854 /* Headers */,
+				C610B0691BCE41C100DF3854 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Flytech iOS";
+			productName = FlytechPOS;
+			productReference = C610B06B1BCE41C100DF3854 /* Flytech.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C610B0851BCE504C00DF3854 /* Flytech OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C610B08B1BCE504C00DF3854 /* Build configuration list for PBXNativeTarget "Flytech OSX" */;
+			buildPhases = (
+				C610B0811BCE504C00DF3854 /* Sources */,
+				C610B0821BCE504C00DF3854 /* Frameworks */,
+				C610B0831BCE504C00DF3854 /* Headers */,
+				C610B0841BCE504C00DF3854 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Flytech OSX";
+			productName = Flytech;
+			productReference = C610B0861BCE504C00DF3854 /* Flytech.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C610B0621BCE41C100DF3854 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Glastonia Ltd.";
+				TargetAttributes = {
+					C610B06A1BCE41C100DF3854 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					C610B0851BCE504C00DF3854 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = C610B0651BCE41C100DF3854 /* Build configuration list for PBXProject "Flytech" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C610B0611BCE41C100DF3854;
+			productRefGroup = C610B06C1BCE41C100DF3854 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C610B06A1BCE41C100DF3854 /* Flytech iOS */,
+				C610B0851BCE504C00DF3854 /* Flytech OSX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C610B0691BCE41C100DF3854 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C610B0841BCE504C00DF3854 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C610B0661BCE41C100DF3854 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C607DE051BD9851800E1441A /* FTConnectivity.m in Sources */,
+				C657832F1BD95C05000C2E48 /* FTErrorDomain+Factory.m in Sources */,
+				C64CDDE01BE361CF00F72549 /* FTPrinter+Private.m in Sources */,
+				C64CDD9A1BE0B42600F72549 /* FTSerialPortConfiguration+Factory.m in Sources */,
+				C65783161BD95A77000C2E48 /* FTStand.m in Sources */,
+				C64CDD8E1BDFBBD900F72549 /* FTSerialPortCommunicator.m in Sources */,
+				C64CDDC11BE0FC1200F72549 /* CBPeripheral+Services.m in Sources */,
+				C65783101BD95A77000C2E48 /* FTErrorDomain.m in Sources */,
+				C64CDDEC1BE3A32400F72549 /* FTSerialPortCommunicatorTask.m in Sources */,
+				C657830E1BD95A77000C2E48 /* FTBLEAvailability.m in Sources */,
+				C64CDDAF1BE0C17900F72549 /* FTStand+Private.m in Sources */,
+				C65783041BD95A77000C2E48 /* FTBLEAvailabilityAdapter.m in Sources */,
+				C65783081BD95A77000C2E48 /* FTConnectionPool.m in Sources */,
+				C64CDDC71BE0FDDB00F72549 /* CBService+Characteristics.m in Sources */,
+				C65783141BD95A77000C2E48 /* FTFlytech.m in Sources */,
+				C65783121BD95A77000C2E48 /* FTFlytech+SharedInstance.m in Sources */,
+				C6B81CB31BDA6A1500A0C4E0 /* CBCentralManager+Factory.m in Sources */,
+				C657830A1BD95A77000C2E48 /* FTScanner.m in Sources */,
+				C64CDDDA1BE35BA100F72549 /* FTPrinter.m in Sources */,
+				C64CDD941BDFC13B00F72549 /* FTSerialPortConfiguration.m in Sources */,
+				C64CDDA91BE0BFF800F72549 /* FTPeripheralController.m in Sources */,
+				C65783061BD95A77000C2E48 /* FTCentralManagerDelegateProxy.m in Sources */,
+				C64CDDD41BE27BCD00F72549 /* FTStandModelNumberParser.m in Sources */,
+				C64CDDCD1BE1124C00F72549 /* FTSerialPortCommunicator+Private.m in Sources */,
+				C6CFD67C1BDE34E200234EF6 /* FTConnectionAttempt.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C610B0811BCE504C00DF3854 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C607DE061BD9851800E1441A /* FTConnectivity.m in Sources */,
+				C65783301BD95C05000C2E48 /* FTErrorDomain+Factory.m in Sources */,
+				C64CDDE11BE361CF00F72549 /* FTPrinter+Private.m in Sources */,
+				C64CDD9B1BE0B42600F72549 /* FTSerialPortConfiguration+Factory.m in Sources */,
+				C65783201BD95B34000C2E48 /* FTErrorDomain.m in Sources */,
+				C64CDD8F1BDFBBD900F72549 /* FTSerialPortCommunicator.m in Sources */,
+				C64CDDC21BE0FC1200F72549 /* CBPeripheral+Services.m in Sources */,
+				C65783281BD95B67000C2E48 /* FTScanner.m in Sources */,
+				C64CDDED1BE3A32400F72549 /* FTSerialPortCommunicatorTask.m in Sources */,
+				C64CDDB01BE0C17900F72549 /* FTStand+Private.m in Sources */,
+				C657831E1BD95B28000C2E48 /* FTStand.m in Sources */,
+				C657831C1BD95B1F000C2E48 /* FTBLEAvailability.m in Sources */,
+				C65783181BD95B09000C2E48 /* FTFlytech.m in Sources */,
+				C64CDDC81BE0FDDB00F72549 /* CBService+Characteristics.m in Sources */,
+				C65783221BD95B47000C2E48 /* FTBLEAvailabilityAdapter.m in Sources */,
+				C65783261BD95B5E000C2E48 /* FTConnectionPool.m in Sources */,
+				C6B81CB41BDA6A1500A0C4E0 /* CBCentralManager+Factory.m in Sources */,
+				C657831A1BD95B11000C2E48 /* FTFlytech+SharedInstance.m in Sources */,
+				C64CDDDB1BE35BA100F72549 /* FTPrinter.m in Sources */,
+				C64CDD951BDFC13B00F72549 /* FTSerialPortConfiguration.m in Sources */,
+				C64CDDAA1BE0BFF800F72549 /* FTPeripheralController.m in Sources */,
+				C65783241BD95B53000C2E48 /* FTCentralManagerDelegateProxy.m in Sources */,
+				C64CDDD51BE27BCD00F72549 /* FTStandModelNumberParser.m in Sources */,
+				C64CDDCE1BE1124C00F72549 /* FTSerialPortCommunicator+Private.m in Sources */,
+				C6CFD67D1BDE34E200234EF6 /* FTConnectionAttempt.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C610B0711BCE41C100DF3854 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.glastonia.Flytech;
+				PRODUCT_NAME = Flytech;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C610B0721BCE41C100DF3854 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.glastonia.Flytech;
+				PRODUCT_NAME = Flytech;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C610B0741BCE41C100DF3854 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C610B0751BCE41C100DF3854 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C610B08C1BCE504C00DF3854 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C610B08D1BCE504C00DF3854 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C610B0651BCE41C100DF3854 /* Build configuration list for PBXProject "Flytech" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C610B0711BCE41C100DF3854 /* Debug */,
+				C610B0721BCE41C100DF3854 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C610B0731BCE41C100DF3854 /* Build configuration list for PBXNativeTarget "Flytech iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C610B0741BCE41C100DF3854 /* Debug */,
+				C610B0751BCE41C100DF3854 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C610B08B1BCE504C00DF3854 /* Build configuration list for PBXNativeTarget "Flytech OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C610B08C1BCE504C00DF3854 /* Debug */,
+				C610B08D1BCE504C00DF3854 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C610B0621BCE41C100DF3854 /* Project object */;
+}
