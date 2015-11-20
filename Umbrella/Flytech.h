@@ -12,7 +12,9 @@
 #import "FTBLEAvailability.h"
 #import "FTConnectivity.h"
 #import "FTStand.h"
+#import "FTPrinter.h"
 #import "FTErrorDomain.h"
+#import "FTPrinter+Advanced.h"
 
 FOUNDATION_EXPORT double FlytechPOSVersionNumber;
 FOUNDATION_EXPORT const unsigned char FlytechPOSVersionString[];
