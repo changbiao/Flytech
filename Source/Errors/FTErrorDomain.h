@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 extern NSString * const FTFlytechErrorDomain;
+extern NSString * const FTFlytechErrorUserInfoKeyInvalidResponse;
 
 typedef NS_ENUM(NSUInteger, FTFlytechErrorCode) {
     FTFlytechErrorCodeUndefined,
@@ -19,7 +20,9 @@ typedef NS_ENUM(NSUInteger, FTFlytechErrorCode) {
     FTFlytechErrorCodeAlreadyConnecting,
     FTFlytechErrorCodeConnectionTimedOut,
     FTFlytechErrorCodeConnectionFailed,
-    FTFlytechErrorCodeConnectionInterrupted
+    FTFlytechErrorCodeConnectionInterrupted,
+    FTFlytechErrorCodePrinterCommunicationFailed,
+    FTFlytechErrorCodePrinterReceivedInvalidResponse
 };
 
 @interface FTErrorDomain : NSObject

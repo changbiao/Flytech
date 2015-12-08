@@ -46,6 +46,7 @@ NSString * const FTPrinterHexCmdNVBitImagePrint = @"1C70";
 NSString * const FTPrinterHexCmdRasterBitImagePrint = @"1D7630";
 NSString * const FTPrinterHexCmdAbsolutePositionSpecify = @"1B24";
 NSString * const FTPrinterHexCmdVerticalAbsolutePositionSpecifyInPageMode = @"1D24";
+NSString * const FTPrinterHexCmdFunctionSettingsChange = @"126B";
 NSString * const FTPrinterHexCmdFunctionSettingResponse = @"126C00";
 NSString * const FTPrinterHexCmdExecutionResponseRequest = @"1271";
 NSString * const FTPrinterHexCmdAutomaticStatusBackEnableDisable = @"1D61";
@@ -56,3 +57,5 @@ NSString * const FTPrinterHexCmd512ZeroBytes = @"00000000 00000000 00000000 0000
                                                 "00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 \n"
                                                 "00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 \n"
                                                 "00000000 00000000 00000000 00000000";
+NSString * const FTPrinterHexCmdCharacterPrintDirectionSpecifyInPageMade = @"1B54";
+NSString * const FTPrinterHexCmdInversionFlipPrintingSpecifyCancel = @"1B7B";

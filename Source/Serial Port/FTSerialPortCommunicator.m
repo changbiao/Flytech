@@ -51,6 +51,11 @@
     [self addTask:[FTSerialPortCommunicatorTask sendDataTaskWithPortNumber:portNumber data:data completionHandler:completion]];
 }
 
+- (void)sendDataEnsured:(NSData *)data toPortNumber:(FTSerialPortNumber)portNumber completion:(void (^)(NSError *))completion {
+    FTLog(@"Data: %@, Port number: %ld", data, portNumber);
+    [self addTask:[FTSerialPortCommunicatorTask sendDataEnsuredTaskWithPortNumber:portNumber data:data completionHandler:completion]];
+}
+
 #pragma mark - Internals
 
 - (void)addTask:(FTSerialPortCommunicatorTask *)task {
@@ -65,6 +70,7 @@
         case FTSerialPortCommunicatorTaskTypeGetConfiguration: [self processGetConfigurationTask:task]; break;
         case FTSerialPortCommunicatorTaskTypeSetConfiguration: [self processSetConfigurationTask:task]; break;
         case FTSerialPortCommunicatorTaskTypeSendData: [self processSendDataTask:task]; break;
+        case FTSerialPortCommunicatorTaskTypeSendDataEnsured: [self processSendDataEnsuredTask:task]; break;
     }
 }
 
@@ -161,37 +167,17 @@
 }
 
 - (void)processSendDataTask:(FTSerialPortCommunicatorTask *)task {
-    CBService *serialPortService;
-    CBCharacteristic *writeCharacteristic;
-    switch (task.portNumber) {
-        case FTSerialPortNumberOne:
-            serialPortService = [self.peripheral serviceWithUUIDString:FTServiceUUIDStringSerialPortOne];
-            writeCharacteristic = [serialPortService characteristicForUUIDString:FTCharacteristicUUIDStringSerialPortOneRX];
-            break;
-        case FTSerialPortNumberTwo:
-            serialPortService = [self.peripheral serviceWithUUIDString:FTServiceUUIDStringSerialPortTwo];
-            writeCharacteristic = [serialPortService characteristicForUUIDString:FTCharacteristicUUIDStringSerialPortTwoRX];
-            break;
-        case FTSerialPortNumberThree:
-            serialPortService = [self.peripheral serviceWithUUIDString:FTServiceUUIDStringSerialPortThree];
-            writeCharacteristic = [serialPortService characteristicForUUIDString:FTCharacteristicUUIDStringSerialPortThreeRX];
-            break;
-    }
+    CBService *serialPortService = [self serviceForPortNumber:task.portNumber];
+    CBCharacteristic *writeCharacteristic = [self writeCharacteristicForService:serialPortService];
     NSData *remainingData = task.data;
+    CBCharacteristicWriteType writeType = CBCharacteristicWriteWithoutResponse;
+    NSUInteger chunkSize = 100;
     while (remainingData) {
-        NSData *payload = remainingData.length > 20 ? [remainingData subdataWithRange:NSMakeRange(0, 20)] : remainingData;
-        [self.peripheral writeValue:payload forCharacteristic:writeCharacteristic type:CBCharacteristicWriteWithResponse];
-        remainingData = remainingData.length > 20 ? [remainingData subdataWithRange:NSMakeRange(19, remainingData.length - 20)] : nil;
+        NSData *payload = remainingData.length > chunkSize ? [remainingData subdataWithRange:NSMakeRange(0, chunkSize)] : remainingData;
+        [self.peripheral writeValue:payload forCharacteristic:writeCharacteristic type:writeType];
+        remainingData = remainingData.length > chunkSize ? [remainingData subdataWithRange:NSMakeRange(chunkSize, remainingData.length - chunkSize)] : nil;
     }
-    [self completeCurrentSendDataTask];
-}
-
-- (void)completeCurrentSendDataTask {
-    void(^completionHandler)(NSError *error) = self.tasks.firstObject.completionHandler;
-    [self completeCurrentTask];
-    if (completionHandler) {
-        completionHandler(nil);
-    }
+    [self completeCurrentSendDataTaskWithError:nil];
 }
 
 #pragma mark - Accessors

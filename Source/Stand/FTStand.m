@@ -47,15 +47,6 @@
     }
 }
 
-- (void)print:(FTPrintHandler)printHandler completion:(FTPrintCompletionHandler)completionHandler {
-    if (printHandler) {
-        printHandler(self.printer);
-    }
-    if (completionHandler) {
-        completionHandler(nil);
-    }
-}
-
 - (void)undockWithCompletion:(FTUndockCompletionHandler)completionHandler {
     if (completionHandler) {
         completionHandler(nil);

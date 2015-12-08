@@ -59,6 +59,14 @@
         case FTFlytechErrorCodeConnectionInterrupted:
             baseUserInfo[NSLocalizedFailureReasonErrorKey] = NSLocalizedString(@"The connection to the stand was interrupted.", nil);
             break;
+        case FTFlytechErrorCodePrinterCommunicationFailed:
+            baseUserInfo[NSLocalizedFailureReasonErrorKey] = NSLocalizedString(@"Communication to the printer failed.", nil);
+            baseUserInfo[NSLocalizedRecoverySuggestionErrorKey] = NSLocalizedString(@"Inspect the underlying error from the serial port communicator.", nil);
+            break;
+        case FTFlytechErrorCodePrinterReceivedInvalidResponse:
+            baseUserInfo[NSLocalizedFailureReasonErrorKey] = NSLocalizedString(@"An invalid or unexpected response was received from the printer.", nil);
+            baseUserInfo[NSLocalizedRecoverySuggestionErrorKey] = NSLocalizedString(@"Inspect the received data to debug.", nil);
+            break;
     }
     return baseUserInfo;
 }

@@ -11,6 +11,7 @@
 
 typedef NS_ENUM(NSUInteger, FTSerialPortCommunicatorTaskType) {
     FTSerialPortCommunicatorTaskTypeSendData,
+    FTSerialPortCommunicatorTaskTypeSendDataEnsured,
     FTSerialPortCommunicatorTaskTypeGetConfiguration,
     FTSerialPortCommunicatorTaskTypeSetConfiguration
 };
@@ -22,8 +23,11 @@ typedef NS_ENUM(NSUInteger, FTSerialPortCommunicatorTaskType) {
 @property (strong, nonatomic) FTSerialPortConfiguration *configuration;
 @property (copy, nonatomic) NSData *data;
 @property (copy, nonatomic) id completionHandler;
+@property (strong, nonatomic) CBService *service;
+@property (strong, nonatomic) CBCharacteristic *characteristic;
 
 + (instancetype)sendDataTaskWithPortNumber:(FTSerialPortNumber)portNumber data:(NSData *)data completionHandler:(void(^)(NSError *error))completionHandler;
++ (instancetype)sendDataEnsuredTaskWithPortNumber:(FTSerialPortNumber)portNumber data:(NSData *)data completionHandler:(void(^)(NSError *error))completionHandler;
 + (instancetype)getConfigurationTaskWithPortNumber:(FTSerialPortNumber)portNumber completionHandler:(void(^)(FTSerialPortConfiguration *configuration, NSError *error))completionHandler;
 + (instancetype)setConfigurationTaskWithPortNumber:(FTSerialPortNumber)portNumber configuration:(FTSerialPortConfiguration *)configuration completionHandler:(void(^)(NSError *error))completionHandler;
 

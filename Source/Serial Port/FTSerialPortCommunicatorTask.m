@@ -18,6 +18,12 @@
     return task;
 }
 
++ (instancetype)sendDataEnsuredTaskWithPortNumber:(FTSerialPortNumber)portNumber data:(NSData *)data completionHandler:(void (^)(NSError *))completionHandler {
+    FTSerialPortCommunicatorTask *task = [self taskWithType:FTSerialPortCommunicatorTaskTypeSendDataEnsured portNumber:portNumber completionHandler:completionHandler];
+    task.data = data;
+    return task;
+}
+
 + (instancetype)getConfigurationTaskWithPortNumber:(FTSerialPortNumber)portNumber completionHandler:(void(^)(FTSerialPortConfiguration *configuration, NSError *error))completionHandler {
     return [self taskWithType:FTSerialPortCommunicatorTaskTypeGetConfiguration portNumber:portNumber completionHandler:completionHandler];
 }

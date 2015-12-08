@@ -10,7 +10,7 @@
 #define FTDebugging_h
 
 #define FTDebugLoggingEnabled
-#define FTBLEDebugLoggingEnabled
+// #define FTBLEDebugLoggingEnabled
 
 #ifdef FTDebugLoggingEnabled
 #   define FTLog(fmt, ...)   NSLog((@"[Flytech ] %s " fmt), __PRETTY_FUNCTION__, ##__VA_ARGS__);

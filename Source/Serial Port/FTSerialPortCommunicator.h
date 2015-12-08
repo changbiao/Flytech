@@ -38,5 +38,6 @@ typedef NS_ENUM(NSUInteger, FTSerialPortCommunicatorErrorCode) {
 - (void)configurationForPortNumber:(FTSerialPortNumber)portNumber completion:(void(^)(FTSerialPortConfiguration *configuration, NSError *error))completion;
 - (void)applyConfiguration:(FTSerialPortConfiguration *)configuration toPortNumber:(FTSerialPortNumber)portNumber completion:(void(^)(NSError *error))completion;
 - (void)sendData:(NSData *)data toPortNumber:(FTSerialPortNumber)portNumber completion:(void(^)(NSError *error))completion;
+- (void)sendDataEnsured:(NSData *)data toPortNumber:(FTSerialPortNumber)portNumber completion:(void(^)(NSError *error))completion;
 
 @end

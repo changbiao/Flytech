@@ -24,6 +24,24 @@
 
 #pragma mark - Private Interface
 
+- (void)processSendDataEnsuredTask:(FTSerialPortCommunicatorTask *)task {
+    task.service = [self serviceForPortNumber:task.portNumber];
+    task.characteristic = [self writeCharacteristicForService:task.service];
+    [self continueProcessingSendDataEnsuredTask:task];
+}
+
+- (void)continueProcessingSendDataEnsuredTask:(FTSerialPortCommunicatorTask *)task {
+    CBCharacteristicWriteType writeType = CBCharacteristicWriteWithResponse;
+    NSUInteger chunkSize = 20;
+    if (task.data) {
+        NSData *payload = task.data.length > chunkSize ? [task.data subdataWithRange:NSMakeRange(0, chunkSize)] : task.data;
+        task.data = task.data.length > chunkSize ? [task.data subdataWithRange:NSMakeRange(chunkSize, task.data.length - chunkSize)] : nil;
+        [self.peripheral writeValue:payload forCharacteristic:task.characteristic type:writeType];
+    } else {
+        [self completeCurrentSendDataTaskWithError:nil];
+    }
+}
+
 - (void)receiveData:(NSData *)data forCharacteristic:(CBCharacteristic *)characteristic {
     if ([characteristic.service.UUID.UUIDString isEqualToString:FTServiceUUIDStringConfiguration]) {
         [self handleResponseForGetConfigurationWithResponseData:data];
@@ -33,6 +51,18 @@
         [self handleReceivedData:data fromPortNumber:FTSerialPortNumberTwo];
     } else if ([characteristic.UUID.UUIDString isEqualToString:FTCharacteristicUUIDStringSerialPortThreeTX]) {
         [self handleReceivedData:data fromPortNumber:FTSerialPortNumberThree];
+    }
+}
+
+- (void)sendingDataCompletedForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
+    FTSerialPortCommunicatorTask *currentTask = self.tasks.firstObject;
+    if (!currentTask || currentTask.characteristic != characteristic) {
+        return;
+    }
+    if (error) {
+        [self completeCurrentSendDataTaskWithError:error];
+    } else {
+        [self continueProcessingSendDataEnsuredTask:currentTask];
     }
 }
 
@@ -61,7 +91,7 @@
         dataReception.data = [NSMutableData dataWithData:data];
         [self.dataReceptions addObject:dataReception];
     }
-    dataReception.timer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(dataReceptionTimerElapsed:) userInfo:nil repeats:NO];
+    dataReception.timer = [NSTimer scheduledTimerWithTimeInterval:0.035 target:self selector:@selector(dataReceptionTimerElapsed:) userInfo:nil repeats:NO];
 }
 
 - (void)dataReceptionTimerElapsed:(NSTimer *)timer {
@@ -70,6 +100,33 @@
     [self.dataReceptions removeObject:dataReception];
     for (id<FTSerialPortCommunicatorObserver> serialPortCommunicatorObserver in self.observers) {
         [serialPortCommunicatorObserver serialPortCommunicator:self receivedData:dataReception.data fromPortNumber:dataReception.portNumber];
+    }
+}
+
+- (CBService *)serviceForPortNumber:(FTSerialPortNumber)portNumber {
+    switch (portNumber) {
+        case FTSerialPortNumberOne: return [self.peripheral serviceWithUUIDString:FTServiceUUIDStringSerialPortOne]; break;
+        case FTSerialPortNumberTwo: return [self.peripheral serviceWithUUIDString:FTServiceUUIDStringSerialPortTwo]; break;
+        case FTSerialPortNumberThree: return [self.peripheral serviceWithUUIDString:FTServiceUUIDStringSerialPortThree]; break;
+    }
+}
+
+- (CBCharacteristic *)writeCharacteristicForService:(CBService *)service {
+    if ([service.UUID.UUIDString isEqualToString:FTServiceUUIDStringSerialPortOne]) {
+        return [service characteristicForUUIDString:FTCharacteristicUUIDStringSerialPortOneRX];
+    } else if ([service.UUID.UUIDString isEqualToString:FTServiceUUIDStringSerialPortTwo]) {
+        return [service characteristicForUUIDString:FTCharacteristicUUIDStringSerialPortTwoRX];
+    } else if ([service.UUID.UUIDString isEqualToString:FTServiceUUIDStringSerialPortThree]) {
+        return [service characteristicForUUIDString:FTCharacteristicUUIDStringSerialPortThreeRX];
+    }
+    return nil;
+}
+
+- (void)completeCurrentSendDataTaskWithError:(NSError *)error {
+    void(^completionHandler)(NSError *error) = self.tasks.firstObject.completionHandler;
+    [self completeCurrentTask];
+    if (completionHandler) {
+        completionHandler(nil);
     }
 }
 

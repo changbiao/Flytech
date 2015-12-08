@@ -9,6 +9,7 @@
 #import "FTErrorDomain.h"
 
 NSString * const FTFlytechErrorDomain = @"com.glastonia.Flytech.FTFlytechErrorDomain";
+NSString * const FTFlytechErrorUserInfoKeyInvalidResponse = @"Invalid response";
 
 @implementation FTErrorDomain
 

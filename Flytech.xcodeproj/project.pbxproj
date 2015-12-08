@@ -15,6 +15,26 @@
 		C60911DE1BFDB690001E70BA /* FTDebugging.h in Headers */ = {isa = PBXBuildFile; fileRef = C60911DD1BFDB690001E70BA /* FTDebugging.h */; };
 		C60911DF1BFDB690001E70BA /* FTDebugging.h in Headers */ = {isa = PBXBuildFile; fileRef = C60911DD1BFDB690001E70BA /* FTDebugging.h */; };
 		C610B07B1BCE42C200DF3854 /* Flytech.h in Headers */ = {isa = PBXBuildFile; fileRef = C610B0781BCE42C200DF3854 /* Flytech.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C62872C01C15B6B30016217C /* FTPrinterPageBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C62872BE1C15B6B30016217C /* FTPrinterPageBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C62872C11C15B6B30016217C /* FTPrinterPageBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C62872BE1C15B6B30016217C /* FTPrinterPageBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C62872C21C15B6B30016217C /* FTPrinterPageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = C62872BF1C15B6B30016217C /* FTPrinterPageBuilder.m */; };
+		C62872C31C15B6B30016217C /* FTPrinterPageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = C62872BF1C15B6B30016217C /* FTPrinterPageBuilder.m */; };
+		C66828281C032D1B006FFDB1 /* FTPrinterFunctionSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = C66828261C032D1B006FFDB1 /* FTPrinterFunctionSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C66828291C032D1B006FFDB1 /* FTPrinterFunctionSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = C66828261C032D1B006FFDB1 /* FTPrinterFunctionSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C668282A1C032D1B006FFDB1 /* FTPrinterFunctionSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = C66828271C032D1B006FFDB1 /* FTPrinterFunctionSettings.m */; };
+		C668282B1C032D1B006FFDB1 /* FTPrinterFunctionSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = C66828271C032D1B006FFDB1 /* FTPrinterFunctionSettings.m */; };
+		C67065B81C15B7FE00302D0E /* FTPrinterPageTextComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = C67065B61C15B7FE00302D0E /* FTPrinterPageTextComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C67065B91C15B7FE00302D0E /* FTPrinterPageTextComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = C67065B61C15B7FE00302D0E /* FTPrinterPageTextComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C67065BA1C15B7FE00302D0E /* FTPrinterPageTextComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = C67065B71C15B7FE00302D0E /* FTPrinterPageTextComponent.m */; };
+		C67065BB1C15B7FE00302D0E /* FTPrinterPageTextComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = C67065B71C15B7FE00302D0E /* FTPrinterPageTextComponent.m */; };
+		C67065BE1C15B9D200302D0E /* FTPrinterPageColumnsComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = C67065BC1C15B9D200302D0E /* FTPrinterPageColumnsComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C67065BF1C15B9D200302D0E /* FTPrinterPageColumnsComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = C67065BC1C15B9D200302D0E /* FTPrinterPageColumnsComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C67065C01C15B9D200302D0E /* FTPrinterPageColumnsComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = C67065BD1C15B9D200302D0E /* FTPrinterPageColumnsComponent.m */; };
+		C67065C11C15B9D200302D0E /* FTPrinterPageColumnsComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = C67065BD1C15B9D200302D0E /* FTPrinterPageColumnsComponent.m */; };
+		C67065CA1C15BB2C00302D0E /* FTPrinterPageComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = C67065C81C15BB2C00302D0E /* FTPrinterPageComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C67065CB1C15BB2C00302D0E /* FTPrinterPageComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = C67065C81C15BB2C00302D0E /* FTPrinterPageComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C67065CC1C15BB2C00302D0E /* FTPrinterPageComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = C67065C91C15BB2C00302D0E /* FTPrinterPageComponent.m */; };
+		C67065CD1C15BB2C00302D0E /* FTPrinterPageComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = C67065C91C15BB2C00302D0E /* FTPrinterPageComponent.m */; };
 		C6BA55901BFB181B00077FBC /* CBCentralManager+Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55471BFB181B00077FBC /* CBCentralManager+Factory.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		C6BA55911BFB181B00077FBC /* CBCentralManager+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55481BFB181B00077FBC /* CBCentralManager+Factory.m */; };
 		C6BA55921BFB181B00077FBC /* CBPeripheral+Services.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55491BFB181B00077FBC /* CBPeripheral+Services.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -85,6 +105,22 @@
 		C6BA55D51BFB20B800077FBC /* FTPrinter+Advanced.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55D21BFB20B800077FBC /* FTPrinter+Advanced.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C6BA55D61BFB20B800077FBC /* FTPrinter+Advanced.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55D31BFB20B800077FBC /* FTPrinter+Advanced.m */; };
 		C6BA55D71BFB20B800077FBC /* FTPrinter+Advanced.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55D31BFB20B800077FBC /* FTPrinter+Advanced.m */; };
+		C6CA5D081C06EFE0000F6CBA /* FTPrinterFunctionSettings+Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = C6CA5D061C06EFE0000F6CBA /* FTPrinterFunctionSettings+Factory.h */; };
+		C6CA5D091C06EFE0000F6CBA /* FTPrinterFunctionSettings+Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = C6CA5D061C06EFE0000F6CBA /* FTPrinterFunctionSettings+Factory.h */; };
+		C6CA5D0A1C06EFE0000F6CBA /* FTPrinterFunctionSettings+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5D071C06EFE0000F6CBA /* FTPrinterFunctionSettings+Factory.m */; };
+		C6CA5D0B1C06EFE0000F6CBA /* FTPrinterFunctionSettings+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5D071C06EFE0000F6CBA /* FTPrinterFunctionSettings+Factory.m */; };
+		C6CA5D0E1C06F4B6000F6CBA /* FTPrinterTask.h in Headers */ = {isa = PBXBuildFile; fileRef = C6CA5D0C1C06F4B6000F6CBA /* FTPrinterTask.h */; };
+		C6CA5D0F1C06F4B6000F6CBA /* FTPrinterTask.h in Headers */ = {isa = PBXBuildFile; fileRef = C6CA5D0C1C06F4B6000F6CBA /* FTPrinterTask.h */; };
+		C6CA5D101C06F4B6000F6CBA /* FTPrinterTask.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5D0D1C06F4B6000F6CBA /* FTPrinterTask.m */; };
+		C6CA5D111C06F4B6000F6CBA /* FTPrinterTask.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5D0D1C06F4B6000F6CBA /* FTPrinterTask.m */; };
+		C6CA5D141C071196000F6CBA /* FTPrinterStatusUpdate.h in Headers */ = {isa = PBXBuildFile; fileRef = C6CA5D121C071196000F6CBA /* FTPrinterStatusUpdate.h */; };
+		C6CA5D151C071196000F6CBA /* FTPrinterStatusUpdate.h in Headers */ = {isa = PBXBuildFile; fileRef = C6CA5D121C071196000F6CBA /* FTPrinterStatusUpdate.h */; };
+		C6CA5D161C071196000F6CBA /* FTPrinterStatusUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5D131C071196000F6CBA /* FTPrinterStatusUpdate.m */; };
+		C6CA5D171C071196000F6CBA /* FTPrinterStatusUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5D131C071196000F6CBA /* FTPrinterStatusUpdate.m */; };
+		C6D9E84E1C16DC5800F12EB5 /* NSString+FTWordWrap.h in Headers */ = {isa = PBXBuildFile; fileRef = C6D9E84C1C16DC5800F12EB5 /* NSString+FTWordWrap.h */; };
+		C6D9E84F1C16DC5800F12EB5 /* NSString+FTWordWrap.h in Headers */ = {isa = PBXBuildFile; fileRef = C6D9E84C1C16DC5800F12EB5 /* NSString+FTWordWrap.h */; };
+		C6D9E8501C16DC5800F12EB5 /* NSString+FTWordWrap.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D9E84D1C16DC5800F12EB5 /* NSString+FTWordWrap.m */; };
+		C6D9E8511C16DC5800F12EB5 /* NSString+FTWordWrap.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D9E84D1C16DC5800F12EB5 /* NSString+FTWordWrap.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +131,16 @@
 		C610B0781BCE42C200DF3854 /* Flytech.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flytech.h; sourceTree = "<group>"; };
 		C610B07A1BCE42C200DF3854 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C610B0861BCE504C00DF3854 /* Flytech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Flytech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C62872BE1C15B6B30016217C /* FTPrinterPageBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPrinterPageBuilder.h; sourceTree = "<group>"; };
+		C62872BF1C15B6B30016217C /* FTPrinterPageBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPrinterPageBuilder.m; sourceTree = "<group>"; };
+		C66828261C032D1B006FFDB1 /* FTPrinterFunctionSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPrinterFunctionSettings.h; sourceTree = "<group>"; };
+		C66828271C032D1B006FFDB1 /* FTPrinterFunctionSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPrinterFunctionSettings.m; sourceTree = "<group>"; };
+		C67065B61C15B7FE00302D0E /* FTPrinterPageTextComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPrinterPageTextComponent.h; sourceTree = "<group>"; };
+		C67065B71C15B7FE00302D0E /* FTPrinterPageTextComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPrinterPageTextComponent.m; sourceTree = "<group>"; };
+		C67065BC1C15B9D200302D0E /* FTPrinterPageColumnsComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPrinterPageColumnsComponent.h; sourceTree = "<group>"; };
+		C67065BD1C15B9D200302D0E /* FTPrinterPageColumnsComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPrinterPageColumnsComponent.m; sourceTree = "<group>"; };
+		C67065C81C15BB2C00302D0E /* FTPrinterPageComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPrinterPageComponent.h; sourceTree = "<group>"; };
+		C67065C91C15BB2C00302D0E /* FTPrinterPageComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPrinterPageComponent.m; sourceTree = "<group>"; };
 		C6BA55471BFB181B00077FBC /* CBCentralManager+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBCentralManager+Factory.h"; sourceTree = "<group>"; };
 		C6BA55481BFB181B00077FBC /* CBCentralManager+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBCentralManager+Factory.m"; sourceTree = "<group>"; };
 		C6BA55491BFB181B00077FBC /* CBPeripheral+Services.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBPeripheral+Services.h"; sourceTree = "<group>"; };
@@ -163,6 +209,14 @@
 		C6BA558F1BFB181B00077FBC /* NSString+FTHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FTHex.m"; sourceTree = "<group>"; };
 		C6BA55D21BFB20B800077FBC /* FTPrinter+Advanced.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FTPrinter+Advanced.h"; sourceTree = "<group>"; };
 		C6BA55D31BFB20B800077FBC /* FTPrinter+Advanced.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FTPrinter+Advanced.m"; sourceTree = "<group>"; };
+		C6CA5D061C06EFE0000F6CBA /* FTPrinterFunctionSettings+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FTPrinterFunctionSettings+Factory.h"; sourceTree = "<group>"; };
+		C6CA5D071C06EFE0000F6CBA /* FTPrinterFunctionSettings+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FTPrinterFunctionSettings+Factory.m"; sourceTree = "<group>"; };
+		C6CA5D0C1C06F4B6000F6CBA /* FTPrinterTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPrinterTask.h; sourceTree = "<group>"; };
+		C6CA5D0D1C06F4B6000F6CBA /* FTPrinterTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPrinterTask.m; sourceTree = "<group>"; };
+		C6CA5D121C071196000F6CBA /* FTPrinterStatusUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPrinterStatusUpdate.h; sourceTree = "<group>"; };
+		C6CA5D131C071196000F6CBA /* FTPrinterStatusUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPrinterStatusUpdate.m; sourceTree = "<group>"; };
+		C6D9E84C1C16DC5800F12EB5 /* NSString+FTWordWrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FTWordWrap.h"; sourceTree = "<group>"; };
+		C6D9E84D1C16DC5800F12EB5 /* NSString+FTWordWrap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FTWordWrap.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +348,22 @@
 				C6BA55D31BFB20B800077FBC /* FTPrinter+Advanced.m */,
 				C6BA55661BFB181B00077FBC /* FTPrinter+HexCmd.h */,
 				C6BA55671BFB181B00077FBC /* FTPrinter+HexCmd.m */,
+				C62872BE1C15B6B30016217C /* FTPrinterPageBuilder.h */,
+				C62872BF1C15B6B30016217C /* FTPrinterPageBuilder.m */,
+				C67065C81C15BB2C00302D0E /* FTPrinterPageComponent.h */,
+				C67065C91C15BB2C00302D0E /* FTPrinterPageComponent.m */,
+				C67065B61C15B7FE00302D0E /* FTPrinterPageTextComponent.h */,
+				C67065B71C15B7FE00302D0E /* FTPrinterPageTextComponent.m */,
+				C67065BC1C15B9D200302D0E /* FTPrinterPageColumnsComponent.h */,
+				C67065BD1C15B9D200302D0E /* FTPrinterPageColumnsComponent.m */,
+				C6CA5D121C071196000F6CBA /* FTPrinterStatusUpdate.h */,
+				C6CA5D131C071196000F6CBA /* FTPrinterStatusUpdate.m */,
+				C66828261C032D1B006FFDB1 /* FTPrinterFunctionSettings.h */,
+				C66828271C032D1B006FFDB1 /* FTPrinterFunctionSettings.m */,
+				C6CA5D061C06EFE0000F6CBA /* FTPrinterFunctionSettings+Factory.h */,
+				C6CA5D071C06EFE0000F6CBA /* FTPrinterFunctionSettings+Factory.m */,
+				C6CA5D0C1C06F4B6000F6CBA /* FTPrinterTask.h */,
+				C6CA5D0D1C06F4B6000F6CBA /* FTPrinterTask.m */,
 			);
 			path = Printer;
 			sourceTree = "<group>";
@@ -348,6 +418,8 @@
 				C6BA558D1BFB181B00077FBC /* NSMutableData+FTPrepend.m */,
 				C6BA558E1BFB181B00077FBC /* NSString+FTHex.h */,
 				C6BA558F1BFB181B00077FBC /* NSString+FTHex.m */,
+				C6D9E84C1C16DC5800F12EB5 /* NSString+FTWordWrap.h */,
+				C6D9E84D1C16DC5800F12EB5 /* NSString+FTWordWrap.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -360,6 +432,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6BA559E1BFB181B00077FBC /* FTBLEAvailability.h in Headers */,
+				C6CA5D141C071196000F6CBA /* FTPrinterStatusUpdate.h in Headers */,
+				C67065CA1C15BB2C00302D0E /* FTPrinterPageComponent.h in Headers */,
 				C6BA55AA1BFB181B00077FBC /* FTFlytech.h in Headers */,
 				C6BA55A81BFB181B00077FBC /* FTFlytech+SharedInstance.h in Headers */,
 				C6BA559C1BFB181B00077FBC /* FTErrorDomain.h in Headers */,
@@ -381,18 +455,25 @@
 				C6BA55981BFB181B00077FBC /* FTPeripheralController.h in Headers */,
 				C6BA55C81BFB181C00077FBC /* NSData+FTHex.h in Headers */,
 				C6BA55CA1BFB181C00077FBC /* NSData+FTReverse.h in Headers */,
+				C6CA5D081C06EFE0000F6CBA /* FTPrinterFunctionSettings+Factory.h in Headers */,
 				C6BA55AE1BFB181B00077FBC /* FTPrinter+Private.h in Headers */,
 				C6BA55901BFB181B00077FBC /* CBCentralManager+Factory.h in Headers */,
 				C6BA55C61BFB181C00077FBC /* NSData+FTDescriptionBits.h in Headers */,
 				C6BA55AC1BFB181B00077FBC /* FTPrinter+HexCmd.h in Headers */,
 				C60911DE1BFDB690001E70BA /* FTDebugging.h in Headers */,
+				C67065B81C15B7FE00302D0E /* FTPrinterPageTextComponent.h in Headers */,
 				C6BA55BA1BFB181B00077FBC /* FTSerialPortConfiguration+Factory.h in Headers */,
+				C6D9E84E1C16DC5800F12EB5 /* NSString+FTWordWrap.h in Headers */,
 				C6BA55941BFB181B00077FBC /* CBService+Characteristics.h in Headers */,
+				C6CA5D0E1C06F4B6000F6CBA /* FTPrinterTask.h in Headers */,
 				C6BA55CE1BFB181C00077FBC /* NSMutableData+FTPrepend.h in Headers */,
+				C66828281C032D1B006FFDB1 /* FTPrinterFunctionSettings.h in Headers */,
 				C6BA55B61BFB181B00077FBC /* FTSerialPortCommunicator.h in Headers */,
 				C6BA55A21BFB181B00077FBC /* FTConnectionAttempt.h in Headers */,
 				C6BA55C01BFB181C00077FBC /* FTStand+Private.h in Headers */,
 				C6BA55A01BFB181B00077FBC /* FTBLEAvailabilityAdapter.h in Headers */,
+				C62872C01C15B6B30016217C /* FTPrinterPageBuilder.h in Headers */,
+				C67065BE1C15B9D200302D0E /* FTPrinterPageColumnsComponent.h in Headers */,
 				C6BA55C41BFB181C00077FBC /* FTStandModelNumberParser.h in Headers */,
 				C610B07B1BCE42C200DF3854 /* Flytech.h in Headers */,
 				C6BA55D41BFB20B800077FBC /* FTPrinter+Advanced.h in Headers */,
@@ -404,9 +485,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				C60911DA1BFC8AA2001E70BA /* FTSerialPortDataReception.h in Headers */,
+				C6CA5D0F1C06F4B6000F6CBA /* FTPrinterTask.h in Headers */,
+				C67065B91C15B7FE00302D0E /* FTPrinterPageTextComponent.h in Headers */,
+				C62872C11C15B6B30016217C /* FTPrinterPageBuilder.h in Headers */,
+				C6D9E84F1C16DC5800F12EB5 /* NSString+FTWordWrap.h in Headers */,
+				C6CA5D151C071196000F6CBA /* FTPrinterStatusUpdate.h in Headers */,
+				C6CA5D091C06EFE0000F6CBA /* FTPrinterFunctionSettings+Factory.h in Headers */,
 				C60911DF1BFDB690001E70BA /* FTDebugging.h in Headers */,
+				C67065BF1C15B9D200302D0E /* FTPrinterPageColumnsComponent.h in Headers */,
+				C67065CB1C15BB2C00302D0E /* FTPrinterPageComponent.h in Headers */,
 				C60911BA1BFB8C8B001E70BA /* Flytech.h in Headers */,
 				C6BA55D51BFB20B800077FBC /* FTPrinter+Advanced.h in Headers */,
+				C66828291C032D1B006FFDB1 /* FTPrinterFunctionSettings.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,8 +597,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6BA55A71BFB181B00077FBC /* FTConnectivity.m in Sources */,
+				C67065C01C15B9D200302D0E /* FTPrinterPageColumnsComponent.m in Sources */,
 				C6BA55CB1BFB181C00077FBC /* NSData+FTReverse.m in Sources */,
 				C6BA55B71BFB181B00077FBC /* FTSerialPortCommunicator.m in Sources */,
+				C62872C21C15B6B30016217C /* FTPrinterPageBuilder.m in Sources */,
 				C6BA55C11BFB181C00077FBC /* FTStand+Private.m in Sources */,
 				C6BA55D11BFB181C00077FBC /* NSString+FTHex.m in Sources */,
 				C6BA559D1BFB181B00077FBC /* FTErrorDomain.m in Sources */,
@@ -522,8 +614,11 @@
 				C6BA55CF1BFB181C00077FBC /* NSMutableData+FTPrepend.m in Sources */,
 				C6BA55BD1BFB181C00077FBC /* FTSerialPortConfiguration.m in Sources */,
 				C6BA55971BFB181B00077FBC /* FTCentralManagerDelegateProxy.m in Sources */,
+				C6CA5D161C071196000F6CBA /* FTPrinterStatusUpdate.m in Sources */,
+				C6D9E8501C16DC5800F12EB5 /* NSString+FTWordWrap.m in Sources */,
 				C6BA55931BFB181B00077FBC /* CBPeripheral+Services.m in Sources */,
 				C6BA55AB1BFB181B00077FBC /* FTFlytech.m in Sources */,
+				C6CA5D0A1C06EFE0000F6CBA /* FTPrinterFunctionSettings+Factory.m in Sources */,
 				C6BA55B91BFB181B00077FBC /* FTSerialPortCommunicatorTask.m in Sources */,
 				C6BA55CD1BFB181C00077FBC /* NSData+FTTrim.m in Sources */,
 				C6BA55B31BFB181B00077FBC /* FTScanner.m in Sources */,
@@ -533,14 +628,18 @@
 				C6BA55BF1BFB181C00077FBC /* FTSerialPortConfigurator.m in Sources */,
 				C6BA55991BFB181B00077FBC /* FTPeripheralController.m in Sources */,
 				C6BA559F1BFB181B00077FBC /* FTBLEAvailability.m in Sources */,
+				C668282A1C032D1B006FFDB1 /* FTPrinterFunctionSettings.m in Sources */,
 				C6BA55911BFB181B00077FBC /* CBCentralManager+Factory.m in Sources */,
 				C6BA55C31BFB181C00077FBC /* FTStand.m in Sources */,
 				C6BA55A91BFB181B00077FBC /* FTFlytech+SharedInstance.m in Sources */,
 				C6BA55BB1BFB181C00077FBC /* FTSerialPortConfiguration+Factory.m in Sources */,
 				C6BA55B51BFB181B00077FBC /* FTSerialPortCommunicator+Private.m in Sources */,
+				C67065CC1C15BB2C00302D0E /* FTPrinterPageComponent.m in Sources */,
 				C6BA55AD1BFB181B00077FBC /* FTPrinter+HexCmd.m in Sources */,
 				C6BA55C91BFB181C00077FBC /* NSData+FTHex.m in Sources */,
 				C6BA55A51BFB181B00077FBC /* FTConnectionPool.m in Sources */,
+				C67065BA1C15B7FE00302D0E /* FTPrinterPageTextComponent.m in Sources */,
+				C6CA5D101C06F4B6000F6CBA /* FTPrinterTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,7 +647,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6CA5D111C06F4B6000F6CBA /* FTPrinterTask.m in Sources */,
+				C67065BB1C15B7FE00302D0E /* FTPrinterPageTextComponent.m in Sources */,
+				C6CA5D171C071196000F6CBA /* FTPrinterStatusUpdate.m in Sources */,
+				C668282B1C032D1B006FFDB1 /* FTPrinterFunctionSettings.m in Sources */,
 				C60911DC1BFC8AA2001E70BA /* FTSerialPortDataReception.m in Sources */,
+				C62872C31C15B6B30016217C /* FTPrinterPageBuilder.m in Sources */,
+				C6CA5D0B1C06EFE0000F6CBA /* FTPrinterFunctionSettings+Factory.m in Sources */,
+				C67065CD1C15BB2C00302D0E /* FTPrinterPageComponent.m in Sources */,
+				C6D9E8511C16DC5800F12EB5 /* NSString+FTWordWrap.m in Sources */,
+				C67065C11C15B9D200302D0E /* FTPrinterPageColumnsComponent.m in Sources */,
 				C6BA55D71BFB20B800077FBC /* FTPrinter+Advanced.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

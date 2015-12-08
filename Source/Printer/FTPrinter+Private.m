@@ -9,11 +9,24 @@
 #import "FTPrinter+Private.h"
 #import <objc/runtime.h>
 #import "FTDebugging.h"
+#import "FTPrinterFunctionSettings.h"
+#import "NSData+FTDescriptionBits.h"
+#import "FTPrinter+HexCmd.h"
+#import "NSData+FTHex.h"
+#import "FTPrinterStatusUpdate.h"
+#import "FTErrorDomain+Factory.h"
 
 typedef NS_ENUM(NSUInteger, FTPrinterResponseType) {
     FTPrinterResponseTypeUnknown,
-    FTPrinterResponseTypeStatusUpdate
+    FTPrinterResponseTypeStatusUpdate,
+    FTPrinterResponseTypeFunctionSettings
 };
+
+@interface FTPrinter ()
+
+@property (strong, nonatomic) NSMutableArray *mutableTasks;
+
+@end
 
 @implementation FTPrinter (Private)
 
@@ -29,53 +42,125 @@ typedef NS_ENUM(NSUInteger, FTPrinterResponseType) {
     return self;
 }
 
+#pragma mark - Public Interface
+
+- (void)addTask:(FTPrinterTask *)task {
+    [self.mutableTasks addObject:task];
+    if (self.mutableTasks.count == 1) {
+        [self processNextTask];
+    }
+}
+
+- (void)addSendDataTaskWithData:(NSData *)data completion:(FTPrinterDefaultCompletionHandler)completion {
+    FTPrinterTaskSendData *task = [FTPrinterTaskSendData new];
+    task.data = data;
+    task.completionHandler = completion;
+    [self addTask:task];
+}
+
 #pragma mark - FTSerialPortCommunicatorObserver
 
 - (void)serialPortCommunicator:(FTSerialPortCommunicator *)serialPortCommunicator receivedData:(NSData *)data fromPortNumber:(FTSerialPortNumber)portNumber {
     if (portNumber != self.portNumber) {
         return;
     }
+    [self handleResponseData:data];
+}
+
+#pragma mark - Response Handling
+
+- (void)handleResponseData:(NSData *)data {
     FTLog(@"Received data: %@ from printer", data);
     switch ([self determineResponseTypeForData:data]) {
-        case FTPrinterResponseTypeStatusUpdate: FTLog(@"Data is status update"); break;
-        case FTPrinterResponseTypeUnknown: FTLog(@"Data is of unknown type"); break;
+        case FTPrinterResponseTypeStatusUpdate: [self handleStatusUpdateResponseData:data]; break;
+        case FTPrinterResponseTypeFunctionSettings: [self handleFunctionSettingsResponseData:data]; break;
+        case FTPrinterResponseTypeUnknown: [self handleUnknownResponse:data]; break;
     }
 }
 
-#pragma mark - Internals
-
 - (FTPrinterResponseType)determineResponseTypeForData:(NSData *)data {
-    if ([self dataIsStatusUpdate:data]) {
+    if ([FTPrinterStatusUpdate validateDataForInitialization:data]) {
         return FTPrinterResponseTypeStatusUpdate;
+    } else if ([FTPrinterFunctionSettings validateDataForInitialization:data]) {
+        return FTPrinterResponseTypeFunctionSettings;
     }
     return FTPrinterResponseTypeUnknown;
 }
 
-- (BOOL)dataIsStatusUpdate:(NSData *)data {
-    if (data.length != 4) {
-        return NO;
+- (void)handleStatusUpdateResponseData:(NSData *)data {
+    FTPrinterStatusUpdate *statusUpdate = [[FTPrinterStatusUpdate alloc] initWithData:data];
+    FTLog(@"%@", statusUpdate);
+}
+
+- (void)handleFunctionSettingsResponseData:(NSData *)data {
+    FTPrinterFunctionSettings *functionSettings = [[FTPrinterFunctionSettings alloc] initWithData:data];
+    FTPrinterTask *currentTask = self.mutableTasks.firstObject;
+    if (currentTask && [currentTask isKindOfClass:[FTPrinterTaskGetFunctionSettings class]]) {
+        [self completeCurrentTaskWithResponse:functionSettings error:nil];
+    } else {
+        id userInfo = @{ FTFlytechErrorUserInfoKeyInvalidResponse: data };
+        [self completeCurrentTaskWithResponse:nil error:[FTErrorDomain flytechErrorWithCode:FTFlytechErrorCodePrinterReceivedInvalidResponse userInfo:userInfo]];
     }
-    unsigned char printerMechanismInformation;
-    [data getBytes:&printerMechanismInformation range:NSMakeRange(0, 1)];
-    if (((printerMechanismInformation ^ 0x81) & 0x91) != 0x91) {
-        return NO;
+}
+
+- (void)handleUnknownResponse:(NSData *)data {
+    id userInfo = @{ FTFlytechErrorUserInfoKeyInvalidResponse: data };
+    [self completeCurrentTaskWithResponse:nil error:[FTErrorDomain flytechErrorWithCode:FTFlytechErrorCodePrinterReceivedInvalidResponse userInfo:userInfo]];
+}
+
+#pragma mark - Task Handling
+
+- (void)processNextTask {
+    if (!self.mutableTasks.count) {
+        return;
     }
-    unsigned char errorInformation;
-    [data getBytes:&errorInformation range:NSMakeRange(1, 1)];
-    if (((errorInformation ^ 0x90) & 0x90) != 0x90) {
-        return NO;
+    FTPrinterTask *nextTask = self.mutableTasks[0];
+    if ([nextTask isKindOfClass:[FTPrinterTaskGetFunctionSettings class]]) {
+        [self processGetFunctionSettingsTask:(FTPrinterTaskGetFunctionSettings *)nextTask];
+    } else if ([nextTask isKindOfClass:[FTPrinterTaskSendData class]]) {
+        [self processSendDataTask:(FTPrinterTaskSendData *)nextTask];
+    } else {
+        FTLog(@"Unhandled printer task encountered: %@", nextTask);
     }
-    unsigned char paperSensorInformation;
-    [data getBytes:&paperSensorInformation range:NSMakeRange(2, 1)];
-    if (((paperSensorInformation ^ 0x90) & 0x90) != 0x90) {
-        return NO;
+}
+
+- (void)processGetFunctionSettingsTask:(FTPrinterTaskGetFunctionSettings *)task {
+    [self.serialPortCommunicator sendDataEnsured:[NSData dataWithHex:FTPrinterHexCmdFunctionSettingResponse] toPortNumber:self.portNumber completion:^(NSError *error) {
+        if (error) {
+            [self completeCurrentTaskWithResponse:nil error:[FTErrorDomain flytechErrorWithCode:FTFlytechErrorCodePrinterCommunicationFailed userInfo:@{ NSUnderlyingErrorKey: error }]];
+        }
+    }];
+}
+
+- (void)processSendDataTask:(FTPrinterTaskSendData *)task {
+    [self.serialPortCommunicator sendDataEnsured:task.data toPortNumber:self.portNumber completion:^(NSError *error) {
+        [self completeCurrentTaskWithResponse:nil error:error ? [FTErrorDomain flytechErrorWithCode:FTFlytechErrorCodePrinterCommunicationFailed userInfo:@{ NSUnderlyingErrorKey: error }] : nil];
+    }];
+}
+
+- (void)completeCurrentTaskWithResponse:(id)response error:(NSError *)error {
+    if (!self.mutableTasks.count) {
+        return;
     }
-    unsigned char presenterInformation;
-    [data getBytes:&presenterInformation range:NSMakeRange(3, 1)];
-    if (((presenterInformation ^ 0x90) & 0x90) != 0x90) {
-        return NO;
+    FTPrinterTask *currentTask = self.mutableTasks[0];
+    id completionHandler = currentTask.completionHandler;
+    [self.mutableTasks removeObject:currentTask];
+    if (self.mutableTasks.count) {
+        [self processNextTask];
     }
-    return YES;
+    if ([currentTask isKindOfClass:[FTPrinterTaskGetFunctionSettings class]]) {
+        void(^typedCompletionHandler)(FTPrinterFunctionSettings *functionSettings, NSError *error) = completionHandler;
+        if (typedCompletionHandler) {
+            typedCompletionHandler(response, error);
+        }
+    } else if ([currentTask isKindOfClass:[FTPrinterTaskSendData class]]) {
+        void(^typedCompletionHandler)(NSError *error) = completionHandler;
+        if (typedCompletionHandler) {
+            typedCompletionHandler(error);
+        }
+    } else {
+        FTLog(@"Unhandled printer task enountered: %@", currentTask);
+    }
 }
 
 #pragma mark - Accessors
@@ -88,6 +173,19 @@ typedef NS_ENUM(NSUInteger, FTPrinterResponseType) {
     return [objc_getAssociatedObject(self, @selector(portNumber)) unsignedIntegerValue];
 }
 
+- (NSArray *)tasks {
+    return [NSArray arrayWithArray:self.mutableTasks];
+}
+
+- (NSMutableArray *)mutableTasks {
+    NSMutableArray *mutableTasks = objc_getAssociatedObject(self, @selector(mutableTasks));
+    if (!mutableTasks) {
+        mutableTasks = [NSMutableArray array];
+        self.mutableTasks = mutableTasks;
+    }
+    return mutableTasks;
+}
+
 #pragma mark - Mutators
 
 - (void)setSerialPortCommunicator:(FTSerialPortCommunicator *)serialPortCommunicator {
@@ -96,6 +194,10 @@ typedef NS_ENUM(NSUInteger, FTPrinterResponseType) {
 
 - (void)setPortNumber:(FTSerialPortNumber)portNumber {
     objc_setAssociatedObject(self, @selector(portNumber), @(portNumber), OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (void)setMutableTasks:(NSMutableArray *)mutableTasks {
+    objc_setAssociatedObject(self, @selector(mutableTasks), mutableTasks, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end

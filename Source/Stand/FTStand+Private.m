@@ -13,6 +13,7 @@
 #import "FTPrinter+Private.h"
 #import "FTPrinter+Advanced.h"
 #import "FTDebugging.h"
+#import "FTPrinterFunctionSettings+Factory.h"
 
 @interface FTStand ()
 
@@ -55,11 +56,19 @@
                 completionHandler(error);
                 return;
             }
-            self.printer = [[FTPrinter alloc] initWithSerialPortCommunicator:self.serialPortCommunicator portNumber:[self targetPortNumberForPrinterOnStandModel:self.model]];
-            [self.printer send512ZeroBytes]; // This is due to some bug on the logic board, the first many bytes received are lost.
-            [self.printer initializeHardware];
-            [self.printer enablePrinter:YES];
-            completionHandler(nil);
+            [self initializePrinterWithCompletion:^(NSError *error) {
+                if (error) {
+                    completionHandler(error);
+                    return;
+                }
+                [self ensurePrinterConfigurationWithCompletion:^(NSError *error) {
+                    if (error) {
+                        completionHandler(error);
+                        return;
+                    }
+                    [self.printer enableAutomaticStatusBackForChangingDrawerSensorStatus:YES printerInformation:NO errorStatus:YES paperSensorInformation:YES presenterInformation:NO completion:completionHandler];
+                }];
+            }];
         }];
     }];
 }
@@ -71,6 +80,32 @@
         case FTStandModelT605: return FTSerialPortNumberThree; break;
         case FTStandModelUnknown: return FTSerialPortNumberThree; break;
     }
+}
+
+- (void)initializePrinterWithCompletion:(void(^)(NSError *error))completion {
+    self.printer = [[FTPrinter alloc] initWithSerialPortCommunicator:self.serialPortCommunicator portNumber:[self targetPortNumberForPrinterOnStandModel:self.model]];
+    [self.printer send512ZeroBytesWithCompletion:nil]; // This is due to some bug on the logic board, the first many bytes received are lost.
+    [self.printer initializeHardwareWithCompletion:completion];
+}
+
+- (void)ensurePrinterConfigurationWithCompletion:(void(^)(NSError *error))completion {
+    FTPrinterFunctionSettings *appropriateFunctionSettings = [FTPrinterFunctionSettings functionSettingsForStandModel:self.model];
+    [self.printer functionSettingsWithCompletion:^(FTPrinterFunctionSettings *functionSettings, NSError *error) {
+        if (error) {
+            completion(error);
+            return;
+        }
+        functionSettings.automaticStatusResponseEnabled = NO;
+        if ([functionSettings isEqual:appropriateFunctionSettings]) {
+            completion(nil);
+        } else {
+            [self.printer setFunctionSettings:appropriateFunctionSettings storing:NO completion:completion];
+        }
+    }];
+}
+
+- (void)initializePrinterHardwareWithCompletion:(void(^)(NSError *error))completion {
+    [self.printer initializeHardwareWithCompletion:completion];
 }
 
 #pragma mark - Accessors

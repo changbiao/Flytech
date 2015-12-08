@@ -150,6 +150,9 @@
 
 - (void)peripheral:(CBPeripheral *)peripheral didWriteValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
     FTBLELog(@"Peripheral: %@, Characteristic: %@, Error: %@", peripheral, characteristic, error);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.serialPortCommunicator sendingDataCompletedForCharacteristic:characteristic error:error];
+    });
 }
 
 - (void)peripheral:(CBPeripheral *)peripheral didWriteValueForDescriptor:(CBDescriptor *)descriptor error:(NSError *)error {

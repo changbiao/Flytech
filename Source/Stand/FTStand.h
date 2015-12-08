@@ -32,7 +32,6 @@ typedef void(^FTUndockCompletionHandler)(NSError * _Nullable error);
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithIdentifier:(NSUUID *)identifier NS_DESIGNATED_INITIALIZER;
 
-- (void)print:(FTPrintHandler)printHandler completion:(FTPrintCompletionHandler)completionHandler;
 - (void)undockWithCompletion:(FTUndockCompletionHandler)completionHandler;
 
 @end
