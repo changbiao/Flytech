@@ -88,8 +88,7 @@ typedef NS_ENUM(NSUInteger, ZBPrinterResponseType) {
 }
 
 - (void)handleStatusUpdateResponseData:(NSData *)data {
-    ZBPrinterStatusUpdate *statusUpdate = [[ZBPrinterStatusUpdate alloc] initWithData:data];
-    ZBLog(@"%@", statusUpdate);
+    ZBLog(@"%@", [[ZBPrinterStatusUpdate alloc] initWithData:data]);
 }
 
 - (void)handleFunctionSettingsResponseData:(NSData *)data {
