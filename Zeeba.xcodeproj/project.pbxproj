@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		C60911BA1BFB8C8B001E70BA /* Zeeba.h in Headers */ = {isa = PBXBuildFile; fileRef = C610B0781BCE42C200DF3854 /* Zeeba.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C60911D91BFC8AA2001E70BA /* ZBSerialPortDataReception.h in Headers */ = {isa = PBXBuildFile; fileRef = C60911D71BFC8AA2001E70BA /* ZBSerialPortDataReception.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C60911DA1BFC8AA2001E70BA /* ZBSerialPortDataReception.h in Headers */ = {isa = PBXBuildFile; fileRef = C60911D71BFC8AA2001E70BA /* ZBSerialPortDataReception.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C60911D91BFC8AA2001E70BA /* ZBSerialPortDataReception.h in Headers */ = {isa = PBXBuildFile; fileRef = C60911D71BFC8AA2001E70BA /* ZBSerialPortDataReception.h */; };
+		C60911DA1BFC8AA2001E70BA /* ZBSerialPortDataReception.h in Headers */ = {isa = PBXBuildFile; fileRef = C60911D71BFC8AA2001E70BA /* ZBSerialPortDataReception.h */; };
 		C60911DB1BFC8AA2001E70BA /* ZBSerialPortDataReception.m in Sources */ = {isa = PBXBuildFile; fileRef = C60911D81BFC8AA2001E70BA /* ZBSerialPortDataReception.m */; };
 		C60911DC1BFC8AA2001E70BA /* ZBSerialPortDataReception.m in Sources */ = {isa = PBXBuildFile; fileRef = C60911D81BFC8AA2001E70BA /* ZBSerialPortDataReception.m */; };
-		C60911DE1BFDB690001E70BA /* ZBDebugging.h in Headers */ = {isa = PBXBuildFile; fileRef = C60911DD1BFDB690001E70BA /* ZBDebugging.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C60911DF1BFDB690001E70BA /* ZBDebugging.h in Headers */ = {isa = PBXBuildFile; fileRef = C60911DD1BFDB690001E70BA /* ZBDebugging.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C60911DE1BFDB690001E70BA /* ZBDebugging.h in Headers */ = {isa = PBXBuildFile; fileRef = C60911DD1BFDB690001E70BA /* ZBDebugging.h */; };
+		C60911DF1BFDB690001E70BA /* ZBDebugging.h in Headers */ = {isa = PBXBuildFile; fileRef = C60911DD1BFDB690001E70BA /* ZBDebugging.h */; };
 		C610B07B1BCE42C200DF3854 /* Zeeba.h in Headers */ = {isa = PBXBuildFile; fileRef = C610B0781BCE42C200DF3854 /* Zeeba.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C62872C01C15B6B30016217C /* ZBPrinterPageBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C62872BE1C15B6B30016217C /* ZBPrinterPageBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C62872C11C15B6B30016217C /* ZBPrinterPageBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C62872BE1C15B6B30016217C /* ZBPrinterPageBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -25,63 +25,63 @@
 		C63B17C41C20029900B0ECD2 /* ZBZeeba+SharedInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55611BFB181B00077FBC /* ZBZeeba+SharedInstance.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C63B17C51C2002A000B0ECD2 /* ZBBLEAvailability.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55571BFB181B00077FBC /* ZBBLEAvailability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C63B17C61C2002A400B0ECD2 /* ZBBLEAvailability.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55581BFB181B00077FBC /* ZBBLEAvailability.m */; };
-		C63B17C71C2002A700B0ECD2 /* ZBBLEAvailabilityAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55591BFB181B00077FBC /* ZBBLEAvailabilityAdapter.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17C71C2002A700B0ECD2 /* ZBBLEAvailabilityAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55591BFB181B00077FBC /* ZBBLEAvailabilityAdapter.h */; };
 		C63B17C81C2002AC00B0ECD2 /* ZBBLEAvailabilityAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA555A1BFB181B00077FBC /* ZBBLEAvailabilityAdapter.m */; };
-		C63B17C91C2002AE00B0ECD2 /* ZBScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA556D1BFB181B00077FBC /* ZBScanner.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17C91C2002AE00B0ECD2 /* ZBScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA556D1BFB181B00077FBC /* ZBScanner.h */; };
 		C63B17CA1C2002BE00B0ECD2 /* ZBScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA556E1BFB181B00077FBC /* ZBScanner.m */; };
-		C63B17CB1C2002C000B0ECD2 /* ZBConnectionPool.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA555D1BFB181B00077FBC /* ZBConnectionPool.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17CB1C2002C000B0ECD2 /* ZBConnectionPool.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA555D1BFB181B00077FBC /* ZBConnectionPool.h */; };
 		C63B17CC1C2002C500B0ECD2 /* ZBConnectionPool.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA555E1BFB181B00077FBC /* ZBConnectionPool.m */; };
-		C63B17CD1C2002C800B0ECD2 /* ZBConnectionAttempt.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA555B1BFB181B00077FBC /* ZBConnectionAttempt.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17CD1C2002C800B0ECD2 /* ZBConnectionAttempt.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA555B1BFB181B00077FBC /* ZBConnectionAttempt.h */; };
 		C63B17CE1C2002CD00B0ECD2 /* ZBConnectionAttempt.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA555C1BFB181B00077FBC /* ZBConnectionAttempt.m */; };
 		C63B17CF1C2002D200B0ECD2 /* ZBConnectivity.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA555F1BFB181B00077FBC /* ZBConnectivity.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C63B17D01C2002D700B0ECD2 /* ZBConnectivity.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55601BFB181B00077FBC /* ZBConnectivity.m */; };
-		C63B17D11C2002DA00B0ECD2 /* ZBCentralManagerDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA554D1BFB181B00077FBC /* ZBCentralManagerDelegateProxy.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17D11C2002DA00B0ECD2 /* ZBCentralManagerDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA554D1BFB181B00077FBC /* ZBCentralManagerDelegateProxy.h */; };
 		C63B17D21C2002DE00B0ECD2 /* ZBCentralManagerDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA554E1BFB181B00077FBC /* ZBCentralManagerDelegateProxy.m */; };
-		C63B17D31C2002E000B0ECD2 /* CBCentralManager+ZBFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55471BFB181B00077FBC /* CBCentralManager+ZBFactory.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17D31C2002E000B0ECD2 /* CBCentralManager+ZBFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55471BFB181B00077FBC /* CBCentralManager+ZBFactory.h */; };
 		C63B17D41C2002E500B0ECD2 /* CBCentralManager+ZBFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55481BFB181B00077FBC /* CBCentralManager+ZBFactory.m */; };
-		C63B17D51C20095F00B0ECD2 /* ZBPeripheralController.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA554F1BFB181B00077FBC /* ZBPeripheralController.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17D51C20095F00B0ECD2 /* ZBPeripheralController.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA554F1BFB181B00077FBC /* ZBPeripheralController.h */; };
 		C63B17D61C20096300B0ECD2 /* ZBPeripheralController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55501BFB181B00077FBC /* ZBPeripheralController.m */; };
-		C63B17D71C20096600B0ECD2 /* CBPeripheral+ZBServices.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55491BFB181B00077FBC /* CBPeripheral+ZBServices.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17D71C20096600B0ECD2 /* CBPeripheral+ZBServices.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55491BFB181B00077FBC /* CBPeripheral+ZBServices.h */; };
 		C63B17D81C20096A00B0ECD2 /* CBPeripheral+ZBServices.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA554A1BFB181B00077FBC /* CBPeripheral+ZBServices.m */; };
-		C63B17D91C20096D00B0ECD2 /* CBService+ZBCharacteristics.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA554B1BFB181B00077FBC /* CBService+ZBCharacteristics.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17D91C20096D00B0ECD2 /* CBService+ZBCharacteristics.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA554B1BFB181B00077FBC /* CBService+ZBCharacteristics.h */; };
 		C63B17DA1C20097100B0ECD2 /* CBService+ZBCharacteristics.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA554C1BFB181B00077FBC /* CBService+ZBCharacteristics.m */; };
-		C63B17DB1C20097400B0ECD2 /* ZBSerialPortCommunicator.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55721BFB181B00077FBC /* ZBSerialPortCommunicator.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17DB1C20097400B0ECD2 /* ZBSerialPortCommunicator.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55721BFB181B00077FBC /* ZBSerialPortCommunicator.h */; };
 		C63B17DC1C20097800B0ECD2 /* ZBSerialPortCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55731BFB181B00077FBC /* ZBSerialPortCommunicator.m */; };
-		C63B17DD1C20097B00B0ECD2 /* ZBSerialPortCommunicator+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55701BFB181B00077FBC /* ZBSerialPortCommunicator+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17DD1C20097B00B0ECD2 /* ZBSerialPortCommunicator+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55701BFB181B00077FBC /* ZBSerialPortCommunicator+Private.h */; };
 		C63B17DE1C20098000B0ECD2 /* ZBSerialPortCommunicator+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55711BFB181B00077FBC /* ZBSerialPortCommunicator+Private.m */; };
-		C63B17DF1C20098D00B0ECD2 /* ZBSerialPortConfigurator.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA557A1BFB181B00077FBC /* ZBSerialPortConfigurator.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17DF1C20098D00B0ECD2 /* ZBSerialPortConfigurator.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA557A1BFB181B00077FBC /* ZBSerialPortConfigurator.h */; };
 		C63B17E01C20099100B0ECD2 /* ZBSerialPortConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA557B1BFB181B00077FBC /* ZBSerialPortConfigurator.m */; };
-		C63B17E11C20099400B0ECD2 /* ZBSerialPortConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55781BFB181B00077FBC /* ZBSerialPortConfiguration.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17E11C20099400B0ECD2 /* ZBSerialPortConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55781BFB181B00077FBC /* ZBSerialPortConfiguration.h */; };
 		C63B17E21C20099800B0ECD2 /* ZBSerialPortConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55791BFB181B00077FBC /* ZBSerialPortConfiguration.m */; };
-		C63B17E31C20099C00B0ECD2 /* ZBSerialPortConfiguration+Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55761BFB181B00077FBC /* ZBSerialPortConfiguration+Factory.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17E31C20099C00B0ECD2 /* ZBSerialPortConfiguration+Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55761BFB181B00077FBC /* ZBSerialPortConfiguration+Factory.h */; };
 		C63B17E41C2009A000B0ECD2 /* ZBSerialPortConfiguration+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55771BFB181B00077FBC /* ZBSerialPortConfiguration+Factory.m */; };
-		C63B17E51C2009A400B0ECD2 /* ZBSerialPortCommunicatorTask.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55741BFB181B00077FBC /* ZBSerialPortCommunicatorTask.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17E51C2009A400B0ECD2 /* ZBSerialPortCommunicatorTask.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55741BFB181B00077FBC /* ZBSerialPortCommunicatorTask.h */; };
 		C63B17E61C2009AA00B0ECD2 /* ZBSerialPortCommunicatorTask.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55751BFB181B00077FBC /* ZBSerialPortCommunicatorTask.m */; };
 		C63B17E71C2009AD00B0ECD2 /* ZBStand.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA557F1BFB181B00077FBC /* ZBStand.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C63B17E81C2009B200B0ECD2 /* ZBStand.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55801BFB181B00077FBC /* ZBStand.m */; };
-		C63B17E91C2009B500B0ECD2 /* ZBStand+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA557D1BFB181B00077FBC /* ZBStand+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17E91C2009B500B0ECD2 /* ZBStand+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA557D1BFB181B00077FBC /* ZBStand+Private.h */; };
 		C63B17EA1C200A5A00B0ECD2 /* ZBStand+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA557E1BFB181B00077FBC /* ZBStand+Private.m */; };
-		C63B17EB1C200A5D00B0ECD2 /* ZBStandModelNumberParser.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55811BFB181B00077FBC /* ZBStandModelNumberParser.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17EB1C200A5D00B0ECD2 /* ZBStandModelNumberParser.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55811BFB181B00077FBC /* ZBStandModelNumberParser.h */; };
 		C63B17EC1C200A6000B0ECD2 /* ZBStandModelNumberParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55821BFB181B00077FBC /* ZBStandModelNumberParser.m */; };
 		C63B17ED1C200A6500B0ECD2 /* ZBPrinter.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA556A1BFB181B00077FBC /* ZBPrinter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C63B17EE1C200A6900B0ECD2 /* ZBPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA556B1BFB181B00077FBC /* ZBPrinter.m */; };
-		C63B17EF1C200A7200B0ECD2 /* ZBPrinter+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55681BFB181B00077FBC /* ZBPrinter+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17EF1C200A7200B0ECD2 /* ZBPrinter+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55681BFB181B00077FBC /* ZBPrinter+Private.h */; };
 		C63B17F01C200A7700B0ECD2 /* ZBPrinter+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55691BFB181B00077FBC /* ZBPrinter+Private.m */; };
-		C63B17F11C200A8400B0ECD2 /* ZBPrinter+HexCmd.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55661BFB181B00077FBC /* ZBPrinter+HexCmd.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17F11C200A8400B0ECD2 /* ZBPrinter+HexCmd.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55661BFB181B00077FBC /* ZBPrinter+HexCmd.h */; };
 		C63B17F21C200A8800B0ECD2 /* ZBPrinter+HexCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55671BFB181B00077FBC /* ZBPrinter+HexCmd.m */; };
-		C63B17F31C200ACC00B0ECD2 /* NSData+ZBDescriptionBits.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55841BFB181B00077FBC /* NSData+ZBDescriptionBits.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17F31C200ACC00B0ECD2 /* NSData+ZBDescriptionBits.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55841BFB181B00077FBC /* NSData+ZBDescriptionBits.h */; };
 		C63B17F41C200AD100B0ECD2 /* NSData+ZBDescriptionBits.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55851BFB181B00077FBC /* NSData+ZBDescriptionBits.m */; };
-		C63B17F51C200AD400B0ECD2 /* NSData+ZBHex.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55861BFB181B00077FBC /* NSData+ZBHex.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17F51C200AD400B0ECD2 /* NSData+ZBHex.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55861BFB181B00077FBC /* NSData+ZBHex.h */; };
 		C63B17F61C200AD800B0ECD2 /* NSData+ZBHex.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55871BFB181B00077FBC /* NSData+ZBHex.m */; };
-		C63B17F71C200ADB00B0ECD2 /* NSData+ZBReverse.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55881BFB181B00077FBC /* NSData+ZBReverse.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17F71C200ADB00B0ECD2 /* NSData+ZBReverse.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55881BFB181B00077FBC /* NSData+ZBReverse.h */; };
 		C63B17F81C200ADF00B0ECD2 /* NSData+ZBReverse.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55891BFB181B00077FBC /* NSData+ZBReverse.m */; };
-		C63B17F91C200AE200B0ECD2 /* NSData+ZBTrim.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA558A1BFB181B00077FBC /* NSData+ZBTrim.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17F91C200AE200B0ECD2 /* NSData+ZBTrim.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA558A1BFB181B00077FBC /* NSData+ZBTrim.h */; };
 		C63B17FA1C200AE600B0ECD2 /* NSData+ZBTrim.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA558B1BFB181B00077FBC /* NSData+ZBTrim.m */; };
-		C63B17FB1C200AE900B0ECD2 /* NSMutableData+ZBPrepend.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA558C1BFB181B00077FBC /* NSMutableData+ZBPrepend.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17FB1C200AE900B0ECD2 /* NSMutableData+ZBPrepend.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA558C1BFB181B00077FBC /* NSMutableData+ZBPrepend.h */; };
 		C63B17FC1C200AEF00B0ECD2 /* NSMutableData+ZBPrepend.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA558D1BFB181B00077FBC /* NSMutableData+ZBPrepend.m */; };
-		C63B17FD1C200AF100B0ECD2 /* NSString+ZBHex.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA558E1BFB181B00077FBC /* NSString+ZBHex.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17FD1C200AF100B0ECD2 /* NSString+ZBHex.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA558E1BFB181B00077FBC /* NSString+ZBHex.h */; };
 		C63B17FE1C200AF500B0ECD2 /* NSString+ZBHex.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA558F1BFB181B00077FBC /* NSString+ZBHex.m */; };
-		C63B17FF1C200B0100B0ECD2 /* ZBErrorDomain+Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55521BFB181B00077FBC /* ZBErrorDomain+Factory.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C63B17FF1C200B0100B0ECD2 /* ZBErrorDomain+Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55521BFB181B00077FBC /* ZBErrorDomain+Factory.h */; };
 		C63B18001C200B0500B0ECD2 /* ZBErrorDomain+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55531BFB181B00077FBC /* ZBErrorDomain+Factory.m */; };
 		C63B18011C200B0800B0ECD2 /* ZBErrorDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55541BFB181B00077FBC /* ZBErrorDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C63B18021C200B0E00B0ECD2 /* ZBErrorDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55551BFB181B00077FBC /* ZBErrorDomain.m */; };
@@ -101,27 +101,27 @@
 		C67065CB1C15BB2C00302D0E /* ZBPrinterPageComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = C67065C81C15BB2C00302D0E /* ZBPrinterPageComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C67065CC1C15BB2C00302D0E /* ZBPrinterPageComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = C67065C91C15BB2C00302D0E /* ZBPrinterPageComponent.m */; };
 		C67065CD1C15BB2C00302D0E /* ZBPrinterPageComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = C67065C91C15BB2C00302D0E /* ZBPrinterPageComponent.m */; };
-		C6BA55901BFB181B00077FBC /* CBCentralManager+ZBFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55471BFB181B00077FBC /* CBCentralManager+ZBFactory.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55901BFB181B00077FBC /* CBCentralManager+ZBFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55471BFB181B00077FBC /* CBCentralManager+ZBFactory.h */; };
 		C6BA55911BFB181B00077FBC /* CBCentralManager+ZBFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55481BFB181B00077FBC /* CBCentralManager+ZBFactory.m */; };
-		C6BA55921BFB181B00077FBC /* CBPeripheral+ZBServices.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55491BFB181B00077FBC /* CBPeripheral+ZBServices.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55921BFB181B00077FBC /* CBPeripheral+ZBServices.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55491BFB181B00077FBC /* CBPeripheral+ZBServices.h */; };
 		C6BA55931BFB181B00077FBC /* CBPeripheral+ZBServices.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA554A1BFB181B00077FBC /* CBPeripheral+ZBServices.m */; };
-		C6BA55941BFB181B00077FBC /* CBService+ZBCharacteristics.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA554B1BFB181B00077FBC /* CBService+ZBCharacteristics.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55941BFB181B00077FBC /* CBService+ZBCharacteristics.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA554B1BFB181B00077FBC /* CBService+ZBCharacteristics.h */; };
 		C6BA55951BFB181B00077FBC /* CBService+ZBCharacteristics.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA554C1BFB181B00077FBC /* CBService+ZBCharacteristics.m */; };
-		C6BA55961BFB181B00077FBC /* ZBCentralManagerDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA554D1BFB181B00077FBC /* ZBCentralManagerDelegateProxy.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55961BFB181B00077FBC /* ZBCentralManagerDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA554D1BFB181B00077FBC /* ZBCentralManagerDelegateProxy.h */; };
 		C6BA55971BFB181B00077FBC /* ZBCentralManagerDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA554E1BFB181B00077FBC /* ZBCentralManagerDelegateProxy.m */; };
-		C6BA55981BFB181B00077FBC /* ZBPeripheralController.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA554F1BFB181B00077FBC /* ZBPeripheralController.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55981BFB181B00077FBC /* ZBPeripheralController.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA554F1BFB181B00077FBC /* ZBPeripheralController.h */; };
 		C6BA55991BFB181B00077FBC /* ZBPeripheralController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55501BFB181B00077FBC /* ZBPeripheralController.m */; };
-		C6BA559A1BFB181B00077FBC /* ZBErrorDomain+Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55521BFB181B00077FBC /* ZBErrorDomain+Factory.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA559A1BFB181B00077FBC /* ZBErrorDomain+Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55521BFB181B00077FBC /* ZBErrorDomain+Factory.h */; };
 		C6BA559B1BFB181B00077FBC /* ZBErrorDomain+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55531BFB181B00077FBC /* ZBErrorDomain+Factory.m */; };
 		C6BA559C1BFB181B00077FBC /* ZBErrorDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55541BFB181B00077FBC /* ZBErrorDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C6BA559D1BFB181B00077FBC /* ZBErrorDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55551BFB181B00077FBC /* ZBErrorDomain.m */; };
 		C6BA559E1BFB181B00077FBC /* ZBBLEAvailability.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55571BFB181B00077FBC /* ZBBLEAvailability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C6BA559F1BFB181B00077FBC /* ZBBLEAvailability.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55581BFB181B00077FBC /* ZBBLEAvailability.m */; };
-		C6BA55A01BFB181B00077FBC /* ZBBLEAvailabilityAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55591BFB181B00077FBC /* ZBBLEAvailabilityAdapter.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55A01BFB181B00077FBC /* ZBBLEAvailabilityAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55591BFB181B00077FBC /* ZBBLEAvailabilityAdapter.h */; };
 		C6BA55A11BFB181B00077FBC /* ZBBLEAvailabilityAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA555A1BFB181B00077FBC /* ZBBLEAvailabilityAdapter.m */; };
-		C6BA55A21BFB181B00077FBC /* ZBConnectionAttempt.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA555B1BFB181B00077FBC /* ZBConnectionAttempt.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55A21BFB181B00077FBC /* ZBConnectionAttempt.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA555B1BFB181B00077FBC /* ZBConnectionAttempt.h */; };
 		C6BA55A31BFB181B00077FBC /* ZBConnectionAttempt.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA555C1BFB181B00077FBC /* ZBConnectionAttempt.m */; };
-		C6BA55A41BFB181B00077FBC /* ZBConnectionPool.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA555D1BFB181B00077FBC /* ZBConnectionPool.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55A41BFB181B00077FBC /* ZBConnectionPool.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA555D1BFB181B00077FBC /* ZBConnectionPool.h */; };
 		C6BA55A51BFB181B00077FBC /* ZBConnectionPool.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA555E1BFB181B00077FBC /* ZBConnectionPool.m */; };
 		C6BA55A61BFB181B00077FBC /* ZBConnectivity.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA555F1BFB181B00077FBC /* ZBConnectivity.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C6BA55A71BFB181B00077FBC /* ZBConnectivity.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55601BFB181B00077FBC /* ZBConnectivity.m */; };
@@ -129,66 +129,66 @@
 		C6BA55A91BFB181B00077FBC /* ZBZeeba+SharedInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55621BFB181B00077FBC /* ZBZeeba+SharedInstance.m */; };
 		C6BA55AA1BFB181B00077FBC /* ZBZeeba.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55631BFB181B00077FBC /* ZBZeeba.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C6BA55AB1BFB181B00077FBC /* ZBZeeba.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55641BFB181B00077FBC /* ZBZeeba.m */; };
-		C6BA55AC1BFB181B00077FBC /* ZBPrinter+HexCmd.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55661BFB181B00077FBC /* ZBPrinter+HexCmd.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55AC1BFB181B00077FBC /* ZBPrinter+HexCmd.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55661BFB181B00077FBC /* ZBPrinter+HexCmd.h */; };
 		C6BA55AD1BFB181B00077FBC /* ZBPrinter+HexCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55671BFB181B00077FBC /* ZBPrinter+HexCmd.m */; };
-		C6BA55AE1BFB181B00077FBC /* ZBPrinter+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55681BFB181B00077FBC /* ZBPrinter+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55AE1BFB181B00077FBC /* ZBPrinter+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55681BFB181B00077FBC /* ZBPrinter+Private.h */; };
 		C6BA55AF1BFB181B00077FBC /* ZBPrinter+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55691BFB181B00077FBC /* ZBPrinter+Private.m */; };
 		C6BA55B01BFB181B00077FBC /* ZBPrinter.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA556A1BFB181B00077FBC /* ZBPrinter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C6BA55B11BFB181B00077FBC /* ZBPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA556B1BFB181B00077FBC /* ZBPrinter.m */; };
-		C6BA55B21BFB181B00077FBC /* ZBScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA556D1BFB181B00077FBC /* ZBScanner.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55B21BFB181B00077FBC /* ZBScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA556D1BFB181B00077FBC /* ZBScanner.h */; };
 		C6BA55B31BFB181B00077FBC /* ZBScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA556E1BFB181B00077FBC /* ZBScanner.m */; };
-		C6BA55B41BFB181B00077FBC /* ZBSerialPortCommunicator+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55701BFB181B00077FBC /* ZBSerialPortCommunicator+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55B41BFB181B00077FBC /* ZBSerialPortCommunicator+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55701BFB181B00077FBC /* ZBSerialPortCommunicator+Private.h */; };
 		C6BA55B51BFB181B00077FBC /* ZBSerialPortCommunicator+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55711BFB181B00077FBC /* ZBSerialPortCommunicator+Private.m */; };
-		C6BA55B61BFB181B00077FBC /* ZBSerialPortCommunicator.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55721BFB181B00077FBC /* ZBSerialPortCommunicator.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55B61BFB181B00077FBC /* ZBSerialPortCommunicator.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55721BFB181B00077FBC /* ZBSerialPortCommunicator.h */; };
 		C6BA55B71BFB181B00077FBC /* ZBSerialPortCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55731BFB181B00077FBC /* ZBSerialPortCommunicator.m */; };
-		C6BA55B81BFB181B00077FBC /* ZBSerialPortCommunicatorTask.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55741BFB181B00077FBC /* ZBSerialPortCommunicatorTask.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55B81BFB181B00077FBC /* ZBSerialPortCommunicatorTask.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55741BFB181B00077FBC /* ZBSerialPortCommunicatorTask.h */; };
 		C6BA55B91BFB181B00077FBC /* ZBSerialPortCommunicatorTask.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55751BFB181B00077FBC /* ZBSerialPortCommunicatorTask.m */; };
-		C6BA55BA1BFB181B00077FBC /* ZBSerialPortConfiguration+Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55761BFB181B00077FBC /* ZBSerialPortConfiguration+Factory.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55BA1BFB181B00077FBC /* ZBSerialPortConfiguration+Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55761BFB181B00077FBC /* ZBSerialPortConfiguration+Factory.h */; };
 		C6BA55BB1BFB181C00077FBC /* ZBSerialPortConfiguration+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55771BFB181B00077FBC /* ZBSerialPortConfiguration+Factory.m */; };
-		C6BA55BC1BFB181C00077FBC /* ZBSerialPortConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55781BFB181B00077FBC /* ZBSerialPortConfiguration.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55BC1BFB181C00077FBC /* ZBSerialPortConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55781BFB181B00077FBC /* ZBSerialPortConfiguration.h */; };
 		C6BA55BD1BFB181C00077FBC /* ZBSerialPortConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55791BFB181B00077FBC /* ZBSerialPortConfiguration.m */; };
-		C6BA55BE1BFB181C00077FBC /* ZBSerialPortConfigurator.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA557A1BFB181B00077FBC /* ZBSerialPortConfigurator.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55BE1BFB181C00077FBC /* ZBSerialPortConfigurator.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA557A1BFB181B00077FBC /* ZBSerialPortConfigurator.h */; };
 		C6BA55BF1BFB181C00077FBC /* ZBSerialPortConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA557B1BFB181B00077FBC /* ZBSerialPortConfigurator.m */; };
-		C6BA55C01BFB181C00077FBC /* ZBStand+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA557D1BFB181B00077FBC /* ZBStand+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55C01BFB181C00077FBC /* ZBStand+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA557D1BFB181B00077FBC /* ZBStand+Private.h */; };
 		C6BA55C11BFB181C00077FBC /* ZBStand+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA557E1BFB181B00077FBC /* ZBStand+Private.m */; };
 		C6BA55C21BFB181C00077FBC /* ZBStand.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA557F1BFB181B00077FBC /* ZBStand.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C6BA55C31BFB181C00077FBC /* ZBStand.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55801BFB181B00077FBC /* ZBStand.m */; };
-		C6BA55C41BFB181C00077FBC /* ZBStandModelNumberParser.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55811BFB181B00077FBC /* ZBStandModelNumberParser.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55C41BFB181C00077FBC /* ZBStandModelNumberParser.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55811BFB181B00077FBC /* ZBStandModelNumberParser.h */; };
 		C6BA55C51BFB181C00077FBC /* ZBStandModelNumberParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55821BFB181B00077FBC /* ZBStandModelNumberParser.m */; };
-		C6BA55C61BFB181C00077FBC /* NSData+ZBDescriptionBits.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55841BFB181B00077FBC /* NSData+ZBDescriptionBits.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55C61BFB181C00077FBC /* NSData+ZBDescriptionBits.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55841BFB181B00077FBC /* NSData+ZBDescriptionBits.h */; };
 		C6BA55C71BFB181C00077FBC /* NSData+ZBDescriptionBits.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55851BFB181B00077FBC /* NSData+ZBDescriptionBits.m */; };
-		C6BA55C81BFB181C00077FBC /* NSData+ZBHex.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55861BFB181B00077FBC /* NSData+ZBHex.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55C81BFB181C00077FBC /* NSData+ZBHex.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55861BFB181B00077FBC /* NSData+ZBHex.h */; };
 		C6BA55C91BFB181C00077FBC /* NSData+ZBHex.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55871BFB181B00077FBC /* NSData+ZBHex.m */; };
-		C6BA55CA1BFB181C00077FBC /* NSData+ZBReverse.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55881BFB181B00077FBC /* NSData+ZBReverse.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55CA1BFB181C00077FBC /* NSData+ZBReverse.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55881BFB181B00077FBC /* NSData+ZBReverse.h */; };
 		C6BA55CB1BFB181C00077FBC /* NSData+ZBReverse.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55891BFB181B00077FBC /* NSData+ZBReverse.m */; };
-		C6BA55CC1BFB181C00077FBC /* NSData+ZBTrim.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA558A1BFB181B00077FBC /* NSData+ZBTrim.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55CC1BFB181C00077FBC /* NSData+ZBTrim.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA558A1BFB181B00077FBC /* NSData+ZBTrim.h */; };
 		C6BA55CD1BFB181C00077FBC /* NSData+ZBTrim.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA558B1BFB181B00077FBC /* NSData+ZBTrim.m */; };
-		C6BA55CE1BFB181C00077FBC /* NSMutableData+ZBPrepend.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA558C1BFB181B00077FBC /* NSMutableData+ZBPrepend.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55CE1BFB181C00077FBC /* NSMutableData+ZBPrepend.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA558C1BFB181B00077FBC /* NSMutableData+ZBPrepend.h */; };
 		C6BA55CF1BFB181C00077FBC /* NSMutableData+ZBPrepend.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA558D1BFB181B00077FBC /* NSMutableData+ZBPrepend.m */; };
-		C6BA55D01BFB181C00077FBC /* NSString+ZBHex.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA558E1BFB181B00077FBC /* NSString+ZBHex.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BA55D01BFB181C00077FBC /* NSString+ZBHex.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA558E1BFB181B00077FBC /* NSString+ZBHex.h */; };
 		C6BA55D11BFB181C00077FBC /* NSString+ZBHex.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA558F1BFB181B00077FBC /* NSString+ZBHex.m */; };
 		C6BA55D41BFB20B800077FBC /* ZBPrinter+Advanced.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55D21BFB20B800077FBC /* ZBPrinter+Advanced.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C6BA55D51BFB20B800077FBC /* ZBPrinter+Advanced.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55D21BFB20B800077FBC /* ZBPrinter+Advanced.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C6BA55D61BFB20B800077FBC /* ZBPrinter+Advanced.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55D31BFB20B800077FBC /* ZBPrinter+Advanced.m */; };
 		C6BA55D71BFB20B800077FBC /* ZBPrinter+Advanced.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55D31BFB20B800077FBC /* ZBPrinter+Advanced.m */; };
-		C6CA5D081C06EFE0000F6CBA /* ZBPrinterFunctionSettings+Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = C6CA5D061C06EFE0000F6CBA /* ZBPrinterFunctionSettings+Factory.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C6CA5D091C06EFE0000F6CBA /* ZBPrinterFunctionSettings+Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = C6CA5D061C06EFE0000F6CBA /* ZBPrinterFunctionSettings+Factory.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6CA5D081C06EFE0000F6CBA /* ZBPrinterFunctionSettings+Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = C6CA5D061C06EFE0000F6CBA /* ZBPrinterFunctionSettings+Factory.h */; };
+		C6CA5D091C06EFE0000F6CBA /* ZBPrinterFunctionSettings+Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = C6CA5D061C06EFE0000F6CBA /* ZBPrinterFunctionSettings+Factory.h */; };
 		C6CA5D0A1C06EFE0000F6CBA /* ZBPrinterFunctionSettings+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5D071C06EFE0000F6CBA /* ZBPrinterFunctionSettings+Factory.m */; };
 		C6CA5D0B1C06EFE0000F6CBA /* ZBPrinterFunctionSettings+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5D071C06EFE0000F6CBA /* ZBPrinterFunctionSettings+Factory.m */; };
-		C6CA5D0E1C06F4B6000F6CBA /* ZBPrinterTask.h in Headers */ = {isa = PBXBuildFile; fileRef = C6CA5D0C1C06F4B6000F6CBA /* ZBPrinterTask.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C6CA5D0F1C06F4B6000F6CBA /* ZBPrinterTask.h in Headers */ = {isa = PBXBuildFile; fileRef = C6CA5D0C1C06F4B6000F6CBA /* ZBPrinterTask.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6CA5D0E1C06F4B6000F6CBA /* ZBPrinterTask.h in Headers */ = {isa = PBXBuildFile; fileRef = C6CA5D0C1C06F4B6000F6CBA /* ZBPrinterTask.h */; };
+		C6CA5D0F1C06F4B6000F6CBA /* ZBPrinterTask.h in Headers */ = {isa = PBXBuildFile; fileRef = C6CA5D0C1C06F4B6000F6CBA /* ZBPrinterTask.h */; };
 		C6CA5D101C06F4B6000F6CBA /* ZBPrinterTask.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5D0D1C06F4B6000F6CBA /* ZBPrinterTask.m */; };
 		C6CA5D111C06F4B6000F6CBA /* ZBPrinterTask.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5D0D1C06F4B6000F6CBA /* ZBPrinterTask.m */; };
-		C6CA5D141C071196000F6CBA /* ZBPrinterStatusUpdate.h in Headers */ = {isa = PBXBuildFile; fileRef = C6CA5D121C071196000F6CBA /* ZBPrinterStatusUpdate.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C6CA5D151C071196000F6CBA /* ZBPrinterStatusUpdate.h in Headers */ = {isa = PBXBuildFile; fileRef = C6CA5D121C071196000F6CBA /* ZBPrinterStatusUpdate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6CA5D141C071196000F6CBA /* ZBPrinterStatusUpdate.h in Headers */ = {isa = PBXBuildFile; fileRef = C6CA5D121C071196000F6CBA /* ZBPrinterStatusUpdate.h */; };
+		C6CA5D151C071196000F6CBA /* ZBPrinterStatusUpdate.h in Headers */ = {isa = PBXBuildFile; fileRef = C6CA5D121C071196000F6CBA /* ZBPrinterStatusUpdate.h */; };
 		C6CA5D161C071196000F6CBA /* ZBPrinterStatusUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5D131C071196000F6CBA /* ZBPrinterStatusUpdate.m */; };
 		C6CA5D171C071196000F6CBA /* ZBPrinterStatusUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5D131C071196000F6CBA /* ZBPrinterStatusUpdate.m */; };
-		C6D9E84E1C16DC5800F12EB5 /* NSString+ZBWordWrap.h in Headers */ = {isa = PBXBuildFile; fileRef = C6D9E84C1C16DC5800F12EB5 /* NSString+ZBWordWrap.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C6D9E84F1C16DC5800F12EB5 /* NSString+ZBWordWrap.h in Headers */ = {isa = PBXBuildFile; fileRef = C6D9E84C1C16DC5800F12EB5 /* NSString+ZBWordWrap.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6D9E84E1C16DC5800F12EB5 /* NSString+ZBWordWrap.h in Headers */ = {isa = PBXBuildFile; fileRef = C6D9E84C1C16DC5800F12EB5 /* NSString+ZBWordWrap.h */; };
+		C6D9E84F1C16DC5800F12EB5 /* NSString+ZBWordWrap.h in Headers */ = {isa = PBXBuildFile; fileRef = C6D9E84C1C16DC5800F12EB5 /* NSString+ZBWordWrap.h */; };
 		C6D9E8501C16DC5800F12EB5 /* NSString+ZBWordWrap.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D9E84D1C16DC5800F12EB5 /* NSString+ZBWordWrap.m */; };
 		C6D9E8511C16DC5800F12EB5 /* NSString+ZBWordWrap.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D9E84D1C16DC5800F12EB5 /* NSString+ZBWordWrap.m */; };
-		C6F1AEAC1C20263D0038697E /* ZBZeeba+SDKKeyValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = C6F1AEAA1C20263D0038697E /* ZBZeeba+SDKKeyValidation.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C6F1AEAD1C20263D0038697E /* ZBZeeba+SDKKeyValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = C6F1AEAA1C20263D0038697E /* ZBZeeba+SDKKeyValidation.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6F1AEAC1C20263D0038697E /* ZBZeeba+SDKKeyValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = C6F1AEAA1C20263D0038697E /* ZBZeeba+SDKKeyValidation.h */; };
+		C6F1AEAD1C20263D0038697E /* ZBZeeba+SDKKeyValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = C6F1AEAA1C20263D0038697E /* ZBZeeba+SDKKeyValidation.h */; };
 		C6F1AEAE1C20263D0038697E /* ZBZeeba+SDKKeyValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F1AEAB1C20263D0038697E /* ZBZeeba+SDKKeyValidation.m */; };
 		C6F1AEAF1C20263D0038697E /* ZBZeeba+SDKKeyValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F1AEAB1C20263D0038697E /* ZBZeeba+SDKKeyValidation.m */; };
 /* End PBXBuildFile section */
@@ -506,7 +506,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6BA559E1BFB181B00077FBC /* ZBBLEAvailability.h in Headers */,
-				C6CA5D141C071196000F6CBA /* ZBPrinterStatusUpdate.h in Headers */,
 				C67065CA1C15BB2C00302D0E /* ZBPrinterPageComponent.h in Headers */,
 				C6BA55AA1BFB181B00077FBC /* ZBZeeba.h in Headers */,
 				C6BA55A81BFB181B00077FBC /* ZBZeeba+SharedInstance.h in Headers */,
@@ -514,6 +513,13 @@
 				C6BA55C21BFB181C00077FBC /* ZBStand.h in Headers */,
 				C6BA55B01BFB181B00077FBC /* ZBPrinter.h in Headers */,
 				C6BA55A61BFB181B00077FBC /* ZBConnectivity.h in Headers */,
+				C67065B81C15B7FE00302D0E /* ZBPrinterPageTextComponent.h in Headers */,
+				C66828281C032D1B006FFDB1 /* ZBPrinterFunctionSettings.h in Headers */,
+				C62872C01C15B6B30016217C /* ZBPrinterPageBuilder.h in Headers */,
+				C67065BE1C15B9D200302D0E /* ZBPrinterPageColumnsComponent.h in Headers */,
+				C610B07B1BCE42C200DF3854 /* Zeeba.h in Headers */,
+				C6BA55D41BFB20B800077FBC /* ZBPrinter+Advanced.h in Headers */,
+				C6CA5D141C071196000F6CBA /* ZBPrinterStatusUpdate.h in Headers */,
 				C6BA55BC1BFB181C00077FBC /* ZBSerialPortConfiguration.h in Headers */,
 				C6BA55B21BFB181B00077FBC /* ZBScanner.h in Headers */,
 				C6BA55CC1BFB181C00077FBC /* NSData+ZBTrim.h in Headers */,
@@ -535,23 +541,17 @@
 				C6BA55C61BFB181C00077FBC /* NSData+ZBDescriptionBits.h in Headers */,
 				C6BA55AC1BFB181B00077FBC /* ZBPrinter+HexCmd.h in Headers */,
 				C60911DE1BFDB690001E70BA /* ZBDebugging.h in Headers */,
-				C67065B81C15B7FE00302D0E /* ZBPrinterPageTextComponent.h in Headers */,
 				C6BA55BA1BFB181B00077FBC /* ZBSerialPortConfiguration+Factory.h in Headers */,
 				C6D9E84E1C16DC5800F12EB5 /* NSString+ZBWordWrap.h in Headers */,
 				C6BA55941BFB181B00077FBC /* CBService+ZBCharacteristics.h in Headers */,
 				C6CA5D0E1C06F4B6000F6CBA /* ZBPrinterTask.h in Headers */,
 				C6BA55CE1BFB181C00077FBC /* NSMutableData+ZBPrepend.h in Headers */,
-				C66828281C032D1B006FFDB1 /* ZBPrinterFunctionSettings.h in Headers */,
 				C6BA55B61BFB181B00077FBC /* ZBSerialPortCommunicator.h in Headers */,
 				C6BA55A21BFB181B00077FBC /* ZBConnectionAttempt.h in Headers */,
 				C6BA55C01BFB181C00077FBC /* ZBStand+Private.h in Headers */,
 				C6BA55A01BFB181B00077FBC /* ZBBLEAvailabilityAdapter.h in Headers */,
-				C62872C01C15B6B30016217C /* ZBPrinterPageBuilder.h in Headers */,
-				C67065BE1C15B9D200302D0E /* ZBPrinterPageColumnsComponent.h in Headers */,
 				C6BA55C41BFB181C00077FBC /* ZBStandModelNumberParser.h in Headers */,
 				C6F1AEAC1C20263D0038697E /* ZBZeeba+SDKKeyValidation.h in Headers */,
-				C610B07B1BCE42C200DF3854 /* Zeeba.h in Headers */,
-				C6BA55D41BFB20B800077FBC /* ZBPrinter+Advanced.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,26 +559,32 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C60911DA1BFC8AA2001E70BA /* ZBSerialPortDataReception.h in Headers */,
 				C63B18011C200B0800B0ECD2 /* ZBErrorDomain.h in Headers */,
 				C63B17ED1C200A6500B0ECD2 /* ZBPrinter.h in Headers */,
+				C63B17E71C2009AD00B0ECD2 /* ZBStand.h in Headers */,
+				C63B17C41C20029900B0ECD2 /* ZBZeeba+SharedInstance.h in Headers */,
+				C63B17C51C2002A000B0ECD2 /* ZBBLEAvailability.h in Headers */,
+				C67065B91C15B7FE00302D0E /* ZBPrinterPageTextComponent.h in Headers */,
+				C63B17CF1C2002D200B0ECD2 /* ZBConnectivity.h in Headers */,
+				C62872C11C15B6B30016217C /* ZBPrinterPageBuilder.h in Headers */,
+				C63B17C31C20029300B0ECD2 /* ZBZeeba.h in Headers */,
+				C67065BF1C15B9D200302D0E /* ZBPrinterPageColumnsComponent.h in Headers */,
+				C67065CB1C15BB2C00302D0E /* ZBPrinterPageComponent.h in Headers */,
+				C60911BA1BFB8C8B001E70BA /* Zeeba.h in Headers */,
+				C6BA55D51BFB20B800077FBC /* ZBPrinter+Advanced.h in Headers */,
+				C66828291C032D1B006FFDB1 /* ZBPrinterFunctionSettings.h in Headers */,
+				C60911DA1BFC8AA2001E70BA /* ZBSerialPortDataReception.h in Headers */,
 				C63B17C91C2002AE00B0ECD2 /* ZBScanner.h in Headers */,
 				C63B17CD1C2002C800B0ECD2 /* ZBConnectionAttempt.h in Headers */,
-				C63B17E71C2009AD00B0ECD2 /* ZBStand.h in Headers */,
 				C6CA5D0F1C06F4B6000F6CBA /* ZBPrinterTask.h in Headers */,
 				C63B17DD1C20097B00B0ECD2 /* ZBSerialPortCommunicator+Private.h in Headers */,
 				C63B17D11C2002DA00B0ECD2 /* ZBCentralManagerDelegateProxy.h in Headers */,
 				C63B17DF1C20098D00B0ECD2 /* ZBSerialPortConfigurator.h in Headers */,
 				C63B17D71C20096600B0ECD2 /* CBPeripheral+ZBServices.h in Headers */,
-				C63B17C41C20029900B0ECD2 /* ZBZeeba+SharedInstance.h in Headers */,
 				C63B17F71C200ADB00B0ECD2 /* NSData+ZBReverse.h in Headers */,
-				C63B17C51C2002A000B0ECD2 /* ZBBLEAvailability.h in Headers */,
-				C67065B91C15B7FE00302D0E /* ZBPrinterPageTextComponent.h in Headers */,
 				C63B17D31C2002E000B0ECD2 /* CBCentralManager+ZBFactory.h in Headers */,
 				C63B17F91C200AE200B0ECD2 /* NSData+ZBTrim.h in Headers */,
-				C63B17CF1C2002D200B0ECD2 /* ZBConnectivity.h in Headers */,
 				C63B17D51C20095F00B0ECD2 /* ZBPeripheralController.h in Headers */,
-				C62872C11C15B6B30016217C /* ZBPrinterPageBuilder.h in Headers */,
 				C6D9E84F1C16DC5800F12EB5 /* NSString+ZBWordWrap.h in Headers */,
 				C63B17E11C20099400B0ECD2 /* ZBSerialPortConfiguration.h in Headers */,
 				C63B17E31C20099C00B0ECD2 /* ZBSerialPortConfiguration+Factory.h in Headers */,
@@ -594,18 +600,12 @@
 				C63B17DB1C20097400B0ECD2 /* ZBSerialPortCommunicator.h in Headers */,
 				C60911DF1BFDB690001E70BA /* ZBDebugging.h in Headers */,
 				C63B17C71C2002A700B0ECD2 /* ZBBLEAvailabilityAdapter.h in Headers */,
-				C63B17C31C20029300B0ECD2 /* ZBZeeba.h in Headers */,
-				C67065BF1C15B9D200302D0E /* ZBPrinterPageColumnsComponent.h in Headers */,
 				C63B17E51C2009A400B0ECD2 /* ZBSerialPortCommunicatorTask.h in Headers */,
-				C67065CB1C15BB2C00302D0E /* ZBPrinterPageComponent.h in Headers */,
 				C63B17F11C200A8400B0ECD2 /* ZBPrinter+HexCmd.h in Headers */,
-				C60911BA1BFB8C8B001E70BA /* Zeeba.h in Headers */,
 				C63B17F51C200AD400B0ECD2 /* NSData+ZBHex.h in Headers */,
 				C63B17D91C20096D00B0ECD2 /* CBService+ZBCharacteristics.h in Headers */,
-				C6BA55D51BFB20B800077FBC /* ZBPrinter+Advanced.h in Headers */,
 				C6F1AEAD1C20263D0038697E /* ZBZeeba+SDKKeyValidation.h in Headers */,
 				C63B17CB1C2002C000B0ECD2 /* ZBConnectionPool.h in Headers */,
-				C66828291C032D1B006FFDB1 /* ZBPrinterFunctionSettings.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
