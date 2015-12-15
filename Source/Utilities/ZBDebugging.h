@@ -9,7 +9,7 @@
 #ifndef ZBDebugging_h
 #define ZBDebugging_h
 
-#define ZBDebugLoggingEnabled
+// #define ZBDebugLoggingEnabled
 // #define ZBBLEDebugLoggingEnabled
 
 #ifdef ZBDebugLoggingEnabled
