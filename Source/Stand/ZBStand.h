@@ -17,9 +17,7 @@ typedef NS_ENUM(NSUInteger, ZBStandModel) {
     ZBStandModelT605
 };
 
-typedef void(^ZBPrintHandler)(ZBPrinter *printer);
-typedef void(^ZBPrintCompletionHandler)(NSError * _Nullable error);
-typedef void(^ZBUndockCompletionHandler)(NSError * _Nullable error);
+typedef void(^ZBLockCompletionHandler)(NSError * _Nullable error);
 
 @interface ZBStand : NSObject
 
@@ -32,7 +30,7 @@ typedef void(^ZBUndockCompletionHandler)(NSError * _Nullable error);
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithIdentifier:(NSUUID *)identifier NS_DESIGNATED_INITIALIZER;
 
-- (void)undockWithCompletion:(ZBUndockCompletionHandler)completionHandler;
+- (void)setTabletLock:(BOOL)lock completion:(ZBLockCompletionHandler)completion;
 
 @end
 

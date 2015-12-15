@@ -11,6 +11,10 @@
 #import "ZBPeripheralController.h"
 #import "ZBSerialPortCommunicator.h"
 #import "ZBSerialPortConfiguration+Factory.h"
+#import "ZBPrinter+Private.h"
+#import "NSData+ZBHex.h"
+#import "CBPeripheral+ZBServices.h"
+#import "CBService+ZBCharacteristics.h"
 
 @interface ZBStand ()
 
@@ -56,9 +60,18 @@
     
 }
 
-- (void)undockWithCompletion:(ZBUndockCompletionHandler)completionHandler {
-    if (completionHandler) {
-        completionHandler(nil);
+- (void)setTabletLock:(BOOL)lock completion:(ZBLockCompletionHandler)completion {
+    NSMutableData *commandData = [NSMutableData dataWithHex:@"4010"];
+    unsigned char targetByte = self.printer.portNumber;
+    unsigned char lockByte = lock;
+    [commandData appendBytes:&targetByte length:sizeof(targetByte)];
+    [commandData appendBytes:&lockByte length:sizeof(lockByte)];
+    [commandData appendHex:@"1310"];
+    CBService *service = [self.peripheral serviceWithUUIDString:ZBServiceUUIDStringConfiguration];
+    CBCharacteristic *characteristic = [service characteristicForUUIDString:ZBCharacteristicUUIDStringConfigurationCommandPort];
+    [self.peripheral writeValue:commandData forCharacteristic:characteristic type:CBCharacteristicWriteWithResponse];
+    if (completion) {
+        completion(nil);
     }
 }
 
