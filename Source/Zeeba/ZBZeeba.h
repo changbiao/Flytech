@@ -49,9 +49,9 @@ typedef void(^ZBConnectCompletionHandler)(ZBStand *stand, NSError * _Nullable er
 @property (copy, nonatomic, readonly) NSSet<ZBStand *> *connectedStands;
 
 /**
- Starts the underlying Bluetooth stack, aZBer which point the observers will receive updates and method calls can be made.
+ Starts the underlying Bluetooth stack, after which point the observers will receive updates and method calls can be made.
  */
-- (void)start;
+- (void)startWithZeebaSDKKey:(NSString *)zeebaSDKKey;
 
 /**
  Stops the underlying Bluetooth stack.
@@ -100,7 +100,7 @@ typedef void(^ZBConnectCompletionHandler)(ZBStand *stand, NSError * _Nullable er
  Connects to a stand with a given timeout and completion handler.
  @param stand The stand that should be connected to.
  @param timeout The timeout for the stand connection attempt. Use ZBTimeoutInfinity to disable timeout.
- @param completionHandler A completion handler that will be called aZBer the connection attempt with the stand and an optional error.
+ @param completionHandler A completion handler that will be called after the connection attempt with the stand and an optional error.
  */
 - (void)connectStand:(ZBStand *)stand timeout:(NSTimeInterval)timeout completionHandler:(ZBConnectCompletionHandler)completionHandler;
 

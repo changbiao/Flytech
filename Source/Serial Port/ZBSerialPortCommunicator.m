@@ -47,12 +47,12 @@
 }
 
 - (void)sendData:(NSData *)data toPortNumber:(ZBSerialPortNumber)portNumber completion:(void(^)(NSError *error))completion {
-    ZBLog(@"Data (%ld bytes): %@, Port number: %ld", (unsigned long)data.length, data, portNumber);
+    ZBLog(@"Data (%ld bytes): %@, Port number: %ld", (unsigned long)data.length, data, (unsigned long)portNumber);
     [self addTask:[ZBSerialPortCommunicatorTask sendDataTaskWithPortNumber:portNumber data:data completionHandler:completion]];
 }
 
 - (void)sendDataEnsured:(NSData *)data toPortNumber:(ZBSerialPortNumber)portNumber completion:(void (^)(NSError *))completion {
-    ZBLog(@"Data (%ld bytes): %@, Port number: %ld", (unsigned long)data.length, data, portNumber);
+    ZBLog(@"Data (%ld bytes): %@, Port number: %ld", (unsigned long)data.length, data, (unsigned long)portNumber);
     [self addTask:[ZBSerialPortCommunicatorTask sendDataEnsuredTaskWithPortNumber:portNumber data:data completionHandler:completion]];
 }
 

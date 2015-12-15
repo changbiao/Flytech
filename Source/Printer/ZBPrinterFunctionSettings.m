@@ -373,7 +373,7 @@
     NSString *discardPrintUponErrorEnabled = [NSString stringWithFormat:@"Discard print upon error enabled: %@", self.discardPrintUponErrorEnabled ? @"YES" : @"NO"];
     NSString *CRModeInParallelCommunicationEnabled = [NSString stringWithFormat:@"CR mode in parallel communication enabled: %@", self.CRModeInParallelCommunicationEnabled ? @"YES" : @"NO"];
     NSString *printerStopUponPaperNearEndEnabled = [NSString stringWithFormat:@"Printer stop upon paper near end enabled: %@", self.printerStopUponPaperNearEndEnabled ? @"YES" : @"NO"];
-    NSString *initializeAZBerPaperSettingEnabled = [NSString stringWithFormat:@"Initialize aZBer paper setting enabled: %@", self.initializeAZBerPaperSettingEnabled ? @"YES" : @"NO"];
+    NSString *initializeAZBerPaperSettingEnabled = [NSString stringWithFormat:@"Initialize after paper setting enabled: %@", self.initializeAZBerPaperSettingEnabled ? @"YES" : @"NO"];
     NSArray *components = @[ automaticStatusResponseEnabled, discardPrintUponErrorEnabled, CRModeInParallelCommunicationEnabled, printerStopUponPaperNearEndEnabled, initializeAZBerPaperSettingEnabled ];
     return [NSString stringWithFormat:@"SWDIP5 | %@", [components componentsJoinedByString:@", "]];
 }

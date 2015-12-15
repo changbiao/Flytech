@@ -13,6 +13,7 @@
 #import "ZBBLEAvailabilityAdapter.h"
 #import "ZBScanner.h"
 #import "ZBConnectionPool.h"
+#import "ZBZeeba+SDKKeyValidation.h"
 
 NSTimeInterval const ZBTimeoutInfinity = -1;
 
@@ -52,8 +53,16 @@ NSTimeInterval const ZBTimeoutInfinity = -1;
     return self.connectionPool.connectivityObservers;
 }
 
-- (void)start {
+- (void)startWithZeebaSDKKey:(NSString *)zeebaSDKKey {
     if (self.centralManager) {
+        return;
+    }
+    void(^validationFailureBlock)() = ^(){
+        [self stop];
+        NSLog(@"Zeeba SDK Key was found to be invalid and SDK usage has been interrupted.");
+    };
+    if (![[self class] validateSDKKey:zeebaSDKKey failure:validationFailureBlock]) {
+        validationFailureBlock();
         return;
     }
     self.centralManager = [CBCentralManager zeebaCentralManagerWithDelegate:self.centralManagerDelegateProxy];
