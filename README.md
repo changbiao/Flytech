@@ -1,2 +1,2 @@
-# Flytech
-Objective-C SDK for Flytech stands
+# Zeeba
+Objective-C SDK for Zeeba stands
