@@ -16,7 +16,7 @@
 
 #pragma mark - Public Interface
 
-- (void)printTestMaterialWithCompletion:(ZBPrintCompletionHandler)completionHandler {
+- (void)printTestMaterialWithCompletion:(ZBPrinterDefaultCompletionHandler)completionHandler {
     [self printWithPageBuilder:^(ZBPrinterPageBuilder *pageBuilder) {
         pageBuilder.verticalPageComponentPadding = 25;
         [pageBuilder addPageComponentWithText:@"Zeeba Example" font:ZBPrinterCharacterFont16x8 scale:3 alignment:ZBPrinterAlignmentCenter];
