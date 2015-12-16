@@ -37,7 +37,7 @@
     functionSettings.discardPrintUponErrorEnabled = NO;
     functionSettings.CRModeInParallelCommunicationEnabled = NO;
     functionSettings.printerStopUponPaperNearEndEnabled = NO;
-    functionSettings.initializeAZBerPaperSettingEnabled = YES;
+    functionSettings.initializeAfterPaperSettingEnabled = YES;
     functionSettings.autoLoadingPaperFeedingLength = 80;
     functionSettings.markPositionCorrection = 0;
     functionSettings.markDetectionMaximumFeedingLength = 500;

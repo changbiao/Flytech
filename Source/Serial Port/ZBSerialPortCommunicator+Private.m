@@ -74,9 +74,9 @@
 
 - (void)handleResponseForGetConfigurationWithResponseData:(NSData *)responseData {
     ZBSerialPortConfiguration *configuration = [[ZBSerialPortConfiguration alloc] initWithData:responseData];
-    void(^completionHandler)(ZBSerialPortConfiguration *configuration, NSError *error) = self.tasks.firstObject.completionHandler;
+    void(^completion)(ZBSerialPortConfiguration *configuration, NSError *error) = self.tasks.firstObject.completion;
     [self completeCurrentTask];
-    completionHandler(configuration, configuration ? nil : [ZBErrorDomain zeebaError]);
+    completion(configuration, configuration ? nil : [ZBErrorDomain zeebaError]);
 }
 
 - (void)handleReceivedData:(NSData *)data fromPortNumber:(ZBSerialPortNumber)portNumber {
@@ -123,10 +123,10 @@
 }
 
 - (void)completeCurrentSendDataTaskWithError:(NSError *)error {
-    void(^completionHandler)(NSError *error) = self.tasks.firstObject.completionHandler;
+    void(^completion)(NSError *error) = self.tasks.firstObject.completion;
     [self completeCurrentTask];
-    if (completionHandler) {
-        completionHandler(nil);
+    if (completion) {
+        completion(nil);
     }
 }
 

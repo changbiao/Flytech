@@ -87,7 +87,7 @@ typedef NS_ENUM(NSUInteger, ZBPrinterCharacterSetType) {
 @property (assign, nonatomic) BOOL discardPrintUponErrorEnabled;
 @property (assign, nonatomic) BOOL CRModeInParallelCommunicationEnabled;
 @property (assign, nonatomic) BOOL printerStopUponPaperNearEndEnabled;
-@property (assign, nonatomic) BOOL initializeAZBerPaperSettingEnabled;
+@property (assign, nonatomic) BOOL initializeAfterPaperSettingEnabled;
 @property (assign, nonatomic) NSUInteger autoLoadingPaperFeedingLength;
 @property (assign, nonatomic) NSInteger markPositionCorrection;
 @property (assign, nonatomic) NSUInteger markDetectionMaximumFeedingLength;

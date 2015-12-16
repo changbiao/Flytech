@@ -60,21 +60,21 @@
     [self.weakConnectivityObservers removeObject:connectivityObserver];
 }
 
-- (void)connectStand:(ZBStand *)stand timeout:(NSTimeInterval)timeout completionHandler:(ZBConnectCompletionHandler)completionHandler {
+- (void)connectStand:(ZBStand *)stand timeout:(NSTimeInterval)timeout completion:(ZBConnectCompletionHandler)completion {
     NSPredicate *connectionAttemptPredicate = [NSPredicate predicateWithFormat:@"%K == %@", NSStringFromSelector(@selector(stand)), stand];
     NSSet *existingConnectionAttempts = [self.connectionAttempts filteredSetUsingPredicate:connectionAttemptPredicate];
     if (existingConnectionAttempts.count) {
-        completionHandler(stand, [ZBErrorDomain zeebaErrorWithCode:ZBZeebaErrorCodeAlreadyConnecting]);
+        completion(stand, [ZBErrorDomain zeebaErrorWithCode:ZBZeebaErrorCodeAlreadyConnecting]);
         return;
     }
     if ([self.internalConnectedStands containsObject:stand]) {
         NSPredicate *connectedStandPredicate = [NSPredicate predicateWithFormat:@"%K == %@", NSStringFromSelector(@selector(identifier)), stand.identifier];
         ZBStand *connectedStand = [[self.internalConnectedStands filteredSetUsingPredicate:connectedStandPredicate] anyObject];
-        completionHandler(connectedStand, nil);
+        completion(connectedStand, nil);
         return;
     }
     NSTimer *timeoutTimer = timeout == ZBTimeoutInfinity ? nil : [NSTimer scheduledTimerWithTimeInterval:timeout target:self selector:@selector(timeoutTimerElapsed:) userInfo:nil repeats:NO];
-    ZBConnectionAttempt *connectionAttempt = [[ZBConnectionAttempt alloc] initWithStand:stand timeoutTimer:timeoutTimer completionHandler:completionHandler];
+    ZBConnectionAttempt *connectionAttempt = [[ZBConnectionAttempt alloc] initWithStand:stand timeoutTimer:timeoutTimer completion:completion];
     [self processConnectionAttempt:connectionAttempt];
 }
 
@@ -128,12 +128,12 @@
 - (void)completeConnectionAttempt:(ZBConnectionAttempt *)connectionAttempt error:(NSError *)error {
     [connectionAttempt.timeoutTimer invalidate];
     ZBStand *stand = connectionAttempt.stand;
-    ZBConnectCompletionHandler completionHandler = connectionAttempt.completionHandler;
+    ZBConnectCompletionHandler completion = connectionAttempt.completion;
     [self.connectionAttempts removeObject:connectionAttempt];
     if (!error) {
         [self.internalConnectedStands addObject:stand];
     }
-    completionHandler(stand, error);
+    completion(stand, error);
 }
 
 - (ZBConnectionAttempt *)connectionAttemptForTimeoutTimer:(NSTimer *)timeoutTimer {

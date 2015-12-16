@@ -12,10 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZBZeeba (SharedInstance)
 
-/**
- Easy to access shared instance.
- @returns A shared instance object of the ZBZeeba class. The object will be retained and exist
- for the remaining life span of the application.
+/*!
+ *  @method sharedInstance
+ *  @discussion Easy to access shared instance.
+ *  @returns A shared instance object of the ZBZeeba class. The object will be retained and exist
+ *      for the remaining life span of the application.
  */
 + (instancetype)sharedInstance;
 

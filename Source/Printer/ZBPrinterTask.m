@@ -12,9 +12,9 @@
 @end
 
 @implementation ZBPrinterTaskSendData
-@dynamic completionHandler;
+@dynamic completion;
 @end
 
 @implementation ZBPrinterTaskGetFunctionSettings
-@dynamic completionHandler;
+@dynamic completion;
 @end

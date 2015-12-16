@@ -16,7 +16,7 @@
 
 @interface ZBPeripheralController () <CBPeripheralDelegate>
 
-@property (copy, nonatomic) ZBPeripheralControllerPrepareForUseCompletionHandler completionHandler;
+@property (copy, nonatomic) ZBPeripheralControllerPrepareForUseCompletionHandler completion;
 @property (copy, nonatomic) NSString *modelNumber;
 @property (copy, nonatomic) NSString *firmwareRevision;
 @property (assign, nonatomic) BOOL serialPortOneReady;
@@ -31,14 +31,14 @@
 #pragma mark - Public Interface
 
 - (void)prepareForUseWithCompletion:(ZBPeripheralControllerPrepareForUseCompletionHandler)completion {
-    self.completionHandler = completion;
+    self.completion = completion;
     [self.peripheral discoverServices:[CBPeripheral relevantServiceUUIDs]];
 }
 
 #pragma mark - Internals
 
 - (void)evaluateState {
-    if (!self.completionHandler) {
+    if (!self.completion) {
         return;
     }
     if (self.modelNumber && self.firmwareRevision && self.serialPortOneReady && self.serialPortTwoReady && self.serialPortThreeReady) {
@@ -49,15 +49,15 @@
 }
 
 - (void)completeWithError:(NSError *)error {
-    ZBPeripheralControllerPrepareForUseCompletionHandler completionHandler = self.completionHandler;
-    self.completionHandler = nil;
+    ZBPeripheralControllerPrepareForUseCompletionHandler completion = self.completion;
+    self.completion = nil;
     if (error) {
         self.modelNumber = nil;
         self.firmwareRevision = nil;
         self.serialPortCommunicator = nil;
-        completionHandler(nil, nil, nil, error);
+        completion(nil, nil, nil, error);
     } else {
-        completionHandler(self.modelNumber, self.firmwareRevision, self.serialPortCommunicator, nil);
+        completion(self.modelNumber, self.firmwareRevision, self.serialPortCommunicator, nil);
     }
 }
 

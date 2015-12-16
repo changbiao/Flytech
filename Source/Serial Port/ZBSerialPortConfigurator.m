@@ -16,7 +16,7 @@
 
 @property (strong, nonatomic) ZBSerialPortCommunicator *communicator;
 @property (assign, nonatomic) ZBStandModel model;
-@property (copy, nonatomic) void(^completionHandler)(NSError *error);
+@property (copy, nonatomic) void(^completion)(NSError *error);
 
 @end
 
@@ -31,7 +31,7 @@
     }
     self.communicator = communicator;
     self.model = model;
-    self.completionHandler = completion;
+    self.completion = completion;
     [self getConfigurationForPortNumber:ZBSerialPortNumberOne];
 }
 
@@ -71,9 +71,9 @@
 - (void)completeWithError:(NSError *)error {
     self.communicator = nil;
     self.model = ZBStandModelUnknown;
-    void(^completionHandler)(NSError *error) = self.completionHandler;
-    self.completionHandler = nil;
-    completionHandler(error);
+    void(^completion)(NSError *error) = self.completion;
+    self.completion = nil;
+    completion(error);
 }
 
 @end

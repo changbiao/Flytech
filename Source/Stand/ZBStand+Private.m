@@ -14,6 +14,8 @@
 #import "ZBPrinter+Advanced.h"
 #import "ZBDebugging.h"
 #import "ZBPrinterFunctionSettings+Factory.h"
+#import "NSData+ZBHex.h"
+#import "ZBPrinter+HexCmd.h"
 
 @interface ZBStand ()
 
@@ -38,14 +40,14 @@
 
 #pragma mark - Private Interface
 
-- (void)prepareForUseWithCompletion:(void (^)(NSError *error))completionHandler {
+- (void)prepareForUseWithCompletion:(void (^)(NSError *error))completion {
     self.peripheralController = [ZBPeripheralController new];
     self.peripheralController.peripheral = self.peripheral;
-    self.prepareForUseCompletionHandler = completionHandler;
+    self.prepareForUseCompletionHandler = completion;
     [self.peripheralController prepareForUseWithCompletion:^(NSString *modelNumber, NSString *firmwareRevision, ZBSerialPortCommunicator *serialPortCommunicator, NSError *error) {
         ZBLog(@"Peripheral controller prepared for use with model number: %@, firmware revision: %@, serial port communicator: %@, error: %@", modelNumber, firmwareRevision, serialPortCommunicator, error);
         if (error) {
-            completionHandler(error);
+            completion(error);
             return;
         }
         self.model = [ZBStandModelNumberParser standModelForModelNumberString:modelNumber];
@@ -53,23 +55,23 @@
         self.serialPortCommunicator = serialPortCommunicator;
         [self.serialPortConfigurator applyConfigurationAppropriateForStandModel:self.model toSerialPortCommunicator:self.serialPortCommunicator completion:^(NSError *error) {
             if (error) {
-                completionHandler(error);
+                completion(error);
                 return;
             }
             [self initializePrinterWithCompletion:^(NSError *error) {
                 if (error) {
-                    completionHandler(error);
+                    completion(error);
                     return;
                 }
                 [self ensurePrinterConfigurationWithCompletion:^(NSError *error) {
                     if (error) {
-                        completionHandler(error);
+                        completion(error);
                         return;
                     }
                     [self.printer macroDefinitionStartStopWithCompletion:^(NSError *error) {
                         [self.printer printText:@"_" completion:^(NSError *error) {
                             [self.printer macroDefinitionStartStopWithCompletion:^(NSError *error) {
-                                [self.printer enableAutomaticStatusBackForChangingDrawerSensorStatus:YES printerInformation:NO errorStatus:YES paperSensorInformation:YES presenterInformation:NO completion:completionHandler];
+                                [self.printer setAutomaticStatusBackWithSettings:ZBPrinterAutomaticStatusBackSettingsMake(YES, NO, YES, YES, NO) completion:completion];
                             }];
                         }];
                     }];
@@ -90,7 +92,7 @@
 
 - (void)initializePrinterWithCompletion:(void(^)(NSError *error))completion {
     self.printer = [[ZBPrinter alloc] initWithSerialPortCommunicator:self.serialPortCommunicator portNumber:[self targetPortNumberForPrinterOnStandModel:self.model]];
-    [self.printer send512ZeroBytesWithCompletion:nil]; // This is due to some bug on the logic board, the first many bytes received are lost.
+    [self.printer sendData:[NSData dataWithHex:ZBPrinterHexCmd512ZeroBytes] completion:nil]; // This is due to some bug on the logic board, the first many bytes received are lost.
     [self.printer initializeHardwareWithCompletion:completion];
 }
 

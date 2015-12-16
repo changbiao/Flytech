@@ -11,14 +11,14 @@
 @class ZBPrinterFunctionSettings;
 
 @interface ZBPrinterTask : NSObject
-@property (copy, nonatomic) id completionHandler;
+@property (copy, nonatomic) id completion;
 @end
 
 @interface ZBPrinterTaskSendData : ZBPrinterTask
 @property (copy, nonatomic) NSData *data;
-@property (copy, nonatomic) void(^completionHandler)(NSError *error);
+@property (copy, nonatomic) void(^completion)(NSError *error);
 @end
 
 @interface ZBPrinterTaskGetFunctionSettings : ZBPrinterTask
-@property (copy, nonatomic) void(^completionHandler)(ZBPrinterFunctionSettings *functionSettings, NSError *error);
+@property (copy, nonatomic) void(^completion)(ZBPrinterFunctionSettings *functionSettings, NSError *error);
 @end

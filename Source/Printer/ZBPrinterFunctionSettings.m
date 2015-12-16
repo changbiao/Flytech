@@ -180,7 +180,7 @@
     swdip5 |= !self.discardPrintUponErrorEnabled << 1;
     swdip5 |= !self.CRModeInParallelCommunicationEnabled << 2;
     swdip5 |= !self.printerStopUponPaperNearEndEnabled << 3;
-    swdip5 |= !self.initializeAZBerPaperSettingEnabled << 4;
+    swdip5 |= !self.initializeAfterPaperSettingEnabled << 4;
     return [NSData dataWithBytes:&swdip5 length:sizeof(swdip5)];
 }
 
@@ -292,7 +292,7 @@
     self.discardPrintUponErrorEnabled = ((byte & 0x02) >> 1) == 0;
     self.CRModeInParallelCommunicationEnabled = ((byte & 0x04) >> 2) == 0;
     self.printerStopUponPaperNearEndEnabled = ((byte & 0x08) >> 3) == 0;
-    self.initializeAZBerPaperSettingEnabled = ((byte & 0x10) >> 4) == 0;
+    self.initializeAfterPaperSettingEnabled = ((byte & 0x10) >> 4) == 0;
 }
 
 - (void)setSWDIP6To7PropertiesAccordingToBytes:(unsigned char[2])bytes {
@@ -373,8 +373,8 @@
     NSString *discardPrintUponErrorEnabled = [NSString stringWithFormat:@"Discard print upon error enabled: %@", self.discardPrintUponErrorEnabled ? @"YES" : @"NO"];
     NSString *CRModeInParallelCommunicationEnabled = [NSString stringWithFormat:@"CR mode in parallel communication enabled: %@", self.CRModeInParallelCommunicationEnabled ? @"YES" : @"NO"];
     NSString *printerStopUponPaperNearEndEnabled = [NSString stringWithFormat:@"Printer stop upon paper near end enabled: %@", self.printerStopUponPaperNearEndEnabled ? @"YES" : @"NO"];
-    NSString *initializeAZBerPaperSettingEnabled = [NSString stringWithFormat:@"Initialize after paper setting enabled: %@", self.initializeAZBerPaperSettingEnabled ? @"YES" : @"NO"];
-    NSArray *components = @[ automaticStatusResponseEnabled, discardPrintUponErrorEnabled, CRModeInParallelCommunicationEnabled, printerStopUponPaperNearEndEnabled, initializeAZBerPaperSettingEnabled ];
+    NSString *initializeAfterPaperSettingEnabled = [NSString stringWithFormat:@"Initialize after paper setting enabled: %@", self.initializeAfterPaperSettingEnabled ? @"YES" : @"NO"];
+    NSArray *components = @[ automaticStatusResponseEnabled, discardPrintUponErrorEnabled, CRModeInParallelCommunicationEnabled, printerStopUponPaperNearEndEnabled, initializeAfterPaperSettingEnabled ];
     return [NSString stringWithFormat:@"SWDIP5 | %@", [components componentsJoinedByString:@", "]];
 }
 

@@ -9,6 +9,8 @@
 #import "ZBPrinterPageTextComponent.h"
 #import "NSString+ZBWordWrap.h"
 #import "ZBPrinterPageBuilder.h"
+#import "ZBPrinterCommandDataFactory.h"
+#import "ZBPrinterPageBuilder+Optimization.h"
 
 @implementation ZBPrinterPageTextComponent
 
@@ -38,26 +40,26 @@
 
 - (NSData *)commandDataWithStartingPoint:(ZBPrinterPagePoint)startingPoint pageBuilder:(ZBPrinterPageBuilder *)pageBuilder {
     NSMutableData *commandData = [NSMutableData data];
-    [commandData appendData:[ZBPrinter commandDataForPrintAreaSetInPageModeWithX:startingPoint.x y:startingPoint.y width:self.width height:self.height]];
+    [commandData appendData:[ZBPrinterCommandDataFactory commandDataForPrintAreaSetInPageModeWithX:startingPoint.x y:startingPoint.y width:self.width height:self.height]];
     if (self.characterFont != pageBuilder.currentCharacterFont) {
         pageBuilder.currentCharacterFont = self.characterFont;
-        [commandData appendData:[ZBPrinter commandDataForSelectCharacterFont:self.characterFont]];
+        [commandData appendData:[ZBPrinterCommandDataFactory commandDataForSelectCharacterFont:self.characterFont]];
     }
     NSUInteger lineSpacing = [self lineHeightForCharacterFont:self.characterFont withVerticalCharacterScale:self.scale];
     if (lineSpacing != pageBuilder.currentLineSpacing) {
         pageBuilder.currentLineSpacing = lineSpacing;
-        [commandData appendData:[ZBPrinter commandDataForLineSpacingSet:lineSpacing]];
+        [commandData appendData:[ZBPrinterCommandDataFactory commandDataForLineSpacingSet:lineSpacing]];
     }
-    if (self.scale != pageBuilder.currenctCharacterScale) {
-        pageBuilder.currenctCharacterScale = self.scale;
-        [commandData appendData:[ZBPrinter commandDataForSpecifyCharacterScaleVertically:self.scale horizontally:self.scale]];
+    if (self.scale != pageBuilder.currentCharacterScale) {
+        pageBuilder.currentCharacterScale = self.scale;
+        [commandData appendData:[ZBPrinterCommandDataFactory commandDataForSpecifyCharacterScaleVertically:self.scale horizontally:self.scale]];
     }
     NSArray *lines = [self linesWordWrappedAccordingToWidth];
     NSUInteger verticalPosition = [self heightForCharacterFont:self.characterFont withScale:self.scale];
     NSUInteger horizontalPosition = 0;
-    if (self.alignment == ZBPrinterAlignmentLeZB) {
-        [commandData appendData:[ZBPrinter commandDataForSpecifyVerticalAbsolutePositionInPageMode:verticalPosition]];
-        [commandData appendData:[ZBPrinter commandDataForSpecifyHorizontalAbsolutePosition:horizontalPosition]];
+    if (self.alignment == ZBPrinterAlignmentLeft) {
+        [commandData appendData:[ZBPrinterCommandDataFactory commandDataForSpecifyVerticalAbsolutePositionInPageMode:verticalPosition]];
+        [commandData appendData:[ZBPrinterCommandDataFactory commandDataForSpecifyHorizontalAbsolutePosition:horizontalPosition]];
         NSString *linesInText = [lines componentsJoinedByString:@"\n"];
         [commandData appendData:[self commandDataForPrintingText:linesInText]];
     } else {
@@ -75,8 +77,8 @@
                     horizontalPosition--; // No idea why this is required, but it is probably due to the printer's conditional for line breaking.
                 }
             }
-            [commandData appendData:[ZBPrinter commandDataForSpecifyVerticalAbsolutePositionInPageMode:verticalPosition]];
-            [commandData appendData:[ZBPrinter commandDataForSpecifyHorizontalAbsolutePosition:horizontalPosition]];
+            [commandData appendData:[ZBPrinterCommandDataFactory commandDataForSpecifyVerticalAbsolutePositionInPageMode:verticalPosition]];
+            [commandData appendData:[ZBPrinterCommandDataFactory commandDataForSpecifyHorizontalAbsolutePosition:horizontalPosition]];
             [commandData appendData:[self commandDataForPrintingText:line]];
         }
     }
@@ -94,12 +96,12 @@
     while (!scanner.isAtEnd) {
         if ([scanner scanCharactersFromSet:underscoreCharacterSet intoString:&underscores]) {
             if (underscores.length > 4) {
-                [commandData appendData:[ZBPrinter commandDataForMacroExecutionWithExecutionCount:underscores.length inBetweenDelayIn100ms:0]];
+                [commandData appendData:[ZBPrinterCommandDataFactory commandDataForMacroExecutionWithExecutionCount:underscores.length inBetweenDelayIn100ms:0]];
             } else {
-                [commandData appendData:[ZBPrinter commandDataForPrintText:underscores]];
+                [commandData appendData:[ZBPrinterCommandDataFactory commandDataForPrintText:underscores]];
             }
         } else if ([scanner scanUpToCharactersFromSet:underscoreCharacterSet intoString:&notUnderscores]) {
-            [commandData appendData:[ZBPrinter commandDataForPrintText:notUnderscores]];
+            [commandData appendData:[ZBPrinterCommandDataFactory commandDataForPrintText:notUnderscores]];
         }
     }
     return commandData;

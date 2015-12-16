@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)addConnectivityObserver:(id<ZBConnectivityObserver>)connectivityObserver;
 - (void)removeConnectivityObserver:(id<ZBConnectivityObserver>)connectivityObserver;
 
-- (void)connectStand:(ZBStand *)stand timeout:(NSTimeInterval)timeout completionHandler:(ZBConnectCompletionHandler)completionHandler;
+- (void)connectStand:(ZBStand *)stand timeout:(NSTimeInterval)timeout completion:(ZBConnectCompletionHandler)completion;
 - (void)disconnectStand:(ZBStand *)stand;
 
 @end

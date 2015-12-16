@@ -38,22 +38,22 @@
 }
 
 - (void)configurationForPortNumber:(ZBSerialPortNumber)portNumber completion:(void(^)(ZBSerialPortConfiguration *configuration, NSError *error))completion {
-    [self addTask:[ZBSerialPortCommunicatorTask getConfigurationTaskWithPortNumber:portNumber completionHandler:completion]];
+    [self addTask:[ZBSerialPortCommunicatorTask getConfigurationTaskWithPortNumber:portNumber completion:completion]];
 }
 
 - (void)applyConfiguration:(ZBSerialPortConfiguration *)configuration toPortNumber:(ZBSerialPortNumber)portNumber completion:(void(^)(NSError *error))completion {
     ZBLog(@"Configuration: %@, Port number: %ld", configuration, (unsigned long)portNumber);
-    [self addTask:[ZBSerialPortCommunicatorTask setConfigurationTaskWithPortNumber:portNumber configuration:configuration completionHandler:completion]];
+    [self addTask:[ZBSerialPortCommunicatorTask setConfigurationTaskWithPortNumber:portNumber configuration:configuration completion:completion]];
 }
 
 - (void)sendData:(NSData *)data toPortNumber:(ZBSerialPortNumber)portNumber completion:(void(^)(NSError *error))completion {
     ZBLog(@"Data (%ld bytes): %@, Port number: %ld", (unsigned long)data.length, data, (unsigned long)portNumber);
-    [self addTask:[ZBSerialPortCommunicatorTask sendDataTaskWithPortNumber:portNumber data:data completionHandler:completion]];
+    [self addTask:[ZBSerialPortCommunicatorTask sendDataTaskWithPortNumber:portNumber data:data completion:completion]];
 }
 
 - (void)sendDataEnsured:(NSData *)data toPortNumber:(ZBSerialPortNumber)portNumber completion:(void (^)(NSError *))completion {
     ZBLog(@"Data (%ld bytes): %@, Port number: %ld", (unsigned long)data.length, data, (unsigned long)portNumber);
-    [self addTask:[ZBSerialPortCommunicatorTask sendDataEnsuredTaskWithPortNumber:portNumber data:data completionHandler:completion]];
+    [self addTask:[ZBSerialPortCommunicatorTask sendDataEnsuredTaskWithPortNumber:portNumber data:data completion:completion]];
 }
 
 #pragma mark - Internals
@@ -108,9 +108,9 @@
 }
 
 - (void)completeCurrentSetConfigurationTask {
-    void(^completionHandler)(NSError *error) = self.tasks.firstObject.completionHandler;
+    void(^completion)(NSError *error) = self.tasks.firstObject.completion;
     [self completeCurrentTask];
-    completionHandler(nil);
+    completion(nil);
 }
 
 - (NSData *)commandForSettingBaudRate:(ZBSerialPortBaudRate)baudRate onPortNumber:(ZBSerialPortNumber)portNumber {

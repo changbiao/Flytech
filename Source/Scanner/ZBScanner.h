@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (weak, nonatomic) CBCentralManager *centralManager;
 
-- (void)discoverStandsWithTimeout:(NSTimeInterval)timeout discoveryHandler:(nullable ZBDiscoveryHandler)discoveryHandler completionHandler:(ZBDiscoveryCompletionHandler)completionHandler;
+- (void)discoverStandsWithTimeout:(NSTimeInterval)timeout discovery:(nullable ZBDiscoveryHandler)discovery completion:(ZBDiscoveryCompletionHandler)completion;
 - (void)stopDiscovery;
 
 @end

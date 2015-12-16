@@ -12,35 +12,35 @@
 
 #pragma mark - Public Interface
 
-+ (instancetype)sendDataTaskWithPortNumber:(ZBSerialPortNumber)portNumber data:(NSData *)data completionHandler:(void(^)(NSError *error))completionHandler {
-    ZBSerialPortCommunicatorTask *task = [self taskWithType:ZBSerialPortCommunicatorTaskTypeSendData portNumber:portNumber completionHandler:completionHandler];
++ (instancetype)sendDataTaskWithPortNumber:(ZBSerialPortNumber)portNumber data:(NSData *)data completion:(void(^)(NSError *error))completion {
+    ZBSerialPortCommunicatorTask *task = [self taskWithType:ZBSerialPortCommunicatorTaskTypeSendData portNumber:portNumber completion:completion];
     task.data = data;
     return task;
 }
 
-+ (instancetype)sendDataEnsuredTaskWithPortNumber:(ZBSerialPortNumber)portNumber data:(NSData *)data completionHandler:(void (^)(NSError *))completionHandler {
-    ZBSerialPortCommunicatorTask *task = [self taskWithType:ZBSerialPortCommunicatorTaskTypeSendDataEnsured portNumber:portNumber completionHandler:completionHandler];
++ (instancetype)sendDataEnsuredTaskWithPortNumber:(ZBSerialPortNumber)portNumber data:(NSData *)data completion:(void (^)(NSError *))completion {
+    ZBSerialPortCommunicatorTask *task = [self taskWithType:ZBSerialPortCommunicatorTaskTypeSendDataEnsured portNumber:portNumber completion:completion];
     task.data = data;
     return task;
 }
 
-+ (instancetype)getConfigurationTaskWithPortNumber:(ZBSerialPortNumber)portNumber completionHandler:(void(^)(ZBSerialPortConfiguration *configuration, NSError *error))completionHandler {
-    return [self taskWithType:ZBSerialPortCommunicatorTaskTypeGetConfiguration portNumber:portNumber completionHandler:completionHandler];
++ (instancetype)getConfigurationTaskWithPortNumber:(ZBSerialPortNumber)portNumber completion:(void(^)(ZBSerialPortConfiguration *configuration, NSError *error))completion {
+    return [self taskWithType:ZBSerialPortCommunicatorTaskTypeGetConfiguration portNumber:portNumber completion:completion];
 }
 
-+ (instancetype)setConfigurationTaskWithPortNumber:(ZBSerialPortNumber)portNumber configuration:(ZBSerialPortConfiguration *)configuration completionHandler:(void(^)(NSError *error))completionHandler {
-    ZBSerialPortCommunicatorTask *task = [self taskWithType:ZBSerialPortCommunicatorTaskTypeSetConfiguration portNumber:portNumber completionHandler:completionHandler];
++ (instancetype)setConfigurationTaskWithPortNumber:(ZBSerialPortNumber)portNumber configuration:(ZBSerialPortConfiguration *)configuration completion:(void(^)(NSError *error))completion {
+    ZBSerialPortCommunicatorTask *task = [self taskWithType:ZBSerialPortCommunicatorTaskTypeSetConfiguration portNumber:portNumber completion:completion];
     task.configuration = configuration;
     return task;
 }
 
 #pragma mark - Internals
 
-+ (instancetype)taskWithType:(ZBSerialPortCommunicatorTaskType)type portNumber:(ZBSerialPortNumber)portNumber completionHandler:(id)completionHandler {
++ (instancetype)taskWithType:(ZBSerialPortCommunicatorTaskType)type portNumber:(ZBSerialPortNumber)portNumber completion:(id)completion {
     ZBSerialPortCommunicatorTask *task = [ZBSerialPortCommunicatorTask new];
     task.type = type;
     task.portNumber = portNumber;
-    task.completionHandler = completionHandler;
+    task.completion = completion;
     return task;
 }
 

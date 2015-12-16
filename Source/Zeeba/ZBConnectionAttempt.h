@@ -16,10 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ZBConnectionAttempt : NSObject
 
 @property (strong, nonatomic) ZBStand *stand;
-@property (copy, nonatomic) ZBConnectCompletionHandler completionHandler;
+@property (copy, nonatomic) ZBConnectCompletionHandler completion;
 @property (strong, nonatomic, nullable) NSTimer *timeoutTimer;
 
-- (instancetype)initWithStand:(ZBStand *)stand timeoutTimer:(nullable NSTimer *)timeoutTimer completionHandler:(ZBConnectCompletionHandler)completionHandler;
+- (instancetype)initWithStand:(ZBStand *)stand timeoutTimer:(nullable NSTimer *)timeoutTimer completion:(ZBConnectCompletionHandler)completion;
 
 @end
 

@@ -95,16 +95,16 @@ NSTimeInterval const ZBTimeoutInfinity = -1;
     [self.connectionPool removeConnectivityObserver:connectivityObserver];
 }
 
-- (void)discoverStandsWithTimeout:(NSTimeInterval)timeout discoveryHandler:(ZBDiscoveryHandler)discoveryHandler completionHandler:(ZBDiscoveryCompletionHandler)completionHandler {
-    [self.scanner discoverStandsWithTimeout:timeout discoveryHandler:discoveryHandler completionHandler:completionHandler];
+- (void)discoverStandsWithTimeout:(NSTimeInterval)timeout discovery:(ZBDiscoveryHandler)discovery completion:(ZBDiscoveryCompletionHandler)completion {
+    [self.scanner discoverStandsWithTimeout:timeout discovery:discovery completion:completion];
 }
 
 - (void)stopDiscovery {
     [self.scanner stopDiscovery];
 }
 
-- (void)connectStand:(ZBStand *)stand timeout:(NSTimeInterval)timeout completionHandler:(ZBConnectCompletionHandler)completionHandler {
-    [self.connectionPool connectStand:stand timeout:timeout completionHandler:completionHandler];
+- (void)connectStand:(ZBStand *)stand timeout:(NSTimeInterval)timeout completion:(ZBConnectCompletionHandler)completion {
+    [self.connectionPool connectStand:stand timeout:timeout completion:completion];
 }
 
 - (void)disconnectStand:(ZBStand *)stand {

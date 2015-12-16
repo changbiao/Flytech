@@ -14,8 +14,8 @@
 @interface ZBScanner ()
 
 @property (assign, nonatomic) BOOL busy;
-@property (copy, nonatomic) ZBDiscoveryHandler discoveryHandler;
-@property (copy, nonatomic) ZBDiscoveryCompletionHandler completionHandler;
+@property (copy, nonatomic) ZBDiscoveryHandler discovery;
+@property (copy, nonatomic) ZBDiscoveryCompletionHandler completion;
 @property (strong, nonatomic) NSMutableArray *discoveries;
 @property (strong, nonatomic) NSTimer *timeoutTimer;
 
@@ -25,18 +25,18 @@
 
 #pragma mark - Public Interface
 
-- (void)discoverStandsWithTimeout:(NSTimeInterval)timeout discoveryHandler:(ZBDiscoveryHandler)discoveryHandler completionHandler:(ZBDiscoveryCompletionHandler)completionHandler {
+- (void)discoverStandsWithTimeout:(NSTimeInterval)timeout discovery:(ZBDiscoveryHandler)discovery completion:(ZBDiscoveryCompletionHandler)completion {
     if (self.busy) {
-        completionHandler(nil, [ZBErrorDomain zeebaErrorWithCode:ZBZeebaErrorCodeAlreadyDiscovering]);
+        completion(nil, [ZBErrorDomain zeebaErrorWithCode:ZBZeebaErrorCodeAlreadyDiscovering]);
         return;
     }
     if (self.centralManager.state != CBCentralManagerStatePoweredOn) {
-        completionHandler(nil, [ZBErrorDomain zeebaErrorWithCode:ZBZeebaErrorCodeBLEAvailability]);
+        completion(nil, [ZBErrorDomain zeebaErrorWithCode:ZBZeebaErrorCodeBLEAvailability]);
         return;
     }
     self.busy = YES;
-    self.discoveryHandler = discoveryHandler;
-    self.completionHandler = completionHandler;
+    self.discovery = discovery;
+    self.completion = completion;
     self.discoveries = [NSMutableArray array];
     self.timeoutTimer = timeout == ZBTimeoutInfinity ? nil : [NSTimer scheduledTimerWithTimeInterval:timeout target:self selector:@selector(timeoutTimerElapsed:) userInfo:nil repeats:NO];
     NSDictionary *options = @{ CBCentralManagerScanOptionAllowDuplicatesKey: @NO };
@@ -61,8 +61,8 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         ZBStand *discoveredStand = [[ZBStand alloc] initWithPeripheral:peripheral];
         [self.discoveries addObject:discoveredStand];
-        if (self.discoveryHandler) {
-            self.discoveryHandler(discoveredStand);
+        if (self.discovery) {
+            self.discovery(discoveredStand);
         }
     });
 }
@@ -71,17 +71,17 @@
 
 - (void)complete {
     [self.centralManager stopScan];
-    ZBDiscoveryCompletionHandler completionHandler = self.completionHandler;
+    ZBDiscoveryCompletionHandler completion = self.completion;
     NSArray *discoveries = self.discoveries;
     [self reset];
     self.busy = NO;
-    completionHandler(discoveries, nil);
+    completion(discoveries, nil);
 }
 
 - (void)reset {
     [self invalidateTimeoutTimer];
-    self.discoveryHandler = nil;
-    self.completionHandler = nil;
+    self.discovery = nil;
+    self.completion = nil;
     self.discoveries = nil;
 }
 

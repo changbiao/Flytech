@@ -15,6 +15,7 @@
 #import "NSData+ZBHex.h"
 #import "ZBPrinterStatusUpdate.h"
 #import "ZBErrorDomain+Factory.h"
+#import "ZBPrinterCommandDataFactory.h"
 
 typedef NS_ENUM(NSUInteger, ZBPrinterResponseType) {
     ZBPrinterResponseTypeUnknown,
@@ -54,7 +55,7 @@ typedef NS_ENUM(NSUInteger, ZBPrinterResponseType) {
 - (void)addSendDataTaskWithData:(NSData *)data completion:(ZBPrinterDefaultCompletionHandler)completion {
     ZBPrinterTaskSendData *task = [ZBPrinterTaskSendData new];
     task.data = data;
-    task.completionHandler = completion;
+    task.completion = completion;
     [self addTask:task];
 }
 
@@ -124,7 +125,7 @@ typedef NS_ENUM(NSUInteger, ZBPrinterResponseType) {
 }
 
 - (void)processGetFunctionSettingsTask:(ZBPrinterTaskGetFunctionSettings *)task {
-    [self.serialPortCommunicator sendDataEnsured:[NSData dataWithHex:ZBPrinterHexCmdFunctionSettingResponse] toPortNumber:self.portNumber completion:^(NSError *error) {
+    [self.serialPortCommunicator sendDataEnsured:[ZBPrinterCommandDataFactory commandDataForFunctionSettings] toPortNumber:self.portNumber completion:^(NSError *error) {
         if (error) {
             [self completeCurrentTaskWithResponse:nil error:[ZBErrorDomain zeebaErrorWithCode:ZBZeebaErrorCodePrinterCommunicationFailed userInfo:@{ NSUnderlyingErrorKey: error }]];
         }
@@ -142,18 +143,18 @@ typedef NS_ENUM(NSUInteger, ZBPrinterResponseType) {
         return;
     }
     ZBPrinterTask *currentTask = self.mutableTasks[0];
-    id completionHandler = currentTask.completionHandler;
+    id completion = currentTask.completion;
     [self.mutableTasks removeObject:currentTask];
     if (self.mutableTasks.count) {
         [self processNextTask];
     }
     if ([currentTask isKindOfClass:[ZBPrinterTaskGetFunctionSettings class]]) {
-        void(^typedCompletionHandler)(ZBPrinterFunctionSettings *functionSettings, NSError *error) = completionHandler;
+        void(^typedCompletionHandler)(ZBPrinterFunctionSettings *functionSettings, NSError *error) = completion;
         if (typedCompletionHandler) {
             typedCompletionHandler(response, error);
         }
     } else if ([currentTask isKindOfClass:[ZBPrinterTaskSendData class]]) {
-        void(^typedCompletionHandler)(NSError *error) = completionHandler;
+        void(^typedCompletionHandler)(NSError *error) = completion;
         if (typedCompletionHandler) {
             typedCompletionHandler(error);
         }

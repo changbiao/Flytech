@@ -18,6 +18,6 @@
 @property (strong, nonatomic) ZBSerialPortCommunicator *serialPortCommunicator;
 
 - (instancetype)initWithPeripheral:(CBPeripheral *)peripheral;
-- (void)prepareForUseWithCompletion:(void (^)(NSError *error))completionHandler;
+- (void)prepareForUseWithCompletion:(void (^)(NSError *error))completion;
 
 @end

@@ -12,12 +12,12 @@
 
 #pragma mark - Life Cycle
 
-- (instancetype)initWithStand:(ZBStand *)stand timeoutTimer:(NSTimer *)timeoutTimer completionHandler:(ZBConnectCompletionHandler)completionHandler {
+- (instancetype)initWithStand:(ZBStand *)stand timeoutTimer:(NSTimer *)timeoutTimer completion:(ZBConnectCompletionHandler)completion {
     self = [self init];
     if (self) {
         self.stand = stand;
         self.timeoutTimer = timeoutTimer;
-        self.completionHandler = completionHandler;
+        self.completion = completion;
     }
     return self;
 }

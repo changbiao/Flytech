@@ -52,7 +52,7 @@
     pageTextComponent.text = @"________________________________________________________________________ ";
     pageTextComponent.characterFont = ZBPrinterCharacterFont16x8;
     pageTextComponent.scale = 1;
-    pageTextComponent.alignment = ZBPrinterAlignmentLeZB;
+    pageTextComponent.alignment = ZBPrinterAlignmentLeft;
     [self.pageComponents addObject:pageTextComponent];
 }
 
