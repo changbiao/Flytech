@@ -85,6 +85,22 @@
 		C63B18001C200B0500B0ECD2 /* ZBErrorDomain+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55531BFB181B00077FBC /* ZBErrorDomain+Factory.m */; };
 		C63B18011C200B0800B0ECD2 /* ZBErrorDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BA55541BFB181B00077FBC /* ZBErrorDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C63B18021C200B0E00B0ECD2 /* ZBErrorDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA55551BFB181B00077FBC /* ZBErrorDomain.m */; };
+		C64AE7FE1C228AA300C3A9E4 /* ZBPrinterCompositeContent.h in Headers */ = {isa = PBXBuildFile; fileRef = C64AE7FC1C228AA300C3A9E4 /* ZBPrinterCompositeContent.h */; };
+		C64AE7FF1C228AA300C3A9E4 /* ZBPrinterCompositeContent.h in Headers */ = {isa = PBXBuildFile; fileRef = C64AE7FC1C228AA300C3A9E4 /* ZBPrinterCompositeContent.h */; };
+		C64AE8001C228AA300C3A9E4 /* ZBPrinterCompositeContent.m in Sources */ = {isa = PBXBuildFile; fileRef = C64AE7FD1C228AA300C3A9E4 /* ZBPrinterCompositeContent.m */; };
+		C64AE8011C228AA300C3A9E4 /* ZBPrinterCompositeContent.m in Sources */ = {isa = PBXBuildFile; fileRef = C64AE7FD1C228AA300C3A9E4 /* ZBPrinterCompositeContent.m */; };
+		C64AE8041C228AE400C3A9E4 /* ZBPrinterContent.h in Headers */ = {isa = PBXBuildFile; fileRef = C64AE8021C228AE400C3A9E4 /* ZBPrinterContent.h */; };
+		C64AE8051C228AE400C3A9E4 /* ZBPrinterContent.h in Headers */ = {isa = PBXBuildFile; fileRef = C64AE8021C228AE400C3A9E4 /* ZBPrinterContent.h */; };
+		C64AE8061C228AE400C3A9E4 /* ZBPrinterContent.m in Sources */ = {isa = PBXBuildFile; fileRef = C64AE8031C228AE400C3A9E4 /* ZBPrinterContent.m */; };
+		C64AE8071C228AE400C3A9E4 /* ZBPrinterContent.m in Sources */ = {isa = PBXBuildFile; fileRef = C64AE8031C228AE400C3A9E4 /* ZBPrinterContent.m */; };
+		C64AE80D1C23F7BA00C3A9E4 /* ZBPrinterCompositeContent+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C64AE80B1C23F7BA00C3A9E4 /* ZBPrinterCompositeContent+Private.h */; };
+		C64AE80E1C23F7BA00C3A9E4 /* ZBPrinterCompositeContent+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C64AE80B1C23F7BA00C3A9E4 /* ZBPrinterCompositeContent+Private.h */; };
+		C64AE80F1C23F7BA00C3A9E4 /* ZBPrinterCompositeContent+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = C64AE80C1C23F7BA00C3A9E4 /* ZBPrinterCompositeContent+Private.m */; };
+		C64AE8101C23F7BA00C3A9E4 /* ZBPrinterCompositeContent+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = C64AE80C1C23F7BA00C3A9E4 /* ZBPrinterCompositeContent+Private.m */; };
+		C64AE8131C23F92F00C3A9E4 /* ZBPrinterColumnsContent.h in Headers */ = {isa = PBXBuildFile; fileRef = C64AE8111C23F92F00C3A9E4 /* ZBPrinterColumnsContent.h */; };
+		C64AE8141C23F92F00C3A9E4 /* ZBPrinterColumnsContent.h in Headers */ = {isa = PBXBuildFile; fileRef = C64AE8111C23F92F00C3A9E4 /* ZBPrinterColumnsContent.h */; };
+		C64AE8151C23F92F00C3A9E4 /* ZBPrinterColumnsContent.m in Sources */ = {isa = PBXBuildFile; fileRef = C64AE8121C23F92F00C3A9E4 /* ZBPrinterColumnsContent.m */; };
+		C64AE8161C23F92F00C3A9E4 /* ZBPrinterColumnsContent.m in Sources */ = {isa = PBXBuildFile; fileRef = C64AE8121C23F92F00C3A9E4 /* ZBPrinterColumnsContent.m */; };
 		C66828281C032D1B006FFDB1 /* ZBPrinterFunctionSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = C66828261C032D1B006FFDB1 /* ZBPrinterFunctionSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C66828291C032D1B006FFDB1 /* ZBPrinterFunctionSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = C66828261C032D1B006FFDB1 /* ZBPrinterFunctionSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C668282A1C032D1B006FFDB1 /* ZBPrinterFunctionSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = C66828271C032D1B006FFDB1 /* ZBPrinterFunctionSettings.m */; };
@@ -215,6 +231,14 @@
 		C610B0861BCE504C00DF3854 /* Zeeba.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Zeeba.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62872BE1C15B6B30016217C /* ZBPrinterPageBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBPrinterPageBuilder.h; sourceTree = "<group>"; };
 		C62872BF1C15B6B30016217C /* ZBPrinterPageBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBPrinterPageBuilder.m; sourceTree = "<group>"; };
+		C64AE7FC1C228AA300C3A9E4 /* ZBPrinterCompositeContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBPrinterCompositeContent.h; sourceTree = "<group>"; };
+		C64AE7FD1C228AA300C3A9E4 /* ZBPrinterCompositeContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBPrinterCompositeContent.m; sourceTree = "<group>"; };
+		C64AE8021C228AE400C3A9E4 /* ZBPrinterContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBPrinterContent.h; sourceTree = "<group>"; };
+		C64AE8031C228AE400C3A9E4 /* ZBPrinterContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBPrinterContent.m; sourceTree = "<group>"; };
+		C64AE80B1C23F7BA00C3A9E4 /* ZBPrinterCompositeContent+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZBPrinterCompositeContent+Private.h"; sourceTree = "<group>"; };
+		C64AE80C1C23F7BA00C3A9E4 /* ZBPrinterCompositeContent+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZBPrinterCompositeContent+Private.m"; sourceTree = "<group>"; };
+		C64AE8111C23F92F00C3A9E4 /* ZBPrinterColumnsContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBPrinterColumnsContent.h; sourceTree = "<group>"; };
+		C64AE8121C23F92F00C3A9E4 /* ZBPrinterColumnsContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBPrinterColumnsContent.m; sourceTree = "<group>"; };
 		C66828261C032D1B006FFDB1 /* ZBPrinterFunctionSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBPrinterFunctionSettings.h; sourceTree = "<group>"; };
 		C66828271C032D1B006FFDB1 /* ZBPrinterFunctionSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBPrinterFunctionSettings.m; sourceTree = "<group>"; };
 		C67065B61C15B7FE00302D0E /* ZBPrinterPageTextComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBPrinterPageTextComponent.h; sourceTree = "<group>"; };
@@ -442,6 +466,14 @@
 				C67309C81C20D17F004FF939 /* ZBPrinterCommandDataFactory.m */,
 				C6BA55661BFB181B00077FBC /* ZBPrinter+HexCmd.h */,
 				C6BA55671BFB181B00077FBC /* ZBPrinter+HexCmd.m */,
+				C64AE8021C228AE400C3A9E4 /* ZBPrinterContent.h */,
+				C64AE8031C228AE400C3A9E4 /* ZBPrinterContent.m */,
+				C64AE8111C23F92F00C3A9E4 /* ZBPrinterColumnsContent.h */,
+				C64AE8121C23F92F00C3A9E4 /* ZBPrinterColumnsContent.m */,
+				C64AE7FC1C228AA300C3A9E4 /* ZBPrinterCompositeContent.h */,
+				C64AE7FD1C228AA300C3A9E4 /* ZBPrinterCompositeContent.m */,
+				C64AE80B1C23F7BA00C3A9E4 /* ZBPrinterCompositeContent+Private.h */,
+				C64AE80C1C23F7BA00C3A9E4 /* ZBPrinterCompositeContent+Private.m */,
 				C62872BE1C15B6B30016217C /* ZBPrinterPageBuilder.h */,
 				C62872BF1C15B6B30016217C /* ZBPrinterPageBuilder.m */,
 				C67309CD1C21ED59004FF939 /* ZBPrinterPageBuilder+Optimization.h */,
@@ -548,8 +580,10 @@
 				C6BA55B21BFB181B00077FBC /* ZBScanner.h in Headers */,
 				C6BA55CC1BFB181C00077FBC /* NSData+ZBTrim.h in Headers */,
 				C6BA559A1BFB181B00077FBC /* ZBErrorDomain+Factory.h in Headers */,
+				C64AE8041C228AE400C3A9E4 /* ZBPrinterContent.h in Headers */,
 				C6BA55B41BFB181B00077FBC /* ZBSerialPortCommunicator+Private.h in Headers */,
 				C6BA55B81BFB181B00077FBC /* ZBSerialPortCommunicatorTask.h in Headers */,
+				C64AE80D1C23F7BA00C3A9E4 /* ZBPrinterCompositeContent+Private.h in Headers */,
 				C6BA55D01BFB181C00077FBC /* NSString+ZBHex.h in Headers */,
 				C6BA55961BFB181B00077FBC /* ZBCentralManagerDelegateProxy.h in Headers */,
 				C60911D91BFC8AA2001E70BA /* ZBSerialPortDataReception.h in Headers */,
@@ -567,6 +601,7 @@
 				C6BA55C61BFB181C00077FBC /* NSData+ZBDescriptionBits.h in Headers */,
 				C6BA55AC1BFB181B00077FBC /* ZBPrinter+HexCmd.h in Headers */,
 				C67309CF1C21ED59004FF939 /* ZBPrinterPageBuilder+Optimization.h in Headers */,
+				C64AE7FE1C228AA300C3A9E4 /* ZBPrinterCompositeContent.h in Headers */,
 				C60911DE1BFDB690001E70BA /* ZBDebugging.h in Headers */,
 				C6BA55BA1BFB181B00077FBC /* ZBSerialPortConfiguration+Factory.h in Headers */,
 				C6D9E84E1C16DC5800F12EB5 /* NSString+ZBWordWrap.h in Headers */,
@@ -577,6 +612,7 @@
 				C6BA55A21BFB181B00077FBC /* ZBConnectionAttempt.h in Headers */,
 				C6BA55C01BFB181C00077FBC /* ZBStand+Private.h in Headers */,
 				C6BA55A01BFB181B00077FBC /* ZBBLEAvailabilityAdapter.h in Headers */,
+				C64AE8131C23F92F00C3A9E4 /* ZBPrinterColumnsContent.h in Headers */,
 				C6BA55C41BFB181C00077FBC /* ZBStandModelNumberParser.h in Headers */,
 				C6F1AEAC1C20263D0038697E /* ZBZeeba+SDKKeyValidation.h in Headers */,
 			);
@@ -605,8 +641,10 @@
 				C63B17CD1C2002C800B0ECD2 /* ZBConnectionAttempt.h in Headers */,
 				C6CA5D0F1C06F4B6000F6CBA /* ZBPrinterTask.h in Headers */,
 				C63B17DD1C20097B00B0ECD2 /* ZBSerialPortCommunicator+Private.h in Headers */,
+				C64AE8051C228AE400C3A9E4 /* ZBPrinterContent.h in Headers */,
 				C63B17D11C2002DA00B0ECD2 /* ZBCentralManagerDelegateProxy.h in Headers */,
 				C63B17DF1C20098D00B0ECD2 /* ZBSerialPortConfigurator.h in Headers */,
+				C64AE80E1C23F7BA00C3A9E4 /* ZBPrinterCompositeContent+Private.h in Headers */,
 				C63B17D71C20096600B0ECD2 /* CBPeripheral+ZBServices.h in Headers */,
 				C63B17F71C200ADB00B0ECD2 /* NSData+ZBReverse.h in Headers */,
 				C63B17D31C2002E000B0ECD2 /* CBCentralManager+ZBFactory.h in Headers */,
@@ -624,6 +662,7 @@
 				C63B17FF1C200B0100B0ECD2 /* ZBErrorDomain+Factory.h in Headers */,
 				C63B17FD1C200AF100B0ECD2 /* NSString+ZBHex.h in Headers */,
 				C67309D01C21ED59004FF939 /* ZBPrinterPageBuilder+Optimization.h in Headers */,
+				C64AE7FF1C228AA300C3A9E4 /* ZBPrinterCompositeContent.h in Headers */,
 				C63B17EB1C200A5D00B0ECD2 /* ZBStandModelNumberParser.h in Headers */,
 				C63B17F31C200ACC00B0ECD2 /* NSData+ZBDescriptionBits.h in Headers */,
 				C63B17FB1C200AE900B0ECD2 /* NSMutableData+ZBPrepend.h in Headers */,
@@ -634,6 +673,7 @@
 				C63B17F11C200A8400B0ECD2 /* ZBPrinter+HexCmd.h in Headers */,
 				C63B17F51C200AD400B0ECD2 /* NSData+ZBHex.h in Headers */,
 				C63B17D91C20096D00B0ECD2 /* CBService+ZBCharacteristics.h in Headers */,
+				C64AE8141C23F92F00C3A9E4 /* ZBPrinterColumnsContent.h in Headers */,
 				C6F1AEAD1C20263D0038697E /* ZBZeeba+SDKKeyValidation.h in Headers */,
 				C63B17CB1C2002C000B0ECD2 /* ZBConnectionPool.h in Headers */,
 			);
@@ -736,6 +776,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C64AE8151C23F92F00C3A9E4 /* ZBPrinterColumnsContent.m in Sources */,
 				C6BA55A71BFB181B00077FBC /* ZBConnectivity.m in Sources */,
 				C67065C01C15B9D200302D0E /* ZBPrinterPageColumnsComponent.m in Sources */,
 				C6BA55CB1BFB181C00077FBC /* NSData+ZBReverse.m in Sources */,
@@ -760,7 +801,9 @@
 				C6D9E8501C16DC5800F12EB5 /* NSString+ZBWordWrap.m in Sources */,
 				C6BA55931BFB181B00077FBC /* CBPeripheral+ZBServices.m in Sources */,
 				C6BA55AB1BFB181B00077FBC /* ZBZeeba.m in Sources */,
+				C64AE80F1C23F7BA00C3A9E4 /* ZBPrinterCompositeContent+Private.m in Sources */,
 				C6CA5D0A1C06EFE0000F6CBA /* ZBPrinterFunctionSettings+Factory.m in Sources */,
+				C64AE8001C228AA300C3A9E4 /* ZBPrinterCompositeContent.m in Sources */,
 				C6BA55B91BFB181B00077FBC /* ZBSerialPortCommunicatorTask.m in Sources */,
 				C6BA55CD1BFB181C00077FBC /* NSData+ZBTrim.m in Sources */,
 				C6D4AB9B1C20CE6D00C659E6 /* ZBPrinterTestMaterialFactory.m in Sources */,
@@ -773,6 +816,7 @@
 				C6BA559F1BFB181B00077FBC /* ZBBLEAvailability.m in Sources */,
 				C668282A1C032D1B006FFDB1 /* ZBPrinterFunctionSettings.m in Sources */,
 				C67309D11C21ED59004FF939 /* ZBPrinterPageBuilder+Optimization.m in Sources */,
+				C64AE8061C228AE400C3A9E4 /* ZBPrinterContent.m in Sources */,
 				C6BA55911BFB181B00077FBC /* CBCentralManager+ZBFactory.m in Sources */,
 				C6BA55C31BFB181C00077FBC /* ZBStand.m in Sources */,
 				C6BA55A91BFB181B00077FBC /* ZBZeeba+SharedInstance.m in Sources */,
@@ -791,6 +835,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C64AE8161C23F92F00C3A9E4 /* ZBPrinterColumnsContent.m in Sources */,
 				C63B17D41C2002E500B0ECD2 /* CBCentralManager+ZBFactory.m in Sources */,
 				C63B17F01C200A7700B0ECD2 /* ZBPrinter+Private.m in Sources */,
 				C6CA5D111C06F4B6000F6CBA /* ZBPrinterTask.m in Sources */,
@@ -815,7 +860,9 @@
 				C668282B1C032D1B006FFDB1 /* ZBPrinterFunctionSettings.m in Sources */,
 				C63B17DA1C20097100B0ECD2 /* CBService+ZBCharacteristics.m in Sources */,
 				C63B17EE1C200A6900B0ECD2 /* ZBPrinter.m in Sources */,
+				C64AE8101C23F7BA00C3A9E4 /* ZBPrinterCompositeContent+Private.m in Sources */,
 				C63B17D61C20096300B0ECD2 /* ZBPeripheralController.m in Sources */,
+				C64AE8011C228AA300C3A9E4 /* ZBPrinterCompositeContent.m in Sources */,
 				C63B17D81C20096A00B0ECD2 /* CBPeripheral+ZBServices.m in Sources */,
 				C63B17E61C2009AA00B0ECD2 /* ZBSerialPortCommunicatorTask.m in Sources */,
 				C6D4AB9C1C20CE6D00C659E6 /* ZBPrinterTestMaterialFactory.m in Sources */,
@@ -828,6 +875,7 @@
 				C67065CD1C15BB2C00302D0E /* ZBPrinterPageComponent.m in Sources */,
 				C63B17E81C2009B200B0ECD2 /* ZBStand.m in Sources */,
 				C67309D21C21ED59004FF939 /* ZBPrinterPageBuilder+Optimization.m in Sources */,
+				C64AE8071C228AE400C3A9E4 /* ZBPrinterContent.m in Sources */,
 				C63B17E41C2009A000B0ECD2 /* ZBSerialPortConfiguration+Factory.m in Sources */,
 				C63B17F21C200A8800B0ECD2 /* ZBPrinter+HexCmd.m in Sources */,
 				C63B17FA1C200AE600B0ECD2 /* NSData+ZBTrim.m in Sources */,
