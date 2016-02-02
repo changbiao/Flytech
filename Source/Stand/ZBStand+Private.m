@@ -92,7 +92,6 @@
 
 - (void)initializePrinterWithCompletion:(void(^)(NSError *error))completion {
     self.printer = [[ZBPrinter alloc] initWithSerialPortCommunicator:self.serialPortCommunicator portNumber:[self targetPortNumberForPrinterOnStandModel:self.model]];
-    [self.printer sendData:[NSData dataWithHex:ZBPrinterHexCmd512ZeroBytes] completion:nil]; // This is due to some bug on the logic board, the first many bytes received are lost.
     [self.printer initializeHardwareWithCompletion:completion];
 }
 

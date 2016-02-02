@@ -133,7 +133,7 @@ typedef NS_ENUM(NSUInteger, ZBPrinterResponseType) {
 }
 
 - (void)processSendDataTask:(ZBPrinterTaskSendData *)task {
-    [self.serialPortCommunicator sendDataEnsured:task.data toPortNumber:self.portNumber completion:^(NSError *error) {
+    [self.serialPortCommunicator sendData:task.data toPortNumber:self.portNumber completion:^(NSError *error) {
         [self completeCurrentTaskWithResponse:nil error:error ? [ZBErrorDomain zeebaErrorWithCode:ZBZeebaErrorCodePrinterCommunicationFailed userInfo:@{ NSUnderlyingErrorKey: error }] : nil];
     }];
 }

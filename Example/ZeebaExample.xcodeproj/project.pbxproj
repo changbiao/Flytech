@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C65625E01BBD5BEE00DF841F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C65625D91BBD5BEE00DF841F /* AppDelegate.m */; };
+		C65625E11BBD5BEE00DF841F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C65625DA1BBD5BEE00DF841F /* main.m */; };
+		C65625E21BBD5BEE00DF841F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C65625DC1BBD5BEE00DF841F /* Assets.xcassets */; };
+		C65625E31BBD5BEE00DF841F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C65625DD1BBD5BEE00DF841F /* LaunchScreen.storyboard */; };
+		C6ADBBAF1BF34C2B00C7E7FB /* ConnectedStandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ADBBAE1BF34C2B00C7E7FB /* ConnectedStandViewController.m */; };
+		C6CBCE9C1C5F941500A52C15 /* Zeeba.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CBCE991C5F93F500A52C15 /* Zeeba.framework */; };
+		C6CBCE9D1C5F941500A52C15 /* Zeeba.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C6CBCE991C5F93F500A52C15 /* Zeeba.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C6CFD6801BDE5D2000234EF6 /* StandsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CFD67F1BDE5D2000234EF6 /* StandsViewController.m */; };
+		C6D4AB961C2053FA00C659E6 /* Masonry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C6F1AECF1C204F7B0038697E /* Masonry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C6F1AED01C204F7B0038697E /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F1AECF1C204F7B0038697E /* Masonry.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C6CBCE981C5F93F500A52C15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6CBCE931C5F93F500A52C15 /* Zeeba.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C610B06B1BCE41C100DF3854;
+			remoteInfo = "Zeeba iOS";
+		};
+		C6CBCE9A1C5F93F500A52C15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6CBCE931C5F93F500A52C15 /* Zeeba.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C610B0861BCE504C00DF3854;
+			remoteInfo = "Zeeba OSX";
+		};
+		C6CBCE9E1C5F941500A52C15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6CBCE931C5F93F500A52C15 /* Zeeba.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C610B06A1BCE41C100DF3854;
+			remoteInfo = "Zeeba iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C610B09F1BCE533000DF3854 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C6CBCE9D1C5F941500A52C15 /* Zeeba.framework in Embed Frameworks */,
+				C6D4AB961C2053FA00C659E6 /* Masonry.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C65625BD1BBD5BB600DF841F /* ZeebaExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeebaExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C65625D81BBD5BEE00DF841F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C65625D91BBD5BEE00DF841F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C65625DA1BBD5BEE00DF841F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C65625DC1BBD5BEE00DF841F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C65625DE1BBD5BEE00DF841F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C65625DF1BBD5BEE00DF841F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6ADBBAD1BF34C2B00C7E7FB /* ConnectedStandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectedStandViewController.h; sourceTree = "<group>"; };
+		C6ADBBAE1BF34C2B00C7E7FB /* ConnectedStandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectedStandViewController.m; sourceTree = "<group>"; };
+		C6CBCE931C5F93F500A52C15 /* Zeeba.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Zeeba.xcodeproj; path = ../Zeeba.xcodeproj; sourceTree = "<group>"; };
+		C6CFD67E1BDE5D2000234EF6 /* StandsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandsViewController.h; sourceTree = "<group>"; };
+		C6CFD67F1BDE5D2000234EF6 /* StandsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandsViewController.m; sourceTree = "<group>"; };
+		C6F1AECF1C204F7B0038697E /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Masonry.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C65625BA1BBD5BB600DF841F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6CBCE9C1C5F941500A52C15 /* Zeeba.framework in Frameworks */,
+				C6F1AED01C204F7B0038697E /* Masonry.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C65625B41BBD5BB600DF841F = {
+			isa = PBXGroup;
+			children = (
+				C65625D71BBD5BEE00DF841F /* Source */,
+				C6F1AECE1C204F7B0038697E /* Vendor */,
+				C65625DB1BBD5BEE00DF841F /* Resources */,
+				C65625BE1BBD5BB600DF841F /* Products */,
+				C6CBCE931C5F93F500A52C15 /* Zeeba.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		C65625BE1BBD5BB600DF841F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C65625BD1BBD5BB600DF841F /* ZeebaExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C65625D71BBD5BEE00DF841F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C65625D81BBD5BEE00DF841F /* AppDelegate.h */,
+				C65625D91BBD5BEE00DF841F /* AppDelegate.m */,
+				C6CFD67E1BDE5D2000234EF6 /* StandsViewController.h */,
+				C6CFD67F1BDE5D2000234EF6 /* StandsViewController.m */,
+				C6ADBBAD1BF34C2B00C7E7FB /* ConnectedStandViewController.h */,
+				C6ADBBAE1BF34C2B00C7E7FB /* ConnectedStandViewController.m */,
+				C65625DA1BBD5BEE00DF841F /* main.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		C65625DB1BBD5BEE00DF841F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C65625DC1BBD5BEE00DF841F /* Assets.xcassets */,
+				C65625DD1BBD5BEE00DF841F /* LaunchScreen.storyboard */,
+				C65625DF1BBD5BEE00DF841F /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C6CBCE941C5F93F500A52C15 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C6CBCE991C5F93F500A52C15 /* Zeeba.framework */,
+				C6CBCE9B1C5F93F500A52C15 /* Zeeba.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6F1AECE1C204F7B0038697E /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				C6F1AECF1C204F7B0038697E /* Masonry.framework */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C65625BC1BBD5BB600DF841F /* ZeebaExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C65625D41BBD5BB700DF841F /* Build configuration list for PBXNativeTarget "ZeebaExample" */;
+			buildPhases = (
+				C65625B91BBD5BB600DF841F /* Sources */,
+				C65625BA1BBD5BB600DF841F /* Frameworks */,
+				C65625BB1BBD5BB600DF841F /* Resources */,
+				C610B09F1BCE533000DF3854 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6CBCE9F1C5F941500A52C15 /* PBXTargetDependency */,
+			);
+			name = ZeebaExample;
+			productName = FlytechPOSTest;
+			productReference = C65625BD1BBD5BB600DF841F /* ZeebaExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C65625B51BBD5BB600DF841F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Wallmob A/S";
+				TargetAttributes = {
+					C65625BC1BBD5BB600DF841F = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = AP8VQJ559X;
+					};
+				};
+			};
+			buildConfigurationList = C65625B81BBD5BB600DF841F /* Build configuration list for PBXProject "ZeebaExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C65625B41BBD5BB600DF841F;
+			productRefGroup = C65625BE1BBD5BB600DF841F /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C6CBCE941C5F93F500A52C15 /* Products */;
+					ProjectRef = C6CBCE931C5F93F500A52C15 /* Zeeba.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				C65625BC1BBD5BB600DF841F /* ZeebaExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C6CBCE991C5F93F500A52C15 /* Zeeba.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Zeeba.framework;
+			remoteRef = C6CBCE981C5F93F500A52C15 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C6CBCE9B1C5F93F500A52C15 /* Zeeba.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Zeeba.framework;
+			remoteRef = C6CBCE9A1C5F93F500A52C15 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C65625BB1BBD5BB600DF841F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C65625E21BBD5BEE00DF841F /* Assets.xcassets in Resources */,
+				C65625E31BBD5BEE00DF841F /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C65625B91BBD5BB600DF841F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C65625E11BBD5BEE00DF841F /* main.m in Sources */,
+				C6ADBBAF1BF34C2B00C7E7FB /* ConnectedStandViewController.m in Sources */,
+				C65625E01BBD5BEE00DF841F /* AppDelegate.m in Sources */,
+				C6CFD6801BDE5D2000234EF6 /* StandsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C6CBCE9F1C5F941500A52C15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Zeeba iOS";
+			targetProxy = C6CBCE9E1C5F941500A52C15 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C65625DD1BBD5BEE00DF841F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C65625DE1BBD5BEE00DF841F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C65625D21BBD5BB700DF841F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.glastonia.ZeebaExample;
+				PRODUCT_NAME = ZeebaExample;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C65625D31BBD5BB700DF841F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.glastonia.ZeebaExample;
+				PRODUCT_NAME = ZeebaExample;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C65625D51BBD5BB700DF841F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					../,
+					"$(PROJECT_DIR)/Vendor",
+				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				STRIP_BITCODE_FROM_COPIED_FILES = NO;
+			};
+			name = Debug;
+		};
+		C65625D61BBD5BB700DF841F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					../,
+					"$(PROJECT_DIR)/Vendor",
+				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				STRIP_BITCODE_FROM_COPIED_FILES = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C65625B81BBD5BB600DF841F /* Build configuration list for PBXProject "ZeebaExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C65625D21BBD5BB700DF841F /* Debug */,
+				C65625D31BBD5BB700DF841F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C65625D41BBD5BB700DF841F /* Build configuration list for PBXNativeTarget "ZeebaExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C65625D51BBD5BB700DF841F /* Debug */,
+				C65625D61BBD5BB700DF841F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C65625B51BBD5BB600DF841F /* Project object */;
+}

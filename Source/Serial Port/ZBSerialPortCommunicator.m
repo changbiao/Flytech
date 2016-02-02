@@ -169,15 +169,25 @@
 - (void)processSendDataTask:(ZBSerialPortCommunicatorTask *)task {
     CBService *serialPortService = [self serviceForPortNumber:task.portNumber];
     CBCharacteristic *writeCharacteristic = [self writeCharacteristicForService:serialPortService];
-    NSData *remainingData = task.data;
+    __block NSData *remainingData = task.data;
     CBCharacteristicWriteType writeType = CBCharacteristicWriteWithoutResponse;
-    NSUInteger chunkSize = 100;
-    while (remainingData) {
-        NSData *payload = remainingData.length > chunkSize ? [remainingData subdataWithRange:NSMakeRange(0, chunkSize)] : remainingData;
-        [self.peripheral writeValue:payload forCharacteristic:writeCharacteristic type:writeType];
-        remainingData = remainingData.length > chunkSize ? [remainingData subdataWithRange:NSMakeRange(chunkSize, remainingData.length - chunkSize)] : nil;
-    }
-    [self completeCurrentSendDataTaskWithError:nil];
+    NSUInteger chunkSize = 20;
+    dispatch_queue_t queue = dispatch_queue_create("com.glastonia.zeeba.sendDataQueue", NULL);
+    dispatch_async(queue, ^{
+        while (remainingData) {
+            NSData *payload = remainingData.length > chunkSize ? [remainingData subdataWithRange:NSMakeRange(0, chunkSize)] : remainingData;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.peripheral writeValue:payload forCharacteristic:writeCharacteristic type:writeType];
+            });
+            remainingData = remainingData.length > chunkSize ? [remainingData subdataWithRange:NSMakeRange(chunkSize, remainingData.length - chunkSize)] : nil;
+            if (remainingData) {
+                [NSThread sleepForTimeInterval:0.02];
+            }
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self completeCurrentSendDataTaskWithError:nil];
+        });
+    });
 }
 
 #pragma mark - Accessors
