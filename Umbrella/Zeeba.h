@@ -17,6 +17,7 @@
 #import "ZBPrinterCommandDataFactory.h"
 #import "ZBPrinterPageBuilder.h"
 #import "ZBErrorDomain.h"
+#import "ZBDebugging.h"
 
 FOUNDATION_EXPORT double ZeebaPOSVersionNumber;
 FOUNDATION_EXPORT const unsigned char ZeebaPOSVersionString[];

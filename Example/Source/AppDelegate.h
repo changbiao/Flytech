@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+void appLog(NSString *prefix, const char *file, int lineNumber, const char *functionName, NSString *format, ...);
+
 @end

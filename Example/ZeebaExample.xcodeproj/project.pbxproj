@@ -11,6 +11,8 @@
 		C65625E11BBD5BEE00DF841F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C65625DA1BBD5BEE00DF841F /* main.m */; };
 		C65625E21BBD5BEE00DF841F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C65625DC1BBD5BEE00DF841F /* Assets.xcassets */; };
 		C65625E31BBD5BEE00DF841F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C65625DD1BBD5BEE00DF841F /* LaunchScreen.storyboard */; };
+		C6725CD21C8E13D200C73157 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6EB465E1C8E0F01003B7C4A /* CocoaAsyncSocket.framework */; };
+		C6725CD31C8E13D200C73157 /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C6EB465E1C8E0F01003B7C4A /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C6ADBBAF1BF34C2B00C7E7FB /* ConnectedStandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ADBBAE1BF34C2B00C7E7FB /* ConnectedStandViewController.m */; };
 		C6CBCE9C1C5F941500A52C15 /* Zeeba.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CBCE991C5F93F500A52C15 /* Zeeba.framework */; };
 		C6CBCE9D1C5F941500A52C15 /* Zeeba.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C6CBCE991C5F93F500A52C15 /* Zeeba.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -51,6 +53,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C6CBCE9D1C5F941500A52C15 /* Zeeba.framework in Embed Frameworks */,
+				C6725CD31C8E13D200C73157 /* CocoaAsyncSocket.framework in Embed Frameworks */,
 				C6D4AB961C2053FA00C659E6 /* Masonry.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -66,11 +69,13 @@
 		C65625DC1BBD5BEE00DF841F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C65625DE1BBD5BEE00DF841F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C65625DF1BBD5BEE00DF841F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6725CD81C8E348100C73157 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		C6ADBBAD1BF34C2B00C7E7FB /* ConnectedStandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectedStandViewController.h; sourceTree = "<group>"; };
 		C6ADBBAE1BF34C2B00C7E7FB /* ConnectedStandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectedStandViewController.m; sourceTree = "<group>"; };
 		C6CBCE931C5F93F500A52C15 /* Zeeba.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Zeeba.xcodeproj; path = ../Zeeba.xcodeproj; sourceTree = "<group>"; };
 		C6CFD67E1BDE5D2000234EF6 /* StandsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandsViewController.h; sourceTree = "<group>"; };
 		C6CFD67F1BDE5D2000234EF6 /* StandsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandsViewController.m; sourceTree = "<group>"; };
+		C6EB465E1C8E0F01003B7C4A /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaAsyncSocket.framework; sourceTree = "<group>"; };
 		C6F1AECF1C204F7B0038697E /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Masonry.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6725CD21C8E13D200C73157 /* CocoaAsyncSocket.framework in Frameworks */,
 				C6CBCE9C1C5F941500A52C15 /* Zeeba.framework in Frameworks */,
 				C6F1AED01C204F7B0038697E /* Masonry.framework in Frameworks */,
 			);
@@ -115,6 +121,7 @@
 				C6CFD67F1BDE5D2000234EF6 /* StandsViewController.m */,
 				C6ADBBAD1BF34C2B00C7E7FB /* ConnectedStandViewController.h */,
 				C6ADBBAE1BF34C2B00C7E7FB /* ConnectedStandViewController.m */,
+				C6725CD81C8E348100C73157 /* Prefix.pch */,
 				C65625DA1BBD5BEE00DF841F /* main.m */,
 			);
 			path = Source;
@@ -142,6 +149,7 @@
 		C6F1AECE1C204F7B0038697E /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				C6EB465E1C8E0F01003B7C4A /* CocoaAsyncSocket.framework */,
 				C6F1AECF1C204F7B0038697E /* Masonry.framework */,
 			);
 			path = Vendor;
@@ -180,7 +188,7 @@
 				TargetAttributes = {
 					C65625BC1BBD5BB600DF841F = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = AP8VQJ559X;
+						DevelopmentTeam = S8J98EBR44;
 					};
 				};
 			};
@@ -288,6 +296,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -296,6 +305,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Source/Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -334,12 +345,15 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Source/Prefix.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -351,6 +365,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.glastonia.ZeebaExample;
 				PRODUCT_NAME = ZeebaExample;
+				PROVISIONING_PROFILE = "a538d10f-8aa4-45d0-8e48-5c0e5bce8c96";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -361,7 +376,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					../,
@@ -376,7 +390,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					../,

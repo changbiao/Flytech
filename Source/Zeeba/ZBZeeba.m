@@ -14,6 +14,7 @@
 #import "ZBScanner.h"
 #import "ZBConnectionPool.h"
 #import "ZBZeeba+SDKKeyValidation.h"
+#import "ZBDebugging.h"
 
 NSTimeInterval const ZBTimeoutInfinity = -1;
 

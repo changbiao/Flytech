@@ -12,8 +12,8 @@
 		C60911DA1BFC8AA2001E70BA /* ZBSerialPortDataReception.h in Headers */ = {isa = PBXBuildFile; fileRef = C60911D71BFC8AA2001E70BA /* ZBSerialPortDataReception.h */; };
 		C60911DB1BFC8AA2001E70BA /* ZBSerialPortDataReception.m in Sources */ = {isa = PBXBuildFile; fileRef = C60911D81BFC8AA2001E70BA /* ZBSerialPortDataReception.m */; };
 		C60911DC1BFC8AA2001E70BA /* ZBSerialPortDataReception.m in Sources */ = {isa = PBXBuildFile; fileRef = C60911D81BFC8AA2001E70BA /* ZBSerialPortDataReception.m */; };
-		C60911DE1BFDB690001E70BA /* ZBDebugging.h in Headers */ = {isa = PBXBuildFile; fileRef = C60911DD1BFDB690001E70BA /* ZBDebugging.h */; };
-		C60911DF1BFDB690001E70BA /* ZBDebugging.h in Headers */ = {isa = PBXBuildFile; fileRef = C60911DD1BFDB690001E70BA /* ZBDebugging.h */; };
+		C60911DE1BFDB690001E70BA /* ZBDebugging.h in Headers */ = {isa = PBXBuildFile; fileRef = C60911DD1BFDB690001E70BA /* ZBDebugging.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C60911DF1BFDB690001E70BA /* ZBDebugging.h in Headers */ = {isa = PBXBuildFile; fileRef = C60911DD1BFDB690001E70BA /* ZBDebugging.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C610B07B1BCE42C200DF3854 /* Zeeba.h in Headers */ = {isa = PBXBuildFile; fileRef = C610B0781BCE42C200DF3854 /* Zeeba.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C62872C01C15B6B30016217C /* ZBPrinterPageBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C62872BE1C15B6B30016217C /* ZBPrinterPageBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C62872C11C15B6B30016217C /* ZBPrinterPageBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C62872BE1C15B6B30016217C /* ZBPrinterPageBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -117,6 +117,8 @@
 		C67065CB1C15BB2C00302D0E /* ZBPrinterPageComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = C67065C81C15BB2C00302D0E /* ZBPrinterPageComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C67065CC1C15BB2C00302D0E /* ZBPrinterPageComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = C67065C91C15BB2C00302D0E /* ZBPrinterPageComponent.m */; };
 		C67065CD1C15BB2C00302D0E /* ZBPrinterPageComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = C67065C91C15BB2C00302D0E /* ZBPrinterPageComponent.m */; };
+		C6725CD61C8E15D100C73157 /* ZBDebugging.m in Sources */ = {isa = PBXBuildFile; fileRef = C6725CD51C8E15D100C73157 /* ZBDebugging.m */; };
+		C6725CD71C8E15D100C73157 /* ZBDebugging.m in Sources */ = {isa = PBXBuildFile; fileRef = C6725CD51C8E15D100C73157 /* ZBDebugging.m */; };
 		C67309C91C20D17F004FF939 /* ZBPrinterCommandDataFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = C67309C71C20D17F004FF939 /* ZBPrinterCommandDataFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C67309CA1C20D17F004FF939 /* ZBPrinterCommandDataFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = C67309C71C20D17F004FF939 /* ZBPrinterCommandDataFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C67309CB1C20D17F004FF939 /* ZBPrinterCommandDataFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C67309C81C20D17F004FF939 /* ZBPrinterCommandDataFactory.m */; };
@@ -247,6 +249,7 @@
 		C67065BD1C15B9D200302D0E /* ZBPrinterPageColumnsComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBPrinterPageColumnsComponent.m; sourceTree = "<group>"; };
 		C67065C81C15BB2C00302D0E /* ZBPrinterPageComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBPrinterPageComponent.h; sourceTree = "<group>"; };
 		C67065C91C15BB2C00302D0E /* ZBPrinterPageComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBPrinterPageComponent.m; sourceTree = "<group>"; };
+		C6725CD51C8E15D100C73157 /* ZBDebugging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBDebugging.m; sourceTree = "<group>"; };
 		C67309C71C20D17F004FF939 /* ZBPrinterCommandDataFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBPrinterCommandDataFactory.h; sourceTree = "<group>"; };
 		C67309C81C20D17F004FF939 /* ZBPrinterCommandDataFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBPrinterCommandDataFactory.m; sourceTree = "<group>"; };
 		C67309CD1C21ED59004FF939 /* ZBPrinterPageBuilder+Optimization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZBPrinterPageBuilder+Optimization.h"; sourceTree = "<group>"; };
@@ -536,6 +539,7 @@
 			isa = PBXGroup;
 			children = (
 				C60911DD1BFDB690001E70BA /* ZBDebugging.h */,
+				C6725CD51C8E15D100C73157 /* ZBDebugging.m */,
 				C6BA55841BFB181B00077FBC /* NSData+ZBDescriptionBits.h */,
 				C6BA55851BFB181B00077FBC /* NSData+ZBDescriptionBits.m */,
 				C6BA55861BFB181B00077FBC /* NSData+ZBHex.h */,
@@ -811,6 +815,7 @@
 				C60911DB1BFC8AA2001E70BA /* ZBSerialPortDataReception.m in Sources */,
 				C6BA559B1BFB181B00077FBC /* ZBErrorDomain+Factory.m in Sources */,
 				C6BA55D61BFB20B800077FBC /* ZBPrinter+Advanced.m in Sources */,
+				C6725CD61C8E15D100C73157 /* ZBDebugging.m in Sources */,
 				C6BA55BF1BFB181C00077FBC /* ZBSerialPortConfigurator.m in Sources */,
 				C6BA55991BFB181B00077FBC /* ZBPeripheralController.m in Sources */,
 				C6BA559F1BFB181B00077FBC /* ZBBLEAvailability.m in Sources */,
@@ -870,6 +875,7 @@
 				C63B17CE1C2002CD00B0ECD2 /* ZBConnectionAttempt.m in Sources */,
 				C63B17F61C200AD800B0ECD2 /* NSData+ZBHex.m in Sources */,
 				C63B17C61C2002A400B0ECD2 /* ZBBLEAvailability.m in Sources */,
+				C6725CD71C8E15D100C73157 /* ZBDebugging.m in Sources */,
 				C62872C31C15B6B30016217C /* ZBPrinterPageBuilder.m in Sources */,
 				C6CA5D0B1C06EFE0000F6CBA /* ZBPrinterFunctionSettings+Factory.m in Sources */,
 				C67065CD1C15BB2C00302D0E /* ZBPrinterPageComponent.m in Sources */,
@@ -939,6 +945,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.glastonia.zeeba;
 				PRODUCT_NAME = Zeeba;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -984,6 +991,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.glastonia.zeeba;
 				PRODUCT_NAME = Zeeba;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

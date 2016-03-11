@@ -1,0 +1,16 @@
+//
+//  Prefix.pch
+//  ZeebaExample
+//
+//  Created by Rasmus Taulborg Hummelmose on 07/03/2016.
+//  Copyright © 2016 Wallmob A/S. All rights reserved.
+//
+
+#ifndef Prefix_pch
+#define Prefix_pch
+
+#import "AppDelegate.h"
+
+#define AppLog(fmt...)   appLog(@"[App ]",__FILE__,__LINE__,__PRETTY_FUNCTION__,fmt);
+
+#endif /* Prefix_pch */

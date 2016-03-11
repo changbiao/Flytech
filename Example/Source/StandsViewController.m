@@ -7,9 +7,9 @@
 //
 
 #import "StandsViewController.h"
+#import "ConnectedStandViewController.h"
 #import <Zeeba/Zeeba.h>
 #import <Masonry/Masonry.h>
-#import "ConnectedStandViewController.h"
 
 static NSUInteger const StandsTableViewNumberOfSections = 2;
 static NSString * const StandsTableViewCellReuseIdentifier = @"StandsTableViewCellReuseIdentifier";
@@ -110,7 +110,7 @@ typedef NS_ENUM(NSUInteger, StandsTableViewSections) {
 #pragma mark - FTBLEAvailabilityObserver
 
 - (void)zeeba:(ZBZeeba *)zeeba availabilityChanged:(ZBBLEAvailability)availability {
-    NSLog(@"Availability: %@", [ZBBLEAvailabilityTools descriptionForAvailability:availability]);
+    AppLog(@"Availability: %@", [ZBBLEAvailabilityTools descriptionForAvailability:availability]);
 }
 
 #pragma mark - FTConnectivityObserver
@@ -169,7 +169,7 @@ typedef NS_ENUM(NSUInteger, StandsTableViewSections) {
         }
         [self.zeeba connectStand:stand timeout:10 completion:^(ZBStand * _Nonnull stand, NSError * _Nullable error) {
             if (error) {
-                NSLog(@"Failed connecting with error: %@", error);
+                AppLog(@"Failed connecting with error: %@", error);
             } else {
                 [self.connections addObject:stand];
                 [self.tableView reloadData];
